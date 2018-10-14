@@ -1,7 +1,7 @@
 <template>
   <b-container>
     <div class="message_block">
-      <h2 class="message_text">プロダクトや書籍のサポートに関して</h2>
+      <h2>プロダクトや書籍のサポートに関して</h2>
       <p>
         これまで自分が公開ないしは販売をしたプロダクトや書籍に関するアフターケアに関する情報を掲載するためのページになります。<br>
         更新に関するロードマップや書籍の正誤表の掲示・不具合を随時行う予定です。<br>
@@ -24,7 +24,6 @@ export default {
 .message_block h2 {
   padding: 0 0 20px 0;
   color: #444444;
-  font-size: 24px;
-  font-family: 'Palatino', "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 26px;
 }
 </style>

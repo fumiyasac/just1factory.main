@@ -27,7 +27,7 @@ export default {
 .message_block h2 {
   padding: 0 0 20px 0;
   color: #444444;
-  font-size: 24px;
+  font-size: 26px;
   font-family: 'Palatino', "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 </style>

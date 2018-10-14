@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="book_information_block">
-      <h2 class="message_text">書籍・プロダクトのご紹介</h2>
+      <h2>書籍・プロダクトのご紹介</h2>
       <b-row>
         <b-col cols="3">
           <div>
@@ -28,11 +28,10 @@
             <p>これからiOS アプリを本格的に開発していこうと考えている方や、UI実装や表現に関する部分にさらなる磨きをかけていきたい方にとって本書が少しでもお役に立つことができれば幸いです。</p>
           </div>
           <hr>
-          <div class="container">
+          <div class="container text-center">
             <ul class="list-unstyled list-inline">
               <li class="list-inline-item">
-                <b-button class="mt0" href="https://booth.pm/ja/items/1021745" target="_blank">販売ページ</b-button>
-                <b-button class="mt0" href="https://github.com/fumiyasac/ios_ui_recipe_showcase" target="_blank">サンプルコード</b-button>
+                <b-button class="mt0" href="https://booth.pm/ja/items/1021745" target="_blank">電子版の販売ページ</b-button>
               </li>
             </ul>
           </div>
