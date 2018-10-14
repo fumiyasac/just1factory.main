@@ -7,15 +7,16 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: pkg.name,
+    title: pkg.description,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      { hid: 'description', name: 'こちらは「Just1factory(Fumiya Sakai)」の紹介ページになります。運営しているサービスやアプリ・書籍等に関する情報を公開しております。' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    ],
+    css: [
+    ],
   },
 
   /*
@@ -41,9 +42,9 @@ module.exports = {
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios',
-    // Doc:https://github.com/nuxt-community/modules/tree/master/packages/bulma
-    '@nuxtjs/bulma',
-    '@nuxtjs/font-awesome'
+    // Doc: https://bootstrap-vue.js.org/docs/
+    'bootstrap-vue/nuxt',
+    '@nuxtjs/font-awesome',
   ],
   /*
   ** Axios module configuration
@@ -56,13 +57,6 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    postcss: {
-      preset: {
-        features: {
-          customProperties: false
-        }
-      }
-    },
     /*
     ** You can extend webpack config here
     */

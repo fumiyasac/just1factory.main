@@ -1,18 +1,19 @@
 <template>
-  <section class="hero is-fullheight is-default is-bold">
-    <navigation-bar/>
-    <nuxt/>
-    <footer-bar/>
-  </section>
+  <div id="wrapper">
+    <navigation-bar />
+    <nuxt />
+    <footer-bar />
+  </div>
 </template>
 
 <script>
-import NavigationBar from '~/components/NavigationBar.vue'
-import FooterBar from '~/components/FooterBar.vue'
+import NavigationBar from '~/components/global/NavigationBar.vue'
+import FooterBar from '~/components/global/FooterBar.vue'
+
 export default {
   components: {
     NavigationBar,
-    FooterBar
+    FooterBar,
   }
 }
 </script>

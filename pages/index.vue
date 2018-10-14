@@ -1,55 +1,24 @@
 <template>
-  <section class="container">
-    <div>
-      <logo/>
-      <h1 class="title">
-        just1factory.main
-      </h1>
-      <h2 class="subtitle">
-        My great Nuxt.js project
-      </h2>
-    </div>
-  </section>
+  <div>
+    <carousel />
+    <message />
+    <introduction />
+    <information />
+  </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import Carousel from '~/components/index/Carousel.vue'
+import Message from '~/components/index/Message.vue'
+import Introduction from '~/components/index/Introduction.vue'
+import Information from '~/components/index/Information.vue'
 
 export default {
   components: {
-    Logo
+    Carousel,
+    Message,
+    Introduction,
+    Information
   }
 }
 </script>
-
-<style>
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>

@@ -1,6 +1,6 @@
 # just1factory.main
 
-> My great Nuxt.js project
+> My bedazzling Nuxt.js project
 
 ## Build Setup
 
