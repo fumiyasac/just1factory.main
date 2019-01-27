@@ -19,7 +19,9 @@
           <div class="container">
             <p>
               <span class="small">販売価格</span>: <strong class="large text-danger">¥1,000</strong><br>
-              <span class="small">※ 現在は電子版のみの販売になります。改訂版につきましては11月中旬に販売予定です。</span>
+              <span class="small">※1 現在は電子版・書籍版ともに販売中です。</span>
+              <span class="small">※2 Xcode10.1 &amp; Swift4.2にも対応しております。</span>
+              <span class="small">※3 書籍版は数量に限りがございます。</span>
             </p>
           </div>
           <hr>
@@ -31,7 +33,10 @@
           <div class="container text-center">
             <ul class="list-unstyled list-inline">
               <li class="list-inline-item">
-                <b-button class="mt0" href="https://booth.pm/ja/items/1021745" target="_blank">電子版の販売ページ</b-button>
+                <b-button class="mt0" href="https://just1factory.booth.pm/items/1021745" target="_blank">電子版を購入</b-button>
+              </li>
+              <li class="list-inline-item">
+                <b-button class="mt0" href="https://just1factory.booth.pm/items/1150511" target="_blank">書籍版を購入</b-button>
               </li>
             </ul>
           </div>

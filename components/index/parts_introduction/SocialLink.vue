@@ -36,6 +36,11 @@
             </a>
           </li>
           <li class="list-inline-item">
+            <a href="https://medium.com/@fumiyasakai/" target="_blank" class="btn-floating btn-lg">
+              <i class="fa fa-medium medium_color" />
+            </a>
+          </li>
+          <li class="list-inline-item">
             <a href="https://note.mu/fumiyasac" target="_blank" class="btn-floating btn-lg">
               <i class="fa fa-book note_color" />
             </a>
@@ -68,6 +73,9 @@ export default {
 }
 .qiita_color {
 	color: #55c500;
+}
+.medium_color {
+	color: #00ab6c;
 }
 .note_color {
 	color: #249f80;

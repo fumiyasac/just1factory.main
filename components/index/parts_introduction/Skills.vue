@@ -5,6 +5,7 @@
     <b-badge pill variant="info">Ruby</b-badge>
     <b-badge pill variant="info">PHP</b-badge>
     <b-badge pill variant="info">JavaScript</b-badge>
+    <b-badge pill variant="info">Go</b-badge>
     <b-badge pill variant="info">ReactNative</b-badge>
     <b-badge pill variant="info">UI Desigin</b-badge>
   </div>
