@@ -5,6 +5,13 @@
       <b-list-group>
         <b-list-group-item class="flex-column align-items-start">
           <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">iOSアプリ開発「UI実装であると嬉しいレシピブック」の書籍版の準備ができました！</h5>
+            <small>2019/01/27</small>
+          </div>
+          <small>書籍に関するお知らせ</small>
+        </b-list-group-item>
+        <b-list-group-item class="flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">Just1factoryのサイトを公開しました！</h5>
             <small>2018/10/15</small>
           </div>
