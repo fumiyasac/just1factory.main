@@ -1,8 +1,8 @@
 <template>
   <div id="wrapper">
-    <navigation-bar />
+    <NavigationBar />
     <nuxt />
-    <footer-bar />
+    <FooterBar />
   </div>
 </template>
 

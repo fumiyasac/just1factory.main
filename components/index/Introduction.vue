@@ -4,14 +4,13 @@
       <h2>Developer's Profile</h2>
       <b-row>
         <b-col cols="3">
-          <avatar />
+          <Avatar />
         </b-col>
         <b-col cols="9">
-          <profile />
+          <Profile />
           <hr>
-          <skills />
+          <Skills />
           <hr>
-          <social-link />
         </b-col>
       </b-row>
     </div>
@@ -22,15 +21,13 @@
 import Avatar from '~/components/index/parts_introduction/Avatar.vue'
 import Profile from '~/components/index/parts_introduction/Profile.vue'
 import Skills from '~/components/index/parts_introduction/Skills.vue'
-import SocialLink from '~/components/index/parts_introduction/SocialLink.vue'
 
 export default {
   name: 'Introduction',
   components: {
     Avatar,
     Profile,
-    Skills,
-    SocialLink
+    Skills
   }
 }
 </script>

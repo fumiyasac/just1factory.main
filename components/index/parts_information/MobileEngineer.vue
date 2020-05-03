@@ -7,7 +7,7 @@
       デザインの良いところを全て引き出す、アプリを利用するユーザーとの接点となる部分を大切にすることを心がけています。
     </p>
     <div slot="footer">
-      <small class="text-muted">Since: 2017 ~ Present</small>
+      <small class="text-muted">Since: 2017</small>
     </div>
   </b-card>
 </template>

@@ -5,8 +5,8 @@
     <b-collapse id="nav_collapse" is-nav>
       <b-navbar-nav class="ml-auto">
         <b-navbar-nav>
-          <b-nav-item href="/support">プロダクトや書籍のサポート</b-nav-item>
-          <b-nav-item href="https://www.wantedly.com/users/291450" target="_blank">これまでの歩み</b-nav-item>
+          <b-nav-item href="/books">BOOKS</b-nav-item>
+          <b-nav-item href="https://www.wantedly.com/users/291450" target="_blank">Wantedly</b-nav-item>
         </b-navbar-nav>
       </b-navbar-nav>
     </b-collapse>

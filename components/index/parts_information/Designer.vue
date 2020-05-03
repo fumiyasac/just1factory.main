@@ -7,7 +7,7 @@
       キャリアの始まりはここからでした。シンプルかつ適度なアニメーションやインタラクションがあるものが個人的に好きです。
     </p>
     <div slot="footer">
-      <small class="text-muted">Since: 2008 ~ 2010</small>
+      <small class="text-muted">Since: 2008</small>
     </div>
   </b-card>
 </template>
@@ -17,3 +17,9 @@ export default {
   name: 'Designer'
 }
 </script>
+
+<style>
+.card-title {
+  font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
+}
+</style>
