@@ -2,7 +2,9 @@
   <div class="footer">
     <footer class="page-footer">
       <div class="footer-copyright text-center">
-        <p class="copyright_text">&copy; 2020 Copyright Just1factory</p>
+        <p class="copyright_text">
+          &copy; 2020 Copyright Just1factory
+        </p>
       </div>
     </footer>
   </div>

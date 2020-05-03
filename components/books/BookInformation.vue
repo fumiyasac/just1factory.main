@@ -11,9 +11,15 @@
         </b-col>
         <b-col cols="9">
           <div class="container">
-            <h4 class="developer_name">iOSアプリ開発「UI実装であると嬉しいレシピブック」</h4>
+            <h4 class="developer_name">
+              iOSアプリ開発「UI実装であると嬉しいレシピブック」
+            </h4>
             <p>
-              <span class="small">頒布イベント</span>: <b-badge pill variant="info">技術書典5</b-badge>
+              <span class="small">頒布イベント</span>:
+              &nbsp;
+              <b-badge pill variant="info">
+                技術書典5
+              </b-badge>
             </p>
           </div>
           <div class="container pt-3">
@@ -30,7 +36,9 @@
           <div class="container text-center pt-2">
             <ul class="list-unstyled list-inline">
               <li class="list-inline-item">
-                <b-button class="mt0" href="https://just1factory.booth.pm/items/1021745" target="_blank">Boothで同人誌版を購入する</b-button>
+                <b-button class="mt0" href="https://just1factory.booth.pm/items/1021745" target="_blank">
+                  Boothで同人誌版を購入する
+                </b-button>
               </li>
             </ul>
           </div>
@@ -46,9 +54,19 @@
         </b-col>
         <b-col cols="9">
           <div class="container">
-            <h4 class="developer_name">iOSアプリ開発「UI実装であると嬉しいレシピブック Vol.2」</h4>
+            <h4 class="developer_name">
+              iOSアプリ開発「UI実装であると嬉しいレシピブック Vol.2」
+            </h4>
             <p>
-              <span class="small">頒布イベント</span>: <b-badge pill variant="info">技術書典7</b-badge> <b-badge pill variant="info">技術書同人誌博覧会</b-badge>
+              <span class="small">頒布イベント</span>:
+              &nbsp;
+              <b-badge pill variant="info">
+                技術書典7
+              </b-badge>
+              &nbsp;
+              <b-badge pill variant="info">
+                技術書同人誌博覧会
+              </b-badge>
             </p>
           </div>
           <div class="container pt-3">
@@ -65,7 +83,9 @@
           <div class="container text-center pt-2">
             <ul class="list-unstyled list-inline">
               <li class="list-inline-item">
-                <b-button class="mt0" href="https://booth.pm/ja/items/1445531" target="_blank">Boothで同人誌版を購入する</b-button>
+                <b-button class="mt0" href="https://booth.pm/ja/items/1445531" target="_blank">
+                  Boothで同人誌版を購入する
+                </b-button>
               </li>
             </ul>
           </div>
@@ -81,9 +101,15 @@
         </b-col>
         <b-col cols="9">
           <div class="container">
-            <h4 class="developer_name">iOSアプリ開発「UI実装であると嬉しいレシピブック まかない編」</h4>
+            <h4 class="developer_name">
+              iOSアプリ開発「UI実装であると嬉しいレシピブック まかない編」
+            </h4>
             <p>
-              <span class="small">頒布イベント</span>: <b-badge pill variant="info">技術書典8(応援祭)</b-badge>
+              <span class="small">頒布イベント</span>:
+              &nbsp;
+              <b-badge pill variant="info">
+                技術書典8(応援祭)
+              </b-badge>
             </p>
           </div>
           <div class="container pt-3">
@@ -101,7 +127,9 @@
           <div class="container text-center pt-2">
             <ul class="list-unstyled list-inline">
               <li class="list-inline-item">
-                <b-button class="mt0" href="https://booth.pm/ja/items/1835468" target="_blank">Boothで同人誌版を購入する</b-button>
+                <b-button class="mt0" href="https://booth.pm/ja/items/1835468" target="_blank">
+                  Boothで同人誌版を購入する
+                </b-button>
               </li>
             </ul>
           </div>

@@ -1,7 +1,9 @@
 <template>
   <div>
     <div class="container developer_block">
-      <h3 class="developer_name">fumiyasac (Fumiya Sakai)</h3>
+      <h3 class="developer_name">
+        fumiyasac (Fumiya Sakai)
+      </h3>
       <p>1984年9月21日 石川県金沢市生まれ / 東京都在住</p>
     </div>
     <div class="container description_block">

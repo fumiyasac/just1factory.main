@@ -1,7 +1,9 @@
 <template>
   <b-container>
     <div class="message_block">
-      <h2 class="message_text">Developer's Social Links</h2>
+      <h2 class="message_text">
+        Developer's Social Links
+      </h2>
       <div>
         <div class="container">
           <div class="text-center social_block">

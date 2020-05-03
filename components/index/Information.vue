@@ -1,7 +1,9 @@
 <template>
   <div class="container">
     <div class="information_block">
-      <h2 class="message_text">Developer's Summary</h2>
+      <h2 class="message_text">
+        Developer's Summary
+      </h2>
       <b-card-group deck>
         <MobileEngineer />
         <WebEngineer />

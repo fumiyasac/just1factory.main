@@ -1,7 +1,9 @@
 <template>
   <b-container>
     <div class="message_block">
-      <h2 class="message_text">I firmly look at something ivisible to make a good work.</h2>
+      <h2 class="message_text">
+        I firmly look at something ivisible to make a good work.
+      </h2>
       <p>
         <strong>「目に見えない大切な部分」をしっかりと見つめる。</strong><br>
         決して特別ではない当たり前の事をし続けて行く。そしてその繰り返しがかけがえのない財産になる。<br>
