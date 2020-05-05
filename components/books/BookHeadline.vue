@@ -1,3 +1,4 @@
+<!-- Template -->
 <template>
   <b-container>
     <div class="message_block">
@@ -11,12 +12,16 @@
   </b-container>
 </template>
 
-<script>
-export default {
-  name: 'BookHeadline'
-}
+<!-- Script -->
+<script lang="ts">
+import { Component, Vue } from 'nuxt-property-decorator'
+
+@Component
+
+export default class BookHeadline extends Vue {}
 </script>
 
+<!-- Style -->
 <style>
 .message_block {
   padding-top: 80px;

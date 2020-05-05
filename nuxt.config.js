@@ -1,5 +1,15 @@
 const pkg = require('./package')
 
+/**
+ * MEMO: Nuxt.jsのTypescript化について
+ * (1) まずは公式ドキュメントに則って進めるのが基本方針
+ * → https://typescript.nuxtjs.org/ja/guide/
+ * (2) Nuxt.js2.10 + TypeScript環境構成をやってみた（※「vue-property-decorator」は「nuxt-property-decorator」に置き換えています）
+ * → https://medium.com/anti-pattern-engineering/nuxt-js-typescript%E7%92%B0%E5%A2%83%E6%A7%8B%E6%88%90%E3%82%92%E3%82%84%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F-c27df2011e7d
+ * (3) Vueファイルの書き換えは下記を参考にしています
+ * → https://qiita.com/ryo2132/items/4d43209ea89ad1297426
+ */
+
 module.exports = {
   mode: 'spa',
 
@@ -45,6 +55,7 @@ module.exports = {
     // Doc: https://bootstrap-vue.js.org/docs/
     'bootstrap-vue/nuxt',
     '@nuxtjs/font-awesome',
+    '@nuxt/typescript-build'
   ],
   /*
   ** Axios module configuration

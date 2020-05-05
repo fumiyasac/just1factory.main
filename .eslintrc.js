@@ -5,10 +5,13 @@ module.exports = {
     node: true
   },
   parserOptions: {
-    parser: 'babel-eslint'
+    ecmaFeatures: { 
+      legacyDecorators: true
+    }
   },
   extends: [
-    'plugin:vue/recommended'
+    'plugin:vue/recommended',
+    '@nuxtjs/eslint-config-typescript'
   ],
   // required to lint *.vue files
   plugins: [

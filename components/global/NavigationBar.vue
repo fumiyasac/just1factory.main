@@ -1,3 +1,4 @@
+<!-- Template -->
 <template>
   <b-navbar class="navbar_block" color="dark" toggleable="md" type="dark" sticky>
     <b-navbar-toggle target="nav_collapse" />
@@ -8,7 +9,7 @@
       <b-navbar-nav class="ml-auto">
         <b-navbar-nav>
           <b-nav-item href="/books">
-            BOOKS
+            Books
           </b-nav-item>
           <b-nav-item href="https://www.wantedly.com/users/291450" target="_blank">
             Wantedly
@@ -19,12 +20,16 @@
   </b-navbar>
 </template>
 
-<script>
-export default {
-  name: 'NavigationBar'
-}
+<!-- Script -->
+<script lang="ts">
+import { Component, Vue } from 'nuxt-property-decorator'
+
+@Component
+
+export default class NavigationBar extends Vue {}
 </script>
 
+<!-- Style -->
 <style>
 .navbar_block {
   background-color: #444444;
@@ -32,5 +37,9 @@ export default {
 .logo_font {
   font-size: 22px;
   font-family: 'Palatino', 'Arial Narrow', Arial, sans-serif;
+}
+a.nav-link {
+  font-family: 'Palatino', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
 }
 </style>

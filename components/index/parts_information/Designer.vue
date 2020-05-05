@@ -1,3 +1,4 @@
+<!-- Template -->
 <template>
   <b-card title="UI/UX Design" img-src="/summaries/card_image3.jpg" img-alt="Design" img-top>
     <div slot="header">
@@ -12,12 +13,16 @@
   </b-card>
 </template>
 
-<script>
-export default {
-  name: 'Designer'
-}
+<!-- Script -->
+<script lang="ts">
+import { Component, Vue } from 'nuxt-property-decorator'
+
+@Component
+
+export default class Designer extends Vue {}
 </script>
 
+<!-- Style -->
 <style>
 .card-title {
   font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;

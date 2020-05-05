@@ -1,7 +1,8 @@
+<!-- Template -->
 <template>
   <b-card title="Web Application" img-src="/summaries/card_image2.jpg" img-alt="Server" img-top>
     <div slot="header">
-      <small class="text-muted">PHP / Ruby / Go</small>
+      <small class="text-muted">PHP / Ruby / Go / Kotlin</small>
     </div>
     <p class="card-text">
       20代後半にWebエンジニアになり、その際には主に大規模Webサービスやゲームのバックエンド側の開発を経験しました。
@@ -12,8 +13,11 @@
   </b-card>
 </template>
 
-<script>
-export default {
-  name: 'WebEngineer'
-}
+<!-- Script -->
+<script lang="ts">
+import { Component, Vue } from 'nuxt-property-decorator'
+
+@Component
+
+export default class WebEngineer extends Vue {}
 </script>

@@ -1,3 +1,4 @@
+<!-- Template -->
 <template>
   <b-container>
     <div class="message_block">
@@ -56,12 +57,16 @@
   </b-container>
 </template>
 
-<script>
-export default {
-  name: 'SocialLink'
-}
+<!-- Script -->
+<script lang="ts">
+import { Component, Vue } from 'nuxt-property-decorator'
+
+@Component
+
+export default class SocialLink extends Vue {}
 </script>
 
+<!-- Style -->
 <style>
 .message_block {
   padding-top: 80px;
@@ -76,30 +81,30 @@ export default {
   margin: 16px 0;
 }
 .fa {
-	margin-right: 6px;
+  margin-right: 6px;
 }
 .facebook_color {
-	color: #3b5998;
+  color: #3b5998;
 }
 .github_color {
-	color: #333333;
+  color: #333333;
 }
 .twitter_color {
-	color: #00aced;
+  color: #00aced;
 }
 .slideshare_color {
-	color: #0077b5;
+  color: #0077b5;
 }
 .qiita_color {
-	color: #55c500;
+  color: #55c500;
 }
 .medium_color {
-	color: #00ab6c;
+  color: #00ab6c;
 }
 .linkedin_color {
-	color: #2867B2;  
+  color: #2867B2;
 }
 .note_color {
-	color: #249f80;
+  color: #249f80;
 }
 </style>

@@ -6,14 +6,17 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { Component, Vue } from 'nuxt-property-decorator'
 import NavigationBar from '~/components/global/NavigationBar.vue'
 import FooterBar from '~/components/global/FooterBar.vue'
 
-export default {
+@Component({
   components: {
     NavigationBar,
-    FooterBar,
+    FooterBar
   }
-}
+})
+
+export default class extends Vue {}
 </script>

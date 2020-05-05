@@ -1,3 +1,4 @@
+<!-- Template -->
 <template>
   <div class="container text-center skills_block">
     <b-badge pill variant="info">
@@ -30,8 +31,11 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'Skills'
-}
+<!-- Script -->
+<script lang="ts">
+import { Component, Vue } from 'nuxt-property-decorator'
+
+@Component
+
+export default class Skills extends Vue {}
 </script>

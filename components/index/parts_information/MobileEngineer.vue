@@ -1,3 +1,4 @@
+<!-- Template -->
 <template>
   <b-card title="Mobile Application" img-src="/summaries/card_image1.jpg" img-alt="iOS App" img-top>
     <div slot="header">
@@ -12,8 +13,11 @@
   </b-card>
 </template>
 
-<script>
-export default {
-  name: 'MobileEngineer'
-}
+<!-- Script -->
+<script lang="ts">
+import { Component, Vue } from 'nuxt-property-decorator'
+
+@Component
+
+export default class MobileEngineer extends Vue {}
 </script>

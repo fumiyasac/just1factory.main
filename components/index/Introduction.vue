@@ -1,3 +1,4 @@
+<!-- Template -->
 <template>
   <b-container>
     <div class="introduction_block">
@@ -17,21 +18,25 @@
   </b-container>
 </template>
 
-<script>
+<!-- Script -->
+<script lang="ts">
+import { Component, Vue } from 'nuxt-property-decorator'
 import Avatar from '~/components/index/parts_introduction/Avatar.vue'
 import Profile from '~/components/index/parts_introduction/Profile.vue'
 import Skills from '~/components/index/parts_introduction/Skills.vue'
 
-export default {
-  name: 'Introduction',
+@Component({
   components: {
     Avatar,
     Profile,
     Skills
   }
-}
+})
+
+export default class Introduction extends Vue {}
 </script>
 
+<!-- Style -->
 <style>
 .introduction_block {
   padding-top: 80px;

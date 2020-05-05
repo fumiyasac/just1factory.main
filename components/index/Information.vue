@@ -1,3 +1,4 @@
+<!-- Template -->
 <template>
   <div class="container">
     <div class="information_block">
@@ -12,19 +13,26 @@
     </div>
   </div>
 </template>
-<script>
+
+<!-- Script -->
+<script lang="ts">
+import { Component, Vue } from 'nuxt-property-decorator'
 import Designer from '~/components/index/parts_information/Designer.vue'
 import MobileEngineer from '~/components/index/parts_information/MobileEngineer.vue'
 import WebEngineer from '~/components/index/parts_information/WebEngineer.vue'
-export default {
-  name: 'Information',
+
+@Component({
   components: {
     Designer,
     MobileEngineer,
     WebEngineer
   }
-}
+})
+
+export default class Information extends Vue {}
 </script>
+
+<!-- Style -->
 <style>
 .information_block {
   padding-top: 80px;

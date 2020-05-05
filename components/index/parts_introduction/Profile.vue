@@ -1,3 +1,4 @@
+<!-- Template -->
 <template>
   <div>
     <div class="container developer_block">
@@ -16,12 +17,16 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'Profile'
-}
+<!-- Script -->
+<script lang="ts">
+import { Component, Vue } from 'nuxt-property-decorator'
+
+@Component
+
+export default class Profile extends Vue {}
 </script>
 
+<!-- Style -->
 <style>
 .developer_block h3 {
   font-size: 18px;
