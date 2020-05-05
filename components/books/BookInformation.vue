@@ -25,7 +25,7 @@
           </div>
           <div class="container pt-3">
             <p>
-              <span class="small">販売価格</span>: <strong class="large text-danger">¥1,000</strong><br>
+              <span class="small">販売価格（同人誌版）</span>: <strong class="large text-danger">¥1,000</strong><br>
               <span class="small">※1 現在は電子版のみ販売中です。</span><br>
               <span class="small">※2 収録サンプルはXcode11.3.1 &amp; Swift5.1に対応しております。</span>
             </p>
@@ -98,7 +98,7 @@
           </div>
           <div class="container pt-3">
             <p>
-              <span class="small">販売価格</span>: <strong class="large text-danger">¥1,000</strong><br>
+              <span class="small">販売価格（同人誌版）</span>: <strong class="large text-danger">¥1,000</strong><br>
               <span class="small">※1 現在は電子版のみ販売中です。</span><br>
               <span class="small">※2 収録サンプルはXcode11.3.1 &amp; Swift5.1に対応しております。</span>
             </p>
@@ -164,7 +164,7 @@
           </div>
           <div class="container pt-3">
             <p>
-              <span class="small">販売価格</span>: <strong class="large text-danger">¥1,000</strong><br>
+              <span class="small">販売価格（同人誌版）</span>: <strong class="large text-danger">¥1,000</strong><br>
               <span class="small">※1 現在は電子版のみ販売中です。</span><br>
               <span class="small">※2 収録サンプルはXcode11.3.1 &amp; Swift5.1に対応しております。</span>
             </p>
