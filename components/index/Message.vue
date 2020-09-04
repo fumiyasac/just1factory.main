@@ -3,7 +3,7 @@
   <b-container>
     <div class="message_block">
       <h2 class="message_text">
-        I firmly look at something ivisible to make a good work.
+        I firmly look at something invisible to make a good work.
       </h2>
       <p>
         <strong>「目に見えない大切な部分」をしっかりと見つめる。</strong><br>
