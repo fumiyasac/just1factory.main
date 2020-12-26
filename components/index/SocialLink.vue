@@ -11,7 +11,7 @@
             <ul class="list-unstyled list-inline">
               <li class="clickable-space list-inline-item">
                 <a href="https://github.com/fumiyasac" target="_blank" class="btn-floating btn-lg">
-                  <i class="fa fa-github github_color" />Github
+                  <i class="fa fa-github github_color" />GitHub
                 </a>
               </li>
               <li class="clickable-space list-inline-item">

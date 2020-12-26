@@ -16,7 +16,7 @@
               iOSアプリ開発「UI実装であると嬉しいレシピブック」
             </h4>
             <p>
-              <span class="small">頒布イベント</span>:
+              <span class="small">初回頒布イベント</span>:
               &nbsp;
               <b-badge pill variant="info">
                 技術書典5
@@ -27,7 +27,7 @@
             <p>
               <span class="small">販売価格（同人誌版）</span>: <strong class="large text-danger">¥1,000</strong><br>
               <span class="small">※1 現在は電子版のみ販売中です。</span><br>
-              <span class="small">※2 収録サンプルはXcode11.3.1 &amp; Swift5.1に対応しております。</span>
+              <span class="small">※2 収録サンプルはXcode12.3 &amp; Swift5.3に対応しております。</span>
             </p>
           </div>
           <div class="container pt-3">
@@ -81,7 +81,7 @@
               iOSアプリ開発「UI実装であると嬉しいレシピブック Vol.2」
             </h4>
             <p>
-              <span class="small">頒布イベント</span>:
+              <span class="small">初回頒布イベント</span>:
               &nbsp;
               <b-badge pill variant="info">
                 技術書典7
@@ -90,17 +90,13 @@
               <b-badge pill variant="info">
                 第1回技術書同人誌博覧会
               </b-badge>
-              &nbsp;
-              <b-badge pill variant="info">
-                第2回技術書同人誌博覧会
-              </b-badge>
             </p>
           </div>
           <div class="container pt-3">
             <p>
               <span class="small">販売価格（同人誌版）</span>: <strong class="large text-danger">¥1,000</strong><br>
               <span class="small">※1 現在は電子版のみ販売中です。</span><br>
-              <span class="small">※2 収録サンプルはXcode11.3.1 &amp; Swift5.1に対応しております。</span>
+              <span class="small">※2 収録サンプルはXcode12.3 &amp; Swift5.3に対応しております。</span>
             </p>
           </div>
           <div class="container pt-3">
@@ -155,7 +151,7 @@
               iOSアプリ開発「UI実装であると嬉しいレシピブック まかない編」
             </h4>
             <p>
-              <span class="small">頒布イベント</span>:
+              <span class="small">初回頒布イベント</span>:
               &nbsp;
               <b-badge pill variant="info">
                 技術書典8(応援祭)
@@ -166,7 +162,7 @@
             <p>
               <span class="small">販売価格（同人誌版）</span>: <strong class="large text-danger">¥1,000</strong><br>
               <span class="small">※1 現在は電子版のみ販売中です。</span><br>
-              <span class="small">※2 収録サンプルはXcode11.3.1 &amp; Swift5.1に対応しております。</span>
+              <span class="small">※2 収録サンプルはXcode12.3 &amp; Swift5.3に対応しております。</span>
             </p>
           </div>
           <div class="container pt-3">
@@ -211,7 +207,7 @@
               iOSアプリ開発「UI実装であると嬉しいレシピブック おもしろ編」
             </h4>
             <p>
-              <span class="small">頒布イベント</span>:
+              <span class="small">初回頒布イベント</span>:
               &nbsp;
               <b-badge pill variant="info">
                 技術書典9
@@ -222,7 +218,7 @@
             <p>
               <span class="small">販売価格（同人誌版）</span>: <strong class="large text-danger">¥1,000</strong><br>
               <span class="small">※1 現在は電子版のみ販売中です。</span><br>
-              <span class="small">※2 収録サンプルはXcode11.6 &amp; Swift5.2に対応しております。</span>
+              <span class="small">※2 収録サンプルはXcode12.3 &amp; Swift5.3に対応しております。</span>
             </p>
           </div>
           <div class="container pt-3">
