@@ -250,6 +250,39 @@
         </b-col>
       </b-row>
       <hr>
+      <!-- Mobile UI note -->
+      <b-row class="pt-4">
+        <b-col cols="3">
+          <div>
+            <b-img thumbnail fluid class="img-responsive" src="/books/mobile_point_note_examples.jpg" />
+          </div>
+        </b-col>
+        <b-col cols="9">
+          <div class="container">
+            <h4 class="developer_name">
+              モバイルアプリ開発実装考察や重要ポイントを綴ったノート事例集
+            </h4>
+            <p>
+              <span class="small">初回頒布イベント</span>:
+              &nbsp;
+              <b-badge pill variant="info">
+                第11回技術書同人誌博覧会
+              </b-badge>
+            </p>
+          </div>
+          <div class="container pt-3">
+            <p>
+              <span class="small">販売価格（同人誌版）</span>: <strong class="large text-danger">¥500</strong><br>
+            </p>
+          </div>
+          <div class="container pt-3">
+            <p>本書 『モバイルアプリ開発実装考察や重要ポイントを綴ったノート事例集』 は、複雑なUIの実装ポイントからアーキテクチャの理解促進まで、モバイルアプリ開発に欠かせない知見をノート形式で丁寧に紹介する一冊です。UIKitからSwiftUIへのシフトが進む中でもUI実装に情熱を注ぎ、iOSとAndroidの両方に取り組んできた著者が、日々の開発を通して得た経験や学びを、自身の“ノート”を通じて公開しています。</p>
+            <p>著者自身が蓄積してきたノートには、書籍やインターネット、勉強会、GitHubなどから得た多様な情報を整理・咀嚼し、自分の開発現場にフィットする形へと昇華させた工夫とプロセスが詰まっています。ただメモを残すだけでなく、必要なときにすぐ参照できる“学習の道標”として活用する方法が、本書を通じて学べることでしょう。</p>
+            <p>UI実装や新しい技術へのキャッチアップを効率よく進めたい方、また情報の整理・活用方法に悩んでいる方にとって、本書のノート事例は大いに役立つはずです。読者の皆さまが自分の開発スタイルや学習法を見直し、より実践に活かせる知見へと深めるきっかけになることを願っています。</p>
+          </div>
+        </b-col>
+      </b-row>
+      <hr>
     </div>
   </div>
 </template>
