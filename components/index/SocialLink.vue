@@ -10,11 +10,6 @@
           <div class="text-center social_block">
             <ul class="list-unstyled list-inline">
               <li class="clickable-space list-inline-item">
-                <a href="https://github.com/fumiyasac" target="_blank" class="btn-floating btn-lg">
-                  <i class="fa fa-github github_color" />GitHub
-                </a>
-              </li>
-              <li class="clickable-space list-inline-item">
                 <a href="https://www.slideshare.net/fumiyasakai37" target="_blank" class="btn-floating btn-lg">
                   <i class="fa fa-slideshare slideshare_color" />SlideShare
                 </a>
@@ -31,7 +26,7 @@
               </li>
               <li class="clickable-space list-inline-item">
                 <a href="https://twitter.com/fumiyasac" target="_blank" class="btn-floating btn-lg">
-                  <i class="fa fa-twitter twitter_color" />Twitter
+                  <i class="fa fa-twitter twitter_color" />X(Twitter)
                 </a>
               </li>
               <li class="clickable-space list-inline-item">
