@@ -4,7 +4,7 @@
     <footer class="page-footer">
       <div class="footer-copyright text-center">
         <p class="copyright_text">
-          &copy; 2020 Copyright Just1factory
+          &copy; 2025 Copyright Just1factory
         </p>
       </div>
     </footer>
