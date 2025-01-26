@@ -11,8 +11,14 @@
           <b-nav-item href="/books">
             Books
           </b-nav-item>
-          <b-nav-item href="https://www.wantedly.com/users/291450" target="_blank">
-            Wantedly
+          <b-nav-item href="/https://techblog-just1factory.vercel.app/" target="_blank">
+            Private
+          </b-nav-item>
+          <b-nav-item href="https://speakerdeck.com/fumiyasac0921" target="_blank">
+            Speaker Deck
+          </b-nav-item>
+          <b-nav-item href="https://github.com/fumiyasac" target="_blank">
+            GitHub
           </b-nav-item>
         </b-navbar-nav>
       </b-navbar-nav>
