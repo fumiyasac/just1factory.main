@@ -134,8 +134,9 @@ just1factory.main/
 > 補足: create-next-app が生成した `web/AGENTS.md`（Next16 破壊的変更の注意書き）と `web/CLAUDE.md` はそのまま残す。
 
 ### Phase 2 — アセット移設
-- [ ] `static/summaries/*`, `static/books/*` を `web/public/` へコピー（パスは `/summaries/...`, `/books/...` のまま）
-- [ ] 参照が404にならないことを確認
+- [x] `static/summaries/*`（3枚）, `static/books/*`（5枚）を `web/public/` へコピー（パスは `/summaries/...`, `/books/...` のまま）
+- [x] 全8枚が **バイト単位で一致**することを `cmp` で検証
+- [ ] 参照が404にならないことは、コンポーネント移植後（Phase 4/5）にビルド出力で確認
 
 ### Phase 3 — 共通レイアウト移植
 - [ ] `NavigationBar`（**"use client"**：ハンバーガー開閉を `useState` で実装）
@@ -311,8 +312,8 @@ just1factory.main/
 |---|---|---|
 | 0 準備 | ✅ 完了 | ブランチ作成・計画コミット・Node22(nvm)確定・ベースライン=既存dist |
 | 1 雛形 | ✅ 完了 | Next16.2.12+React19+TS。静的export/Bootstrap4.6/FontAwesome4.7 導入・ビルド成功 |
-| 2 アセット | 🟨 作業中 | |
-| 3 レイアウト | ⬜ 未着手 | |
+| 2 アセット | ✅ 完了 | 画像8枚をweb/publicへ移設、cmpでバイト一致を確認 |
+| 3 レイアウト | 🟨 作業中 | |
 | 4 トップ | ⬜ 未着手 | |
 | 5 Books | ⬜ 未着手 | |
 | 6 ビルド検証 | ⬜ 未着手 | |
