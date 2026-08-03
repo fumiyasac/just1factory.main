@@ -4,6 +4,8 @@ import type { Metadata } from "next";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
 import "./globals.css";
+import NavigationBar from "@/components/global/NavigationBar";
+import FooterBar from "@/components/global/FooterBar";
 
 // 旧 nuxt.config.js の head を踏襲（title は package.json の description 相当）
 export const metadata: Metadata = {
@@ -20,9 +22,12 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body>
-        {/* 旧 layouts/default.vue の #wrapper 構造を踏襲。
-            NavigationBar / FooterBar は Phase 3 でここに配置する。 */}
-        <div id="wrapper">{children}</div>
+        {/* 旧 layouts/default.vue の #wrapper 構造を踏襲 */}
+        <div id="wrapper">
+          <NavigationBar />
+          {children}
+          <FooterBar />
+        </div>
       </body>
     </html>
   );

@@ -139,10 +139,11 @@ just1factory.main/
 - [ ] 参照が404にならないことは、コンポーネント移植後（Phase 4/5）にビルド出力で確認
 
 ### Phase 3 — 共通レイアウト移植
-- [ ] `NavigationBar`（**"use client"**：ハンバーガー開閉を `useState` で実装）
-- [ ] `FooterBar`（Copyright 表記維持）
-- [ ] `app/layout.tsx` で NavigationBar / children / FooterBar を配置（`layouts/default.vue` と同等）
-- [ ] 付随 `<style>` は CSS Modules もしくは `globals.css` に移設（クラス名・値は現行を厳密に踏襲）
+- [x] `NavigationBar`（**"use client"**：ハンバーガー開閉を `useState` で実装。内部遷移は `next/link`、外部は `<a target="_blank">`）
+- [x] `FooterBar`（Copyright 表記「&copy; 2025 Copyright Just1factory」を現行のまま維持）
+- [x] `app/layout.tsx` で `#wrapper` 内に NavigationBar / children / FooterBar を配置（`layouts/default.vue` と同等）
+- [x] 付随 `<style>` を `globals.css` に移設（`.navbar_block` #444444, `.logo_font`, `a.nav-link`, `.footer`, `.footer-copyright p` を厳密踏襲）
+- [x] ビルドで brand/footer/toggler と `/books/` リンク（trailingSlash）を出力確認
 
 ### Phase 4 — トップページ `/` 移植
 - [ ] `Message`
@@ -313,8 +314,8 @@ just1factory.main/
 | 0 準備 | ✅ 完了 | ブランチ作成・計画コミット・Node22(nvm)確定・ベースライン=既存dist |
 | 1 雛形 | ✅ 完了 | Next16.2.12+React19+TS。静的export/Bootstrap4.6/FontAwesome4.7 導入・ビルド成功 |
 | 2 アセット | ✅ 完了 | 画像8枚をweb/publicへ移設、cmpでバイト一致を確認 |
-| 3 レイアウト | 🟨 作業中 | |
-| 4 トップ | ⬜ 未着手 | |
+| 3 レイアウト | ✅ 完了 | NavigationBar(client)+FooterBar作成、layoutへ配置、styleをglobalsへ移設 |
+| 4 トップ | 🟨 作業中 | |
 | 5 Books | ⬜ 未着手 | |
 | 6 ビルド検証 | ⬜ 未着手 | |
 | 7 プレビュー | ⬜ 未着手 | |

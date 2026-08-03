@@ -4,3 +4,24 @@
  * ここには各 Vue コンポーネントの <style> から移設した独自スタイルのみを追記していく。
  * （Phase 3 以降で NavigationBar / FooterBar 等のスタイルをここへ集約）
  */
+
+/* === global/NavigationBar（旧 NavigationBar.vue <style>） === */
+.navbar_block {
+  background-color: #444444;
+}
+.logo_font {
+  font-size: 22px;
+  font-family: 'Palatino', 'Arial Narrow', Arial, sans-serif;
+}
+a.nav-link {
+  font-family: 'Palatino', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+}
+
+/* === global/FooterBar（旧 FooterBar.vue <style>） === */
+.footer {
+  padding: 60px 0;
+}
+.footer-copyright p {
+  color: #888888;
+}
