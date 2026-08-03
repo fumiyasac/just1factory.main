@@ -108,9 +108,19 @@ just1factory.main/
 ## 4. 具体的な移行ステップ（フェーズ別チェックリスト）
 
 ### Phase 0 — 準備
-- [ ] `feature/nextjs-migration` ブランチを作成
-- [ ] 旧サイトのビルド確認（`yarn generate` が通ること＝比較の基準を確保）
-- [ ] 旧サイトの見た目を基準スクショとして保存（`/` と `/books`、デスクトップ幅・モバイル幅）
+- [x] `feature/nextjs-migration` ブランチを作成
+- [x] 比較基準の確保：旧サイトを再ビルドせず、リポジトリ内の既存 `dist/`（`index.html` / `books/index.html`）をベースラインとする
+- [x] 実行環境の確定（下記「環境メモ」参照）
+- [ ] 見た目の基準スクショは Phase 6 で新旧を**同一条件で並べて**取得する方針に変更（別々に撮るより厳密なため）
+
+> **環境メモ（重要・再現用）**
+> - システム標準の Node は **v16.17.1**（`/usr/local/bin/node`）で、最新 Next.js は非対応。
+> - `nvm` に **v22.23.1** が入っており、これを使う。各シェル呼び出しで state が消えるため、node 系コマンドは毎回以下で有効化する:
+>   ```bash
+>   export NVM_DIR="$HOME/.nvm"; . "$NVM_DIR/nvm.sh"; nvm use 22
+>   ```
+> - `web/.nvmrc` に `22` を置き、プロジェクトの Node を固定する。
+> - Homebrew は `/usr/local/bin/brew`（Intel系）。`.zprofile` が参照する `/opt/homebrew/bin/brew` は存在せず警告が出るが無害。
 
 ### Phase 1 — Next.js 雛形作成（`web/`）
 - [ ] `web/` に Next.js（TypeScript, App Router, ESLint, `src/` なし想定）を作成
@@ -296,8 +306,8 @@ just1factory.main/
 ## 11. 進捗トラッカー
 | Phase | 状態 | メモ |
 |---|---|---|
-| 0 準備 | ⬜ 未着手 | |
-| 1 雛形 | ⬜ 未着手 | |
+| 0 準備 | ✅ 完了 | ブランチ作成・計画コミット・Node22(nvm)確定・ベースライン=既存dist |
+| 1 雛形 | 🟨 作業中 | |
 | 2 アセット | ⬜ 未着手 | |
 | 3 レイアウト | ⬜ 未着手 | |
 | 4 トップ | ⬜ 未着手 | |
