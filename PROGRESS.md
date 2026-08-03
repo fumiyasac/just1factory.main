@@ -123,12 +123,15 @@ just1factory.main/
 > - Homebrew は `/usr/local/bin/brew`（Intel系）。`.zprofile` が参照する `/opt/homebrew/bin/brew` は存在せず警告が出るが無害。
 
 ### Phase 1 — Next.js 雛形作成（`web/`）
-- [ ] `web/` に Next.js（TypeScript, App Router, ESLint, `src/` なし想定）を作成
-- [ ] `next.config` に `output: 'export'` と `images: { unoptimized: true }` を設定
-- [ ] `bootstrap@4.6.x` と `font-awesome@4.7.0` を導入
-- [ ] `app/layout.tsx` で Bootstrap CSS / Font Awesome CSS / グローバル CSS を import
-- [ ] `metadata`（title・description・viewport）を旧 `nuxt.config.js` から移植
-- [ ] `next dev` で空ページが起動することを確認
+- [x] `web/` に Next.js を作成（**Next 16.2.12 / React 19.2.4 / TypeScript / App Router / ESLint / src なし**）
+- [x] `next.config.ts` に `output: 'export'` / `trailingSlash: true` / `images.unoptimized: true` / `turbopack.root` を設定
+- [x] `bootstrap@4.6.2` と `font-awesome@4.7.0` を導入
+- [x] `app/layout.tsx` で Bootstrap CSS → Font Awesome CSS → globals.css の順で import（`<html lang="ja">`、`#wrapper` 構造）
+- [x] `metadata`（title・description）を旧 `nuxt.config.js` から移植（viewport は Next が既定で付与）
+- [x] `next build` で静的エクスポート成功を確認（`out/index.html` 生成、Bootstrap の `card-deck` と Font Awesome フォントがバンドルされることを検証済み）
+- [x] テンプレート由来の不要ファイル（public の SVG 群、page.module.css）を削除
+
+> 補足: create-next-app が生成した `web/AGENTS.md`（Next16 破壊的変更の注意書き）と `web/CLAUDE.md` はそのまま残す。
 
 ### Phase 2 — アセット移設
 - [ ] `static/summaries/*`, `static/books/*` を `web/public/` へコピー（パスは `/summaries/...`, `/books/...` のまま）
@@ -307,8 +310,8 @@ just1factory.main/
 | Phase | 状態 | メモ |
 |---|---|---|
 | 0 準備 | ✅ 完了 | ブランチ作成・計画コミット・Node22(nvm)確定・ベースライン=既存dist |
-| 1 雛形 | 🟨 作業中 | |
-| 2 アセット | ⬜ 未着手 | |
+| 1 雛形 | ✅ 完了 | Next16.2.12+React19+TS。静的export/Bootstrap4.6/FontAwesome4.7 導入・ビルド成功 |
+| 2 アセット | 🟨 作業中 | |
 | 3 レイアウト | ⬜ 未着手 | |
 | 4 トップ | ⬜ 未着手 | |
 | 5 Books | ⬜ 未着手 | |
