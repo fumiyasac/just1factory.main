@@ -157,10 +157,11 @@ just1factory.main/
 - [ ] 要確認(Phase 6): `<b-card>` の描画順（img→header→body→footer）と `card-title` のタグ(h4)が現行と一致するか
 
 ### Phase 5 — Books ページ `/books` 移植
-- [ ] `BookHeadline`
-- [ ] `BookInformation`（書籍5件分の row/col・バッジ・価格・外部リンク・画像を厳密移植）
-- [ ] `app/books/page.tsx` で配置
-- [ ] 旧 `/books` とスクショ比較
+- [x] `BookHeadline`
+- [x] `BookInformation`（書籍5件分の row/col・バッジ・価格・外部リンク・画像を厳密移植。構成差があるため `.map()` 化せず1対1転記）
+- [x] `app/books/page.tsx` で配置
+- [x] ビルドで `/books/index.html` 生成、バッジ6・書籍画像5・各Amazon/BOOTH/GitHubリンクの出力を確認、ESLint もクリーン
+- [ ] 旧 `/books` とのスクショ比較は Phase 6 で実施
 
 ### Phase 6 — ビルド & 静的エクスポート検証
 - [ ] `next build` が成功し `web/out/` が生成される
@@ -319,8 +320,8 @@ just1factory.main/
 | 2 アセット | ✅ 完了 | 画像8枚をweb/publicへ移設、cmpでバイト一致を確認 |
 | 3 レイアウト | ✅ 完了 | NavigationBar(client)+FooterBar作成、layoutへ配置、styleをglobalsへ移設 |
 | 4 トップ | ✅ 完了 | Message/Introduction/SocialLink/Information と配下9部品を移植、build/lint OK |
-| 5 Books | 🟨 作業中 | |
-| 6 ビルド検証 | ⬜ 未着手 | |
+| 5 Books | ✅ 完了 | BookHeadline+BookInformation(書籍5件)を忠実移植、build/lint OK |
+| 6 ビルド検証 | 🟨 作業中 | |
 | 7 プレビュー | ⬜ 未着手 | |
 | 8 カットオーバー | ⬜ 未着手 | |
 

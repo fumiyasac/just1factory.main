@@ -101,3 +101,23 @@ a.nav-link {
 .card-title {
   font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
 }
+
+/* === books/BookInformation（旧 BookInformation.vue <style>） === */
+.book_information_block {
+  padding-top: 80px;
+}
+.book_information_block h2 {
+  padding: 0 0 20px 0;
+  color: #444444;
+  font-size: 26px;
+  font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
+}
+i.link_icon {
+  margin-right: 5px;
+}
+i.github_color {
+  color: #333333;
+}
+i.amazon_color {
+  color: #FF9900;
+}
