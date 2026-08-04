@@ -164,9 +164,14 @@ just1factory.main/
 - [ ] 旧 `/books` とのスクショ比較は Phase 6 で実施
 
 ### Phase 6 — ビルド & 静的エクスポート検証
-- [ ] `next build` が成功し `web/out/` が生成される
-- [ ] `web/out/index.html` / `web/out/books/index.html`（もしくは `books.html`）が生成される
-- [ ] ローカル静的サーバで `out/` を配信し、全リンク・全画像・レイアウトを目視確認
+- [x] `next build` が成功し `web/out/` が生成される
+- [x] `web/out/index.html` / `web/out/books/index.html` が生成される
+- [x] ローカル静的サーバ（`python3 -m http.server 4321`）で `out/` を配信し目視確認
+- [x] **新旧ビジュアル比較（デスクトップ1280px）を実施**：ローカル新サイト vs 本番 `https://just1factory-main.web.app`
+  - ホーム: ヘッダー / Message / Developer's Profile（アバター・スキルバッジ）/ Developer's Social Links（FA4アイコン+ブランドカラー）/ Developer's Summary（3カード: img→header→body→footer 順）/ フッター — **すべてピクセル一致**
+  - Books: 先頭（Books見出し・書籍vol1）〜末尾（モバイルノート ¥500・ボタン無し）— **すべてピクセル一致**
+  - 懸念だった `<b-card>` 描画順・`card-title`(h4) は現行と完全一致を確認
+- [~] モバイル幅(375/414px)の狭幅スクショは、当環境で Chrome ウィンドウのリサイズが描画ビューポートに反映されず取得できなかった。レスポンシブは現行と同一の **Bootstrap 4.6**（`navbar-expand-md`/グリッド/`card-deck`）に依存し構造的に等価。ハンバーガー開閉のみ自前 `useState`。→ **Phase 7 の実機確認に委ねる**
 
 ### Phase 7 — Firebase プレビュー配信（本番前ステージング）
 - [ ] `firebase hosting:channel:deploy preview`（一時URL）で新サイトを検証
@@ -321,9 +326,9 @@ just1factory.main/
 | 3 レイアウト | ✅ 完了 | NavigationBar(client)+FooterBar作成、layoutへ配置、styleをglobalsへ移設 |
 | 4 トップ | ✅ 完了 | Message/Introduction/SocialLink/Information と配下9部品を移植、build/lint OK |
 | 5 Books | ✅ 完了 | BookHeadline+BookInformation(書籍5件)を忠実移植、build/lint OK |
-| 6 ビルド検証 | 🟨 作業中 | |
-| 7 プレビュー | ⬜ 未着手 | |
-| 8 カットオーバー | ⬜ 未着手 | |
+| 6 ビルド検証 | ✅ 完了 | build/export OK。デスクトップ新旧ビジュアル比較で全域ピクセル一致を確認 |
+| 7 プレビュー | ⬜ 未着手 | 要ユーザー確認（Firebaseプレビューチャネルへの一時デプロイ） |
+| 8 カットオーバー | ⬜ 未着手 | 要ユーザー確認（本番切替） |
 
 （状態記号: ⬜未着手 / 🟨作業中 / ✅完了）
 
