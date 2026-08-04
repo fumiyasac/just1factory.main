@@ -1,8 +1,16 @@
-// Phase 1 の起動確認用プレースホルダ。Phase 4 で実ページ（Message/Introduction/SocialLink/Information）へ差し替える。
+// 旧 pages/index.vue の移植
+import Message from "@/components/index/Message";
+import Introduction from "@/components/index/Introduction";
+import SocialLink from "@/components/index/SocialLink";
+import Information from "@/components/index/Information";
+
 export default function Home() {
   return (
-    <main className="container">
-      <p className="mt-5">Next.js 移行の雛形が起動しました（Phase 1）。</p>
-    </main>
+    <div>
+      <Message />
+      <Introduction />
+      <SocialLink />
+      <Information />
+    </div>
   );
 }

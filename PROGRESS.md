@@ -146,12 +146,15 @@ just1factory.main/
 - [x] ビルドで brand/footer/toggler と `/books/` リンク（trailingSlash）を出力確認
 
 ### Phase 4 — トップページ `/` 移植
-- [ ] `Message`
-- [ ] `Introduction`（内部に `Avatar` / `Profile` / `Skills`）
-- [ ] `SocialLink`（7 リンク＋各ブランドカラー）
-- [ ] `Information`（`card-deck` 内に `MobileEngineer` / `WebEngineer` / `Designer` の3カード）
-- [ ] `app/page.tsx` で上記を順に配置
-- [ ] 旧 `/` とスクショ比較
+- [x] `Message`
+- [x] `Introduction`（内部に `Avatar` / `Profile` / `Skills`）
+- [x] `SocialLink`（7 リンク＋各ブランドカラー、Font Awesome 4 アイコン）
+- [x] `Information`（`card-deck` 内に `MobileEngineer` / `WebEngineer` / `Designer` の3カード）
+- [x] `app/page.tsx` で上記を順に配置
+- [x] ビルドで全コンテンツ・`card-deck`・`badge-pill`・画像参照の出力を確認、ESLint もクリーン
+- [ ] 旧 `/` とのスクショ比較は Phase 6 で実施
+- [x] ESLint 調整: 静的unoptimized方針のため `@next/next/no-img-element` を off、本文の `'`/`"` は `&apos;`/`&quot;` でエスケープ
+- [ ] 要確認(Phase 6): `<b-card>` の描画順（img→header→body→footer）と `card-title` のタグ(h4)が現行と一致するか
 
 ### Phase 5 — Books ページ `/books` 移植
 - [ ] `BookHeadline`
@@ -315,8 +318,8 @@ just1factory.main/
 | 1 雛形 | ✅ 完了 | Next16.2.12+React19+TS。静的export/Bootstrap4.6/FontAwesome4.7 導入・ビルド成功 |
 | 2 アセット | ✅ 完了 | 画像8枚をweb/publicへ移設、cmpでバイト一致を確認 |
 | 3 レイアウト | ✅ 完了 | NavigationBar(client)+FooterBar作成、layoutへ配置、styleをglobalsへ移設 |
-| 4 トップ | 🟨 作業中 | |
-| 5 Books | ⬜ 未着手 | |
+| 4 トップ | ✅ 完了 | Message/Introduction/SocialLink/Information と配下9部品を移植、build/lint OK |
+| 5 Books | 🟨 作業中 | |
 | 6 ビルド検証 | ⬜ 未着手 | |
 | 7 プレビュー | ⬜ 未着手 | |
 | 8 カットオーバー | ⬜ 未着手 | |

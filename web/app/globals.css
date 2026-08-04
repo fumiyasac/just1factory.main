@@ -25,3 +25,79 @@ a.nav-link {
 .footer-copyright p {
   color: #888888;
 }
+
+/* === index/Message・index/SocialLink 共通（旧 .message_block） === */
+.message_block {
+  padding-top: 80px;
+}
+.message_block h2 {
+  padding: 0 0 20px 0;
+  color: #444444;
+  font-size: 26px;
+  font-family: 'Palatino', "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/* === index/Introduction === */
+.introduction_block {
+  padding-top: 80px;
+}
+.introduction_block h2 {
+  padding: 0 0 20px 0;
+  color: #444444;
+  font-size: 26px;
+  font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* === index/Profile === */
+.developer_block h3 {
+  font-size: 18px;
+  font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* === index/SocialLink（余白・アイコン間隔・ブランドカラー） === */
+.clickable-space {
+  margin: 16px 0;
+}
+.fa {
+  margin-right: 6px;
+}
+.facebook_color {
+  color: #3b5998;
+}
+.github_color {
+  color: #333333;
+}
+.twitter_color {
+  color: #00aced;
+}
+.slideshare_color {
+  color: #0077b5;
+}
+.qiita_color {
+  color: #55c500;
+}
+.medium_color {
+  color: #00ab6c;
+}
+.linkedin_color {
+  color: #2867B2;
+}
+.note_color {
+  color: #249f80;
+}
+
+/* === index/Information === */
+.information_block {
+  padding-top: 80px;
+}
+.information_block h2 {
+  padding: 0 0 20px 0;
+  color: #444444;
+  font-size: 26px;
+  font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* === index/Designer（全カード共通のタイトル書体） === */
+.card-title {
+  font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
+}
