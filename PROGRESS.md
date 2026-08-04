@@ -174,8 +174,10 @@ just1factory.main/
 - [~] モバイル幅(375/414px)の狭幅スクショは、当環境で Chrome ウィンドウのリサイズが描画ビューポートに反映されず取得できなかった。レスポンシブは現行と同一の **Bootstrap 4.6**（`navbar-expand-md`/グリッド/`card-deck`）に依存し構造的に等価。ハンバーガー開閉のみ自前 `useState`。→ **Phase 7 の実機確認に委ねる**
 
 ### Phase 7 — Firebase プレビュー配信（本番前ステージング）
-- [ ] `firebase hosting:channel:deploy preview`（一時URL）で新サイトを検証
-- [ ] 実機（スマホ）＋デスクトップで最終目視
+- [x] `firebase.json` を `web/out` 配信・rewrite無しへ更新（本番は未デプロイのため無影響）
+- [x] Firebase CLI v13.29.2 / `just1factory@gmail.com` でログイン済みを確認
+- [ ] `firebase hosting:channel:deploy preview`（一時URL）で新サイトを配信
+- [ ] 実機（スマホ）＋デスクトップで最終目視（特にモバイルのハンバーガー開閉）
 - [ ] Lighthouse 参考取得（任意）
 
 ### Phase 8 — カットオーバー（本番切替）
@@ -240,19 +242,18 @@ just1factory.main/
 ```json
 { "hosting": { "public": "dist", "rewrites": [ { "source": "**", "destination": "/index.html" } ] } }
 ```
-移行後（案）:
+移行後（**実際に適用した最終形**）:
 ```json
 {
   "hosting": {
     "public": "web/out",
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-    "cleanUrls": true,
-    "rewrites": []
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
   }
 }
 ```
-- 静的エクスポートは `/books` の実体HTMLを生成するため、SPA 用の全域 `**→/index.html` rewrite は**外す**（残すと `/books` 直アクセスがトップに化ける恐れ）。
-- `cleanUrls: true` で `/books.html` を `/books` として配信（Next の出力形態に合わせ最終調整）。
+- 静的エクスポートは `/books` の実体HTMLを生成するため、SPA 用の全域 `**→/index.html` rewrite は**外した**（残すと `/books` 直アクセスがトップに化ける）。
+- `next.config` の `trailingSlash: true` により `out/books/index.html` が生成され、Firebase のディレクトリ配信で `/books/` が解決する。内部リンクも `next/link` が `/books/` を出力するため **`cleanUrls` は付けない**（trailingSlash と併用すると余計なリダイレクトになり得るため）。
+- 404 は Next が生成する `out/404.html` を Firebase が自動使用。
 - `.firebaserc`（`just1factory-main`）は変更不要。
 
 ---
