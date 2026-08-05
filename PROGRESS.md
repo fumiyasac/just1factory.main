@@ -176,9 +176,15 @@ just1factory.main/
 ### Phase 7 — Firebase プレビュー配信（本番前ステージング）
 - [x] `firebase.json` を `web/out` 配信・rewrite無しへ更新（本番は未デプロイのため無影響）
 - [x] Firebase CLI v13.29.2 / `just1factory@gmail.com` でログイン済みを確認
-- [ ] `firebase hosting:channel:deploy preview`（一時URL）で新サイトを配信
-- [ ] 実機（スマホ）＋デスクトップで最終目視（特にモバイルのハンバーガー開閉）
+- [x] `firebase hosting:channel:deploy preview --expires 7d` で配信成功
+  - プレビューURL: `https://just1factory-main--preview-bmepfadt.web.app`（**2026-08-12 失効**）
+  - 本番 `just1factory-main.web.app` は無影響（旧サイトのまま）
+- [x] ルーティング検証: `/`=200 / `/books`=301→`/books/`=200 / 画像=200 / 存在しないパス=404（Nextの404.html）
+- [x] デプロイ済みプレビューをブラウザで表示し描画正常を確認（デスクトップ）
+- [ ] **要ユーザー: 実機（スマホ）で最終目視**（特にモバイルのハンバーガーメニュー開閉）
 - [ ] Lighthouse 参考取得（任意）
+
+> 認証メモ: 保存済みFirebaseトークンが失効していたため、ユーザーが `firebase login --reauth` を実機ターミナルで実施して復旧（対話ログインのため要ユーザー操作）。
 
 ### Phase 8 — カットオーバー（本番切替）
 - [ ] `firebase.json` の `public` を `web/out` に変更
@@ -328,7 +334,7 @@ just1factory.main/
 | 4 トップ | ✅ 完了 | Message/Introduction/SocialLink/Information と配下9部品を移植、build/lint OK |
 | 5 Books | ✅ 完了 | BookHeadline+BookInformation(書籍5件)を忠実移植、build/lint OK |
 | 6 ビルド検証 | ✅ 完了 | build/export OK。デスクトップ新旧ビジュアル比較で全域ピクセル一致を確認 |
-| 7 プレビュー | ⬜ 未着手 | 要ユーザー確認（Firebaseプレビューチャネルへの一時デプロイ） |
+| 7 プレビュー | ✅ 配信完了 | preview-bmepfadt.web.app へ配信、ルーティング検証OK。実機目視のみユーザー待ち |
 | 8 カットオーバー | ⬜ 未着手 | 要ユーザー確認（本番切替） |
 
 （状態記号: ⬜未着手 / 🟨作業中 / ✅完了）
