@@ -11,7 +11,7 @@
           <b-nav-item href="/books">
             Books
           </b-nav-item>
-          <b-nav-item href="/https://techblog-just1factory.vercel.app/" target="_blank">
+          <b-nav-item href="https://techblog-just1factory.vercel.app/" target="_blank">
             Private
           </b-nav-item>
           <b-nav-item href="https://speakerdeck.com/fumiyasac0921" target="_blank">
