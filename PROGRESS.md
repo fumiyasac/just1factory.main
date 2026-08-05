@@ -187,12 +187,12 @@ just1factory.main/
 > 認証メモ: 保存済みFirebaseトークンが失効していたため、ユーザーが `firebase login --reauth` を実機ターミナルで実施して復旧（対話ログインのため要ユーザー操作）。
 
 ### Phase 8 — カットオーバー（本番切替）
-- [ ] `firebase.json` の `public` を `web/out` に変更
-- [ ] rewrites を静的多ページ用に調整（下記 §7）
-- [ ] `firebase deploy --only hosting`
-- [ ] 本番URLで最終確認
-- [ ] 数日安定後、旧 Nuxt 関連ファイルを別コミットで撤去、`README.md` を更新
-- [ ] `feature/nextjs-migration` を `master` へマージ
+- [x] `firebase.json` の `public` を `web/out` に変更（Phase 7 で実施）
+- [x] rewrites を静的多ページ用に調整（除去、§7）
+- [x] `firebase deploy --only hosting` を実行（54ファイル配信、release complete）
+- [x] 本番URLで最終確認: `/_next/` 検出・`/_nuxt/` 消滅で新サイト稼働を確認、ルーティング(/=200, /books=301→/books/=200, 未存在=404)・`lang=ja`・title 正常
+- [ ] （フォロー）数日安定後、旧 Nuxt 関連ファイルを別コミットで撤去、`README.md` を更新 ※ロールバック用に当面は残す
+- [ ] `feature/nextjs-migration` を `master` へマージ（PR 経由）
 
 ---
 
@@ -335,7 +335,7 @@ just1factory.main/
 | 5 Books | ✅ 完了 | BookHeadline+BookInformation(書籍5件)を忠実移植、build/lint OK |
 | 6 ビルド検証 | ✅ 完了 | build/export OK。デスクトップ新旧ビジュアル比較で全域ピクセル一致を確認 |
 | 7 プレビュー | ✅ 配信完了 | preview-bmepfadt.web.app へ配信、ルーティング検証OK。実機目視のみユーザー待ち |
-| 8 カットオーバー | ⬜ 未着手 | 要ユーザー確認（本番切替） |
+| 8 カットオーバー | ✅ 本番切替完了 | firebase deploy実行、本番が新サイト(Next.js)稼働を確認。旧Nuxt撤去は別途フォロー |
 
 （状態記号: ⬜未着手 / 🟨作業中 / ✅完了）
 
