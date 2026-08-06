@@ -203,7 +203,7 @@ just1factory.main/
 - [x] ルートで `npm install` → `npm run build`（成功・lint クリーン・`out/{index,books/index,404}.html` 生成）
 - [x] **ローカル検証**: ルートで `npm run dev` 起動（Ready 689ms、`/`=200・ホーム内容OK、`/books`→308で `/books/` 正規化）
 - [x] `README.md` を Next.js 用（環境/開発/ビルド/デプロイ手順）に刷新
-- [ ] 本番へ再デプロイ（`public: out` 反映）
+- [x] 本番へ再デプロイ（`public: out` 反映）→ `/`=200 / `/books/`=200 / `/books`=301 / 未存在=404、Next.js稼働・内容一致を確認
 
 ---
 
@@ -347,7 +347,7 @@ just1factory.main/
 | 6 ビルド検証 | ✅ 完了 | build/export OK。デスクトップ新旧ビジュアル比較で全域ピクセル一致を確認 |
 | 7 プレビュー | ✅ 配信完了 | preview-bmepfadt.web.app へ配信、ルーティング検証OK。実機目視のみユーザー待ち |
 | 8 カットオーバー | ✅ 本番切替完了 | firebase deploy実行、本番が新サイト(Next.js)稼働を確認 |
-| 9 Nuxt撤去/平坦化 | 🟨 作業中 | 旧Nuxt撤去・web/をルートへ平坦化・firebase.json→out・local dev検証OK。再デプロイ待ち |
+| 9 Nuxt撤去/平坦化 | ✅ 完了 | 旧Nuxt撤去・ルート平坦化・firebase.json→out・local dev検証・本番再デプロイ確認済み |
 
 （状態記号: ⬜未着手 / 🟨作業中 / ✅完了）
 
