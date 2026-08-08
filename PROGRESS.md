@@ -191,8 +191,19 @@ just1factory.main/
 - [x] rewrites を静的多ページ用に調整（除去、§7）
 - [x] `firebase deploy --only hosting` を実行（54ファイル配信、release complete）
 - [x] 本番URLで最終確認: `/_next/` 検出・`/_nuxt/` 消滅で新サイト稼働を確認、ルーティング(/=200, /books=301→/books/=200, 未存在=404)・`lang=ja`・title 正常
-- [ ] （フォロー）数日安定後、旧 Nuxt 関連ファイルを別コミットで撤去、`README.md` を更新 ※ロールバック用に当面は残す
+- [x] 旧 Nuxt 関連ファイルを撤去し、`README.md` を Next.js 用に刷新（下記 Phase 9）
 - [ ] `feature/nextjs-migration` を `master` へマージ（PR 経由）
+
+### Phase 9 — Nuxt 残骸の撤去 & ルート平坦化（完全移行）
+本番が新サイトで安定稼働したことを確認後、共存状態を解消して **Next.js のみ・ルート直下** の構成に整理した。
+- [x] 旧 Nuxt を撤去: `pages/ components/ layouts/ middleware/ plugins/ store/ server/ assets/ static/ nuxt.config.js` と旧 `package.json`/`package-lock.json`/`yarn.lock`/`tsconfig.json`/`.eslintrc.js`/`.prettierrc`/`.editorconfig`/`.vscode`、旧 `README.md`、生成物 `dist/`/`.nuxt/`、旧デプロイキャッシュ `.firebase/` を削除
+- [x] `web/` の中身をリポジトリ直下へ移動（`app/ components/ public/` と Next の設定一式）。`web/` ディレクトリは撤去
+- [x] `firebase.json` の `public` を `web/out` → **`out`** に更新
+- [x] `next.config.ts` の `turbopack.root` はルート直下に、`.gitignore` に `.firebase/` を追加、`package.json` の name を `just1factory.main` に更新
+- [x] ルートで `npm install` → `npm run build`（成功・lint クリーン・`out/{index,books/index,404}.html` 生成）
+- [x] **ローカル検証**: ルートで `npm run dev` 起動（Ready 689ms、`/`=200・ホーム内容OK、`/books`→308で `/books/` 正規化）
+- [x] `README.md` を Next.js 用（環境/開発/ビルド/デプロイ手順）に刷新
+- [x] 本番へ再デプロイ（`public: out` 反映）→ `/`=200 / `/books/`=200 / `/books`=301 / 未存在=404、Next.js稼働・内容一致を確認
 
 ---
 
@@ -335,7 +346,8 @@ just1factory.main/
 | 5 Books | ✅ 完了 | BookHeadline+BookInformation(書籍5件)を忠実移植、build/lint OK |
 | 6 ビルド検証 | ✅ 完了 | build/export OK。デスクトップ新旧ビジュアル比較で全域ピクセル一致を確認 |
 | 7 プレビュー | ✅ 配信完了 | preview-bmepfadt.web.app へ配信、ルーティング検証OK。実機目視のみユーザー待ち |
-| 8 カットオーバー | ✅ 本番切替完了 | firebase deploy実行、本番が新サイト(Next.js)稼働を確認。旧Nuxt撤去は別途フォロー |
+| 8 カットオーバー | ✅ 本番切替完了 | firebase deploy実行、本番が新サイト(Next.js)稼働を確認 |
+| 9 Nuxt撤去/平坦化 | ✅ 完了 | 旧Nuxt撤去・ルート平坦化・firebase.json→out・local dev検証・本番再デプロイ確認済み |
 
 （状態記号: ⬜未着手 / 🟨作業中 / ✅完了）
 

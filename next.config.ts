@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // 親ディレクトリにも lockfile があるため、この web/ をワークスペースルートに固定
+  // Turbopack のワークスペースルートをこのプロジェクト直下に固定
   turbopack: { root: import.meta.dirname },
   // Firebase Hosting へ静的配信するため静的エクスポートを有効化
   output: "export",
