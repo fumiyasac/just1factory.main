@@ -397,7 +397,7 @@ export default function BookInformation() {
             <div className="container pt-3">
               <p>
                 <span className="small">販売価格（同人誌版）</span>:{" "}
-                <strong className="large text-danger">¥500</strong>
+                <strong className="large text-danger">¥0</strong>
                 <br />
               </p>
             </div>
@@ -407,11 +407,98 @@ export default function BookInformation() {
                 は、複雑なUIの実装ポイントからアーキテクチャの理解促進まで、モバイルアプリ開発に欠かせない知見をノート形式で丁寧に紹介する一冊です。UIKitからSwiftUIへのシフトが進む中でもUI実装に情熱を注ぎ、iOSとAndroidの両方に取り組んできた著者が、日々の開発を通して得た経験や学びを、自身の“ノート”を通じて公開しています。
               </p>
               <p>
+                第1章では、複雑なUIを設計・実装する上での注意点やポイントを整理し、開発段階で押さえておくべきノウハウを具体例とともに提示します。
+                <br />
+                第2章では、iOSとAndroid間のUI実装の違いや共通点にフォーカスし、プラットフォームごとの特徴を意識した効率的な開発手法を紹介します。
+                <br />
+                第3章では、初めて触れるアーキテクチャをどのように理解し、自分なりに落とし込んでいくかを解説。情報収集から実践に至るまでのアプローチを丁寧に追います。
+                <br />
+                第4章では、コミュニティ主催の勉強会で共有された内容をまとめ、開発者同士の学び合いの場から得られる気づきや実践的なアイデアを具体的に示します。
+              </p>
+              <p>
                 著者自身が蓄積してきたノートには、書籍やインターネット、勉強会、GitHubなどから得た多様な情報を整理・咀嚼し、自分の開発現場にフィットする形へと昇華させた工夫とプロセスが詰まっています。ただメモを残すだけでなく、必要なときにすぐ参照できる“学習の道標”として活用する方法が、本書を通じて学べることでしょう。
               </p>
               <p>
-                UI実装や新しい技術へのキャッチアップを効率よく進めたい方、また情報の整理・活用方法に悩んでいる方にとって、本書のノート事例は大いに役立つはずです。読者の皆さまが自分の開発スタイルや学習法を見直し、より実践に活かせる知見へと深めるきっかけになることを願っています。
+                UI実装や新しい技術へのキャッチアップを効率よく進めたい方、また情報の整理・活用方法に悩んでいる方にとって、本書のノート事例は大いに役立つはずです。
+                <br />
+                読者の皆さまが自分の開発スタイルや学習法を見直し、より実践に活かせる知見へと深めるきっかけになることを願っています。
               </p>
+            </div>
+            <div className="container text-center pt-2">
+              <ul className="list-unstyled list-inline">
+                <li className="list-inline-item">
+                  <a
+                    className="btn btn-secondary mt0"
+                    href="https://techbookfest.org/product/tb0MRLsibEqNPLGvEyiDvh?productVariantID=VCLDkCtbrr3pweFUKGN9f"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    書籍の内容を確認する
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <hr />
+
+        {/* Mobile UI note Vol.2 */}
+        <div className="row pt-4">
+          <div className="col-3">
+            <div>
+              <img
+                className="img-thumbnail img-fluid img-responsive"
+                src="/books/mobile_point_note_examples2.jpg"
+                alt="モバイルアプリ開発 実装考察や重要ポイントを綴ったノート事例集 Vol.2"
+              />
+            </div>
+          </div>
+          <div className="col-9">
+            <div className="container">
+              <h4 className="developer_name">
+                モバイルアプリ開発実装考察や重要ポイントを綴ったノート事例集 Vol.2
+              </h4>
+            </div>
+            <div className="container pt-3">
+              <p>
+                <span className="small">販売価格（同人誌版）</span>:{" "}
+                <strong className="large text-danger">¥0</strong>
+                <br />
+              </p>
+            </div>
+            <div className="container pt-3">
+              <p>
+                本書『モバイルアプリ開発 実装考察や重要ポイントを綴ったノート事例集 Vol.2』は、多くの反響をいただいた前作Vol.1の続編として、日々の開発の中で得た気づきや考察を「ノート」という形で丁寧に綴った一冊です。iOSとAndroidの両方に情熱を注いできた著者が、SwiftUIやJetpack Composeによる宣言的UI、Swift Concurrency（async/await）といった進化し続ける技術と向き合いながら、「とりあえず動くコード」ではなく「なぜそう設計・実装するのか」を自分の言葉で説明できることを大切に書き進めています。
+              </p>
+              <p>
+                第1章では、“比較”という一貫した視点から技術の理解を深めます。前半ではReduxとThe Composable Architecture（TCA）を対比し、データの流れ方・副作用の扱い方・依存関係の注入といった設計上の判断を、フロー図や実装イメージとともに整理。バージョンアップに伴うAPIの変化も追いかけ、技術の“変遷”を俯瞰します。後半ではCombine・AsyncStream・async/awaitという3つの非同期処理アプローチを、同じユースケースで書き比べていきます。
+              </p>
+              <p>
+                第2章では、iOSとAndroidを横断し「同じUI表現を、それぞれの言語・フレームワークでどう実現するか」という視点でUI実装を掘り下げます。たとえばUber Eatsのようなタブとコンテンツが連動してスクロールする表現を、iOSではSwiftUIのGeometryReader / ScrollViewReader、AndroidではJetpack ComposeのTabSync / NestedScrollでどう組み立てるか。MotionLayoutのような“そのプラットフォームならでは”の表現も交えながら、設計思想の違いを浮かび上がらせます。
+              </p>
+              <p>
+                第3章は、データの流れを「線と矢印」で描き、対応するコードをすぐ隣に並べるスタイルで、概念と実装を結びつけます。ReduxやMVIといった単方向データフロー（UIがIntentを発行し、ReducerがStateを生成し、Viewが再描画される流れ）を図示しながら、MVVMとの根本的な違いを「どちらが優れているか」ではなく「何を解決しようとしているか」という角度で捉え直します。あわせてFlutterの実装ノートも収録しています。
+              </p>
+              <p>
+                本書に通底しているのは、ノートを書くという行為の価値は「情報を残す」こと以上に、「自分の思考を整理し、言語化する」プロセスそのものにある、という考え方です。生成AIをはじめとするツールが実装を助けてくれる今だからこそ、なぜそう動くのか・なぜそう設計するのかを説明できる力が、開発現場での判断力や応用力に確かに結びついていきます。
+              </p>
+              <p>
+                新しい技術のキャッチアップを効率よく進めたい方、アーキテクチャやUI実装を「なぜ」から理解し直したい方、そして情報の整理・活用の仕方に悩む方にとって、本書のノート事例がご自身の開発スタイルを見つめ直すきっかけになれば幸いです。
+              </p>
+            </div>
+            <div className="container text-center pt-2">
+              <ul className="list-unstyled list-inline">
+                <li className="list-inline-item">
+                  <a
+                    className="btn btn-secondary mt0"
+                    href="https://techbookfest.org/product/k3HfRqYs4V10wzGw0CWyW2?productVariantID=8cfY3S980inXeXph1bFQ5z"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    書籍の内容を確認する
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
