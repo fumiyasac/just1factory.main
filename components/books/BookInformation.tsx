@@ -458,6 +458,10 @@ export default function BookInformation() {
               <h4 className="developer_name">
                 モバイルアプリ開発実装考察や重要ポイントを綴ったノート事例集 Vol.2
               </h4>
+              <p>
+                <span className="small">初回頒布イベント</span>: &nbsp;
+                <span className="badge badge-pill badge-info">技術書典20</span>
+              </p>
             </div>
             <div className="container pt-3">
               <p>
