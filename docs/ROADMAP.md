@@ -6,7 +6,7 @@ CLAUDE.md から `@docs/ROADMAP.md` で参照する。
 ## Phase 1: 足場固め（現在）
 
 - [x] CLAUDE.md 整備
-- [ ] GitHub Actions CI 導入（Lint + Build チェック）
+- [x] GitHub Actions CI 導入（Lint + Build チェック）
 - [ ] Firebase Hosting Preview Channels でPRプレビュー
 - [ ] Renovate / Dependabot で依存パッケージ管理
 
