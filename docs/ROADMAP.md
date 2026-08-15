@@ -9,6 +9,7 @@ CLAUDE.md から `@docs/ROADMAP.md` で参照する。
 - [x] GitHub Actions CI 導入（Lint + Build チェック）
 - [ ] Firebase Hosting Preview Channels でPRプレビュー
 - [ ] Renovate / Dependabot で依存パッケージ管理
+- [x] メタデータ・OGP・Twitterカード設定
 
 ## Phase 2: コンテンツ拡充
 

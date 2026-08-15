@@ -7,11 +7,44 @@ import "./globals.css";
 import NavigationBar from "@/components/global/NavigationBar";
 import FooterBar from "@/components/global/FooterBar";
 
-// 旧 nuxt.config.js の head を踏襲（title は package.json の description 相当）
 export const metadata: Metadata = {
-  title: "This is Just1factory official website",
+  metadataBase: new URL("https://just1factory.net"),
+  title: {
+    default: "Just1factory - fumiyasac (Fumiya Sakai)",
+    template: "%s | Just1factory",
+  },
   description:
-    "こちらは「Just1factory(Fumiya Sakai)」の紹介ページになります。運営しているサービスやアプリ・書籍等に関する情報を公開しております。",
+    "酒井文也（fumiyasac）のポートフォリオサイト。iOS/Androidアプリ開発に関する技術書・登壇資料・OSSなどのアウトプットを公開しています。",
+  openGraph: {
+    type: "website",
+    siteName: "Just1factory",
+    locale: "ja_JP",
+    url: "https://just1factory.net",
+    title: "Just1factory - fumiyasac (Fumiya Sakai)",
+    description:
+      "酒井文也（fumiyasac）のポートフォリオサイト。iOS/Androidアプリ開発に関する技術書・登壇資料・OSSなどのアウトプットを公開しています。",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Just1factory - fumiyasac (Fumiya Sakai)",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@fumiyasac",
+    creator: "@fumiyasac",
+    title: "Just1factory - fumiyasac (Fumiya Sakai)",
+    description:
+      "酒井文也（fumiyasac）のポートフォリオサイト。iOS/Androidアプリ開発に関する技術書・登壇資料・OSSなどのアウトプットを公開しています。",
+    images: ["/og-image.png"],
+  },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({
