@@ -15,8 +15,9 @@ const SKILLS = [
   "TypeScript",
   "React",
   "Next.js",
-  "ReactNative",
   "UI Desigin",
+  "ReactNative",
+  "Kotlin Multiplatform",
 ];
 
 export default function Skills() {
