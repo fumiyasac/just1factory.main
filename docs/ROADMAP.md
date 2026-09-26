@@ -10,6 +10,16 @@ CLAUDE.md から `@docs/ROADMAP.md` で参照する。
 - [ ] Firebase Hosting Preview Channels でPRプレビュー
 - [ ] Renovate / Dependabot で依存パッケージ管理
 - [x] メタデータ・OGP・Twitterカード設定
+- [x] Dependabot 導入（npm + GitHub Actions）
+- [x] robots.txt / sitemap.xml 生成設定
+- [x] カスタム404ページ
+
+## Claude Code カスタムコマンド
+
+利用可能なスラッシュコマンド:
+- `/add-page <ページ名>`: 新しいページを雛形から作成
+- `/pre-deploy`: デプロイ前のチェックを実行
+- `/update-roadmap <タスク名>`: ROADMAP のタスクを完了にする
 
 ## Phase 2: コンテンツ拡充
 
