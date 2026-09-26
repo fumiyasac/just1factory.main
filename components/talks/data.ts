@@ -1,5 +1,6 @@
 // Talks & Articles ページで表示するキュレーションデータ。
-// 元データ: 2014年〜2026年の登壇資料・技術記事 全177本（Speaker Deck / Zenn / Qiita / SlideShare）。
+// 元データ: 2014年〜2026年のアウトプット全 178 件のうち、Zenn スクラップ 1 件を除外した
+//   「登壇資料・技術記事」176 本を対象とする（Speaker Deck / Zenn / Qiita / SlideShare）。
 // ここでは「単なる網羅」ではなくテーマごとの代表作を厳選している。
 // 新しい登壇・記事を追加したら THEMES / RECENT に適宜追記する運用。
 
@@ -22,7 +23,7 @@ export type Theme = {
 
 export const STATS = [
   { num: "13", unit: "年", label: "2014年から発信を継続" },
-  { num: "177", unit: "本", label: "登壇資料と技術記事の合計" },
+  { num: "176", unit: "本", label: "登壇資料と技術記事の合計" },
   { num: "4", unit: "媒体", label: "Speaker Deck / Zenn / Qiita / SlideShare" },
   { num: "70+", unit: "登壇", label: "potatotips・iOSDC・DroidKaigi 系ほか" },
 ] as const;
@@ -340,7 +341,7 @@ export const PLATFORMS: PlatformInfo[] = [
   },
   {
     platform: "Zenn",
-    count: 10,
+    count: 9,
     since: "2022",
     role: "登壇内容の解説記事化や、実装ノウハウをまとまった読み物として整理する場。",
     icon: "fa-medium",

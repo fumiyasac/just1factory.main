@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Talks & Articles | Just1factory",
     description:
-      "酒井文也（fumiyasac）が 2014 年から続けてきた登壇資料と技術記事のアーカイブ。テーマ別・時系列で 177 本の取り組みを紹介します。",
+      "酒井文也（fumiyasac）が 2014 年から続けてきた登壇資料と技術記事のアーカイブ。テーマ別・時系列で 176 本の取り組みを紹介します。",
     url: "https://just1factory.net/talks",
   },
 };
@@ -22,8 +22,9 @@ export default function Talks() {
     <div>
       <TalksHeadline />
       <TalksStats />
-      <TalksThemes />
+      {/* 「今なにに取り組んでいるか」をテーマ別のバックストーリーより先に見せる */}
       <TalksRecent />
+      <TalksThemes />
       <TalksPlatforms />
     </div>
   );
