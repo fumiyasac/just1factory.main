@@ -8,7 +8,7 @@ export default function TalksPlatforms() {
       <div className="talks_platforms_block">
         <h2>プラットフォーム別に深堀りする</h2>
         <p className="talks_platforms_lead">
-          もっと網羅的に眺めたい方は、下記の各媒体から直接ご覧いただけます。それぞれ異なる時期と役割で、13 年分のアウトプットが積み重なっています。
+          もっと網羅的に眺めたい方は、下記の各媒体から直接ご覧いただけます。それぞれ異なる時期と役割で、13年分のアウトプットが積み重なっています。
         </p>
         <div className="row">
           {PLATFORMS.map((p) => (
