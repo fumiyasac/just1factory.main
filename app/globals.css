@@ -152,124 +152,131 @@ i.amazon_color {
   line-height: 1.5;
 }
 
-/* === talks/TalksThemes === */
-.talks_themes_block {
+/* === talks/TalksArchive（年別・全件アーカイブ） === */
+.talks_archive_block {
   padding-top: 80px;
 }
-.talks_themes_block h2 {
+.talks_archive_block h2 {
   padding: 0 0 20px 0;
   color: #444444;
   font-size: 26px;
   font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
 }
-.talks_themes_lead {
+.archive_lead {
   color: #555555;
-  margin-bottom: 32px;
-}
-.theme_card {
-  padding: 24px 20px;
-  margin-bottom: 20px;
-  border-left: 4px solid #2867B2;
-  background-color: #fafafa;
-  border-radius: 4px;
-}
-.theme_heading {
-  color: #333333;
-  font-size: 20px;
-  font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
-  margin-bottom: 8px;
-}
-.theme_lead {
-  color: #555555;
-  font-size: 14px;
-  margin-bottom: 16px;
-}
-.talk_list {
-  margin: 0;
-}
-.talk_item {
-  padding: 12px 0;
-  border-top: 1px solid #eeeeee;
-}
-.talk_item:first-child {
-  border-top: none;
-}
-.talk_meta {
-  margin-bottom: 4px;
-}
-.talk_date {
-  font-family: 'Menlo', 'Consolas', monospace;
-}
-.talk_title_link {
-  color: #2867B2;
-  font-weight: bold;
-  text-decoration: none;
-}
-.talk_title_link:hover {
-  text-decoration: underline;
-}
-.talk_event {
-  margin-top: 4px;
-}
-.talk_event i.fa {
-  margin-right: 4px;
+  margin-bottom: 24px;
 }
 
-/* === talks/TalksRecent（縦タイムライン） === */
-.talks_recent_block {
-  padding-top: 80px;
+/* カテゴリー凡例 */
+.category_legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  margin-bottom: 40px;
+  background-color: #fafafa;
+  border: 1px solid #eeeeee;
+  border-radius: 6px;
 }
-.talks_recent_block h2 {
-  padding: 0 0 20px 0;
-  color: #444444;
-  font-size: 26px;
+.category_legend_head {
+  color: #666666;
+  font-size: 13px;
+  margin-right: 4px;
+}
+.category_badge {
+  display: inline-block;
+  padding: 3px 10px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1.4;
+  border-radius: 10px;
+  cursor: help;
+}
+
+/* 年ブロック */
+.archive_year {
+  margin-bottom: 48px;
+}
+.archive_year_heading {
+  margin: 0 0 4px 0;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #dddddd;
+  color: #333333;
+}
+.archive_year_num {
+  font-size: 32px;
   font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: bold;
 }
-.talks_recent_lead {
-  color: #555555;
-  margin-bottom: 32px;
+.archive_year_suffix {
+  font-size: 18px;
+  color: #666666;
+  margin-left: 2px;
 }
-.timeline_list {
+.archive_year_count {
+  font-size: 16px;
+  color: #666666;
+  font-weight: normal;
+  margin-left: 4px;
+}
+.archive_year_breakdown {
+  color: #888888;
+  font-size: 12px;
+  margin-bottom: 16px;
+}
+
+/* 年内リスト（各年ごとの縦タイムライン） */
+.archive_list {
   position: relative;
-  padding-left: 24px;
+  padding-left: 20px;
   margin: 0;
-  border-left: 2px solid #dddddd;
+  border-left: 2px solid #eeeeee;
 }
-.timeline_item {
+.archive_item {
   position: relative;
-  padding: 0 0 24px 12px;
+  padding: 0 0 16px 8px;
 }
-.timeline_dot {
+.archive_dot {
   position: absolute;
-  left: -31px;
+  left: -27px;
   top: 6px;
-  width: 12px;
-  height: 12px;
-  background-color: #2867B2;
-  border: 2px solid #ffffff;
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border: 2px solid #2867B2;
   border-radius: 50%;
-  box-shadow: 0 0 0 1px #2867B2;
 }
-.timeline_meta {
+.archive_meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
   margin-bottom: 4px;
 }
-.timeline_date {
+.archive_date {
   font-family: 'Menlo', 'Consolas', monospace;
 }
-.timeline_title_link {
+.archive_platform {
+  /* 既存 badge-pill を上書きせず、微調整 */
+  font-weight: normal;
+}
+.archive_title_link {
+  display: inline-block;
+  margin-top: 2px;
   color: #2867B2;
   font-weight: bold;
   text-decoration: none;
-  display: inline-block;
-  margin-top: 2px;
+  line-height: 1.5;
 }
-.timeline_title_link:hover {
+.archive_title_link:hover {
   text-decoration: underline;
 }
-.timeline_event {
+.archive_event {
   margin-top: 4px;
 }
-.timeline_event i.fa {
+.archive_event i.fa {
   margin-right: 4px;
 }
 
