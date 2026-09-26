@@ -74,7 +74,7 @@ export const PLATFORMS: PlatformInfo[] = [
     count: 9,
     since: "2022",
     role: "登壇内容の解説記事化や、実装ノウハウをまとまった読み物として整理する場。",
-    icon: "fa-medium",
+    icon: "fa-folder-open",
     url: "https://zenn.dev/fumiyasac",
   },
   {
@@ -90,7 +90,7 @@ export const PLATFORMS: PlatformInfo[] = [
     count: 75,
     since: "2014",
     role: "2014〜2022 の登壇資料の集積地。UI 実装や初期の勉強会の記録が残る。",
-    icon: "fa-slideshare",
+    icon: "fa-folder-open",
     url: "https://www.slideshare.net/fumiyasakai37",
   },
 ];

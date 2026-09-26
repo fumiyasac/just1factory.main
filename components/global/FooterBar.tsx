@@ -4,7 +4,7 @@ export default function FooterBar() {
     <div className="footer">
       <footer className="page-footer">
         <div className="footer-copyright text-center">
-          <p className="copyright_text">&copy; 2025 Copyright Just1factory</p>
+          <p className="copyright_text">&copy; 2026 Copyright Just1factory</p>
         </div>
       </footer>
     </div>

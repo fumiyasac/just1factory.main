@@ -85,6 +85,12 @@ a.nav-link {
 .note_color {
   color: #249f80;
 }
+.zenn_color {
+  color: #3EA8FF;
+}
+.speakerdeck_color {
+  color: #009287;
+}
 
 /* === index/Information === */
 .information_block {
