@@ -7,14 +7,18 @@ type Social = {
   label: string;
 };
 
+// プレゼンテーション → 記事 → ソーシャル → コード の順で並べる。
+// FA4.7 に Zenn / Speaker Deck 専用アイコンが無いため、
+// Zenn は執筆イメージの fa-pencil-square-o、Speaker Deck はスライド系の fa-file-powerpoint-o を採用。
 const SOCIALS: Social[] = [
   { href: "https://www.slideshare.net/fumiyasakai37", icon: "fa-slideshare", color: "slideshare_color", label: "SlideShare" },
+  { href: "https://speakerdeck.com/fumiyasac0921", icon: "fa-file-powerpoint-o", color: "speakerdeck_color", label: "Speaker Deck" },
   { href: "https://qiita.com/fumiyasac@github", icon: "fa-folder-open", color: "qiita_color", label: "Qiita" },
-  { href: "https://medium.com/@fumiyasakai/", icon: "fa-medium", color: "medium_color", label: "Medium" },
+  { href: "https://zenn.dev/fumiyasac", icon: "fa-pencil-square-o", color: "zenn_color", label: "Zenn" },
   { href: "https://twitter.com/fumiyasac", icon: "fa-twitter", color: "twitter_color", label: "X(Twitter)" },
   { href: "https://www.facebook.com/fumiya.sakai.37", icon: "fa-facebook", color: "facebook_color", label: "Facebook" },
-  { href: "https://www.linkedin.com/in/%E6%96%87%E4%B9%9F-%E9%85%92%E4%BA%95-77363a48/", icon: "fa-linkedin", color: "linkedin_color", label: "LinkedIn" },
   { href: "https://note.mu/fumiyasac", icon: "fa-book", color: "note_color", label: "note" },
+  { href: "https://github.com/fumiyasac", icon: "fa-github", color: "github_color", label: "GitHub" },
 ];
 
 export default function SocialLink() {

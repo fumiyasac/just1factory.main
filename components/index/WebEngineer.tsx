@@ -4,7 +4,7 @@ export default function WebEngineer() {
     <div className="card">
       <img className="card-img-top" src="/summaries/card_image2.jpg" alt="Server" />
       <div className="card-header">
-        <small className="text-muted">PHP / Ruby / Go / Kotlin</small>
+        <small className="text-muted">PHP / Ruby / Go / Kotlin / Typescript</small>
       </div>
       <div className="card-body">
         <h4 className="card-title">Web Application</h4>

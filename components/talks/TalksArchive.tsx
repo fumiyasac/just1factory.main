@@ -120,11 +120,11 @@ export default function TalksArchive() {
   return (
     <div className="container">
       <div className="talks_archive_block">
-        <h2>これまでの歩み（全 {ARCHIVE.length} 本）</h2>
+        <h2>これまでの歩み（全{ARCHIVE.length} 本）</h2>
         <p className="archive_lead">
           年別・日付降順で、登壇資料と技術記事のすべてをカテゴリータグ付きで並べています。時系列で辿ると、UI
           実装の掘り下げから始まり、バックエンド／クロスプラットフォームの視点、アーキテクチャ、非同期・テスト、そして直近の
-          AI × 越境へと関心が移り変わってきた軌跡が見えます。
+          AI×越境へと関心が移り変わってきた軌跡が見えます。
         </p>
         <CategoryLegend />
         {years.map(([year, items]) => (

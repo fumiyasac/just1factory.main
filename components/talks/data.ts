@@ -47,7 +47,7 @@ export const STATS = [
   { num: "13", unit: "年", label: "2014年から発信を継続" },
   { num: "176", unit: "本", label: "登壇資料と技術記事の合計" },
   { num: "4", unit: "媒体", label: "Speaker Deck / Zenn / Qiita / SlideShare" },
-  { num: "70+", unit: "登壇", label: "potatotips・iOSDC・DroidKaigi 系ほか" },
+  { num: "70+", unit: "登壇", label: "potatotips・iOSDC・DroidKaigi系ほか" },
 ] as const;
 
 // 4 プラットフォーム別の概要と件数（Zenn はスクラップ 1 件を除外した 9 本）。
@@ -74,14 +74,14 @@ export const PLATFORMS: PlatformInfo[] = [
     count: 9,
     since: "2022",
     role: "登壇内容の解説記事化や、実装ノウハウをまとまった読み物として整理する場。",
-    icon: "fa-medium",
+    icon: "fa-folder-open",
     url: "https://zenn.dev/fumiyasac",
   },
   {
     platform: "Qiita",
     count: 50,
     since: "2015",
-    role: "初期から書き溜めてきた実装 TIPS のアーカイブ。5,400+ Contributions。",
+    role: "初期から書き溜めてきた実装TIPSのアーカイブ。5,400+ Contributions。",
     icon: "fa-folder-open",
     url: "https://qiita.com/fumiyasac@github",
   },
@@ -89,8 +89,8 @@ export const PLATFORMS: PlatformInfo[] = [
     platform: "SlideShare",
     count: 75,
     since: "2014",
-    role: "2014〜2022 の登壇資料の集積地。UI 実装や初期の勉強会の記録が残る。",
-    icon: "fa-slideshare",
+    role: "2014〜2022の登壇資料の集積地。UI実装や初期の勉強会の記録が残る。",
+    icon: "fa-folder-open",
     url: "https://www.slideshare.net/fumiyasakai37",
   },
 ];

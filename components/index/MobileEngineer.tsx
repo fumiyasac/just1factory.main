@@ -5,7 +5,7 @@ export default function MobileEngineer() {
     <div className="card">
       <img className="card-img-top" src="/summaries/card_image1.jpg" alt="iOS App" />
       <div className="card-header">
-        <small className="text-muted">iOS / Android / ReactNative</small>
+        <small className="text-muted">iOS / Android / Flutter / ReactNative</small>
       </div>
       <div className="card-body">
         <h4 className="card-title">Mobile Application</h4>

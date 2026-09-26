@@ -86,24 +86,24 @@ export const GISHOHAKU_ITEMS: DesignItem[] = [
   },
 ];
 
-// 親方Project寄稿「チラシで伝えるものづくり」関連の制作物。
+// 親方Project寄稿「メイカーのためのチラシで伝えるものづくり」関連の制作物。
 export const OYAKATA_ITEMS: DesignItem[] = [
   {
     slug: "oyakata-monodukuri-cover",
     image: "/design/oyakata-monodukuri-cover.jpg",
-    title: "『チラシで伝えるものづくり』表紙",
+    title: "『メイカーのためのチラシで伝えるものづくり』表紙",
     subtitle: "親方Project合同誌寄稿",
     description:
       "工房の道具を主役にした写真の上にセリフ体で大きく「チラシで伝えるものづくり」と重ねた表紙。ものづくりの温度と、それをチラシとして届ける行為の重なりをそのまま画に落とし込んだ。",
-    url: "https://oyakata2024.booth.pm/",
+    url: "https://techbookfest.org/product/a35GqPb1C0bTDz3qMgq8C8?productVariantID=gA67T6DhKHiAJBarLrBt0B",
   },
   {
     slug: "oyakata-shochu-server",
     image: "/design/oyakata-shochu-server.jpg",
     title: "「インターネット接続 焼酎サーバー」チラシ",
-    subtitle: "『チラシで伝えるものづくり』掲載作例",
+    subtitle: "『メイカーのためのチラシで伝えるものづくり』掲載作例",
     description:
       "同誌に作例として掲載した、遊び心のあるIoTプロダクト紹介チラシ。悩み → 解決 → 構成部品 → 費用と誘導線を段階化し、技術要素（ESP32 / 電磁弁 / スマホアプリ）を一枚で伝わる形に。",
-    url: "https://oyakata2024.booth.pm/",
+    url: "https://techbookfest.org/product/a35GqPb1C0bTDz3qMgq8C8?productVariantID=gA67T6DhKHiAJBarLrBt0B",
   },
 ];

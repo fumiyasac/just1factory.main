@@ -6,11 +6,11 @@ import { GISHOHAKU_ITEMS, OYAKATA_ITEMS } from "@/components/design/data";
 export const metadata: Metadata = {
   title: "Design",
   description:
-    "酒井文也（fumiyasac）のデザイン制作物ページ。技術書同人誌博覧会（技書博）の告知チラシや、親方Project寄稿『チラシで伝えるものづくり』表紙・作例など、コミュニティ／技術系イベント／出版物のためのグラフィック制作をまとめています。",
+    "酒井文也（fumiyasac）のデザイン制作物ページ。技術書同人誌博覧会（技書博）の告知チラシや、親方Project寄稿『メイカーのためのチラシで伝えるものづくり』表紙・作例など、コミュニティ／技術系イベント／出版物のためのグラフィック制作をまとめています。",
   openGraph: {
     title: "Design | Just1factory",
     description:
-      "技術書同人誌博覧会の告知チラシや、親方Project寄稿『チラシで伝えるものづくり』の制作物など、コミュニティ・出版物向けのデザイン成果物を紹介します。",
+      "技術書同人誌博覧会の告知チラシや、親方Project寄稿『メイカーのためのチラシで伝えるものづくり』の制作物など、コミュニティ・出版物向けのデザイン成果物を紹介します。",
     url: "https://just1factory.net/design",
   },
 };
@@ -25,7 +25,7 @@ export default function Design() {
         items={GISHOHAKU_ITEMS}
       />
       <DesignGallery
-        heading="親方Project寄稿『チラシで伝えるものづくり』"
+        heading="親方Project寄稿『メイカーのためのチラシで伝えるものづくり』"
         lead="親方Project合同誌への寄稿として、表紙デザインと、掲載作例（IoTプロダクト紹介チラシ）を制作しました。ものづくりの手触りをそのまま画面に持ち込むトーンで組み上げています。"
         items={OYAKATA_ITEMS}
       />

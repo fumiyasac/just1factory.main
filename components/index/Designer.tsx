@@ -4,7 +4,7 @@ export default function Designer() {
     <div className="card">
       <img className="card-img-top" src="/summaries/card_image3.jpg" alt="Design" />
       <div className="card-header">
-        <small className="text-muted">Adobe XD / Photoshop / Illustrator</small>
+        <small className="text-muted">Figma / Photoshop / Illustrator</small>
       </div>
       <div className="card-body">
         <h4 className="card-title">UI/UX Design</h4>
