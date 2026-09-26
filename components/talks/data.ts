@@ -18,18 +18,20 @@ export type Category =
 
 export type CategoryInfo = {
   label: string; // バッジ表示用の短い日本語ラベル
-  color: string; // バッジ背景色
   desc: string;  // 凡例用の説明
 };
 
+// 配色は全カテゴリー統一（サイトのヘッダー色 #444444 に合わせた濃いグレー）で
+// globals.css の .category_badge に集約。プラットフォームバッジ(水色 badge-info)と
+// 役割が視覚的に分離し、Palatino セリフ体基調の落ち着いた世界観と調和させるため。
 export const CATEGORIES: Record<Category, CategoryInfo> = {
-  ui:        { label: "UI 実装",        color: "#2867B2", desc: "UI パーツ・アニメーション・トランジション・レイアウト" },
-  cross:     { label: "クロスプラットフォーム", color: "#17a2b8", desc: "iOS/Android の比較や React Native・Flutter" },
-  arch:      { label: "アーキテクチャ",  color: "#6f42c1", desc: "状態管理・DI・レイヤー設計（Redux/TCA/MVVM/Riverpod 等）" },
-  async:     { label: "非同期・テスト",  color: "#28a745", desc: "RxSwift・Combine・Concurrency・UnitTest・swift-testing" },
-  backend:   { label: "バックエンド",    color: "#fd7e14", desc: "Firebase/Rails/Laravel/GraphQL/Parse/Realm/CoreData など" },
-  community: { label: "コミュニティ",    color: "#6c757d", desc: "執筆・勉強法・キャリア・Contribution 振り返り" },
-  ai:        { label: "AI × 越境",      color: "#dc3545", desc: "生成 AI 活用・Claude Code・Flutter 越境・個人開発の設計論" },
+  ui:        { label: "UI 実装",        desc: "UI パーツ・アニメーション・トランジション・レイアウト" },
+  cross:     { label: "クロスプラットフォーム", desc: "iOS/Android の比較や React Native・Flutter" },
+  arch:      { label: "アーキテクチャ",  desc: "状態管理・DI・レイヤー設計（Redux/TCA/MVVM/Riverpod 等）" },
+  async:     { label: "非同期・テスト",  desc: "RxSwift・Combine・Concurrency・UnitTest・swift-testing" },
+  backend:   { label: "バックエンド",    desc: "Firebase/Rails/Laravel/GraphQL/Parse/Realm/CoreData など" },
+  community: { label: "コミュニティ",    desc: "執筆・勉強法・キャリア・Contribution 振り返り" },
+  ai:        { label: "AI × 越境",      desc: "生成 AI 活用・Claude Code・Flutter 越境・個人開発の設計論" },
 };
 
 export type TalkItem = {

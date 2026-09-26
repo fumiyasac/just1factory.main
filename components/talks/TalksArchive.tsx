@@ -28,7 +28,6 @@ function CategoryBadge({ category }: { category: Category }) {
   return (
     <span
       className="category_badge"
-      style={{ backgroundColor: info.color }}
       title={info.desc}
     >
       {info.label}
@@ -47,7 +46,6 @@ function CategoryLegend() {
           <span
             key={key}
             className="category_badge"
-            style={{ backgroundColor: info.color }}
             title={info.desc}
           >
             {info.label}
