@@ -5,11 +5,16 @@ import { Fragment } from "react";
 const SKILLS = [
   "Swift",
   "Objective-C",
+  "Android",
+  "Kotlin",
+  "Flutter",
+  "Dart",
   "Ruby",
   "PHP",
-  "JavaScript",
   "Go",
-  "Kotlin",
+  "TypeScript",
+  "React",
+  "Next.js",
   "ReactNative",
   "UI Desigin",
 ];
