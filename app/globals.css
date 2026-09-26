@@ -121,3 +121,230 @@ i.github_color {
 i.amazon_color {
   color: #FF9900;
 }
+
+/* === talks/TalksStats === */
+.talks_stats_block {
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+.stat_card {
+  padding: 20px 12px;
+  border: 1px solid #eeeeee;
+  border-radius: 6px;
+  background-color: #fafafa;
+  height: 100%;
+}
+.stat_number {
+  color: #444444;
+  font-size: 42px;
+  font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.1;
+}
+.stat_unit {
+  color: #888888;
+  font-size: 18px;
+  margin-left: 4px;
+}
+.stat_label {
+  color: #666666;
+  font-size: 12px;
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+/* === talks/TalksThemes === */
+.talks_themes_block {
+  padding-top: 80px;
+}
+.talks_themes_block h2 {
+  padding: 0 0 20px 0;
+  color: #444444;
+  font-size: 26px;
+  font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
+}
+.talks_themes_lead {
+  color: #555555;
+  margin-bottom: 32px;
+}
+.theme_card {
+  padding: 24px 20px;
+  margin-bottom: 20px;
+  border-left: 4px solid #2867B2;
+  background-color: #fafafa;
+  border-radius: 4px;
+}
+.theme_heading {
+  color: #333333;
+  font-size: 20px;
+  font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
+  margin-bottom: 8px;
+}
+.theme_lead {
+  color: #555555;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+.talk_list {
+  margin: 0;
+}
+.talk_item {
+  padding: 12px 0;
+  border-top: 1px solid #eeeeee;
+}
+.talk_item:first-child {
+  border-top: none;
+}
+.talk_meta {
+  margin-bottom: 4px;
+}
+.talk_date {
+  font-family: 'Menlo', 'Consolas', monospace;
+}
+.talk_title_link {
+  color: #2867B2;
+  font-weight: bold;
+  text-decoration: none;
+}
+.talk_title_link:hover {
+  text-decoration: underline;
+}
+.talk_event {
+  margin-top: 4px;
+}
+.talk_event i.fa {
+  margin-right: 4px;
+}
+
+/* === talks/TalksRecent（縦タイムライン） === */
+.talks_recent_block {
+  padding-top: 80px;
+}
+.talks_recent_block h2 {
+  padding: 0 0 20px 0;
+  color: #444444;
+  font-size: 26px;
+  font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
+}
+.talks_recent_lead {
+  color: #555555;
+  margin-bottom: 32px;
+}
+.timeline_list {
+  position: relative;
+  padding-left: 24px;
+  margin: 0;
+  border-left: 2px solid #dddddd;
+}
+.timeline_item {
+  position: relative;
+  padding: 0 0 24px 12px;
+}
+.timeline_dot {
+  position: absolute;
+  left: -31px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  background-color: #2867B2;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #2867B2;
+}
+.timeline_meta {
+  margin-bottom: 4px;
+}
+.timeline_date {
+  font-family: 'Menlo', 'Consolas', monospace;
+}
+.timeline_title_link {
+  color: #2867B2;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 2px;
+}
+.timeline_title_link:hover {
+  text-decoration: underline;
+}
+.timeline_event {
+  margin-top: 4px;
+}
+.timeline_event i.fa {
+  margin-right: 4px;
+}
+
+/* === talks/TalksPlatforms === */
+.talks_platforms_block {
+  padding-top: 80px;
+}
+.talks_platforms_block h2 {
+  padding: 0 0 20px 0;
+  color: #444444;
+  font-size: 26px;
+  font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
+}
+.talks_platforms_lead {
+  color: #555555;
+  margin-bottom: 24px;
+}
+.platform_card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+}
+.platform_card:hover {
+  text-decoration: none;
+}
+.platform_card_inner {
+  padding: 20px;
+  border: 1px solid #eeeeee;
+  border-radius: 6px;
+  background-color: #fafafa;
+  height: 100%;
+  transition: box-shadow 0.15s ease;
+}
+.platform_card:hover .platform_card_inner {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-color: #2867B2;
+}
+.platform_head {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.platform_icon {
+  font-size: 22px;
+  color: #2867B2;
+  margin-right: 10px;
+}
+.platform_name {
+  color: #333333;
+  font-size: 18px;
+  font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: bold;
+}
+.platform_count_row {
+  margin-bottom: 8px;
+}
+.platform_count {
+  color: #444444;
+  font-size: 28px;
+  font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
+}
+.platform_count_unit {
+  color: #888888;
+  font-size: 14px;
+  margin-left: 4px;
+}
+.platform_since {
+  color: #888888;
+  font-size: 12px;
+  margin-left: 8px;
+}
+.platform_role {
+  color: #555555;
+  font-size: 13px;
+  margin: 0;
+  line-height: 1.6;
+}
