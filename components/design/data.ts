@@ -14,60 +14,17 @@ export type DesignItem = {
 };
 
 // 技術書同人誌博覧会（技書博）のチラシ・ポスターデザイン。
-// 号数順で並べる（古→新）。技書博公式サイト: https://gishohaku.dev/
+// 並び順は「新しい開催が先」（日付降順）。日付を持たない mini in OSC はシリーズ末尾に配置。
 export const GISHOHAKU_ITEMS: DesignItem[] = [
   {
-    slug: "gishohaku-9",
-    image: "/design/gishohaku-9.jpg",
-    title: "技術書同人誌博覧会 #9",
-    subtitle: "一般参加募集チラシ",
-    date: "2023 年 11 月 25 日（土）",
+    slug: "gishohaku-15",
+    image: "/design/gishohaku-15.jpg",
+    title: "技術書同人誌博覧会 #15",
+    subtitle: "サークル & 一般参加者募集チラシ",
+    date: "2027 年 5 月 15 日（土）",
     venue: "大田区産業プラザ PiO 大展示ホール",
     description:
-      "木目調のブラウンをベースに、カフェスペース／出版社企画／即売会の 3 コンテンツを整理して案内するチラシ。会場での落ち着いた回遊イメージを大切に配色を決めた。",
-    url: "https://gishohaku.dev/",
-  },
-  {
-    slug: "gishohaku-10",
-    image: "/design/gishohaku-10.jpg",
-    title: "技術書同人誌博覧会 #10",
-    subtitle: "10th Anniversaries. チラシ",
-    date: "2024 年 5 月 12 日（日）",
-    venue: "大田区産業プラザ PiO 大展示ホール",
-    description:
-      "10 回目の節目という祝祭感をガーランドと明るいスカイブルーで表現。写真素材のサークル切り抜きで過去回の空気感も添えた記念デザイン。",
-    url: "https://gishohaku.dev/",
-  },
-  {
-    slug: "gishohaku-mini-osc",
-    image: "/design/gishohaku-mini-osc.jpg",
-    title: "技書博 mini in OSC",
-    subtitle: "全国 OSC 出展告知",
-    description:
-      "全国のオープンソースカンファレンス（OSC）出展ブランド用ビジュアル。桜と一杯のお茶、本の水彩イラストで、地方回遊と読書の穏やかな時間を表現。",
-    url: "https://gishohaku.dev/",
-  },
-  {
-    slug: "gishohaku-11",
-    image: "/design/gishohaku-11.jpg",
-    title: "技術書同人誌博覧会 #11",
-    subtitle: "開催告知チラシ",
-    date: "2025 年 1 月 25 日（土）",
-    venue: "横浜産貿ホール マリネリア",
-    description:
-      "初の横浜開催に合わせ、みなとみらいの夜景写真を薄く敷いたダークネイビー基調。中央のワードクラウドで扱う技術領域の幅広さを一望させるレイアウトに。",
-    url: "https://gishohaku.dev/",
-  },
-  {
-    slug: "gishohaku-12",
-    image: "/design/gishohaku-12.jpg",
-    title: "技術書同人誌博覧会 #12",
-    subtitle: "一般参加者募集チラシ（2025 夏配布・表面）",
-    date: "2025 年 10 月 26 日（日）",
-    venue: "大宮ソニックシティ",
-    description:
-      "深緑を基調に、大きな #12 の見出しと QR コードで登録動線を明確化。夏の配布物として、次回イベントを短時間で理解してもらう構成にした。",
-    url: "https://gishohaku.dev/",
+      "水彩風の空・歯車・電球のあしらいに公式マスコットの「ありどらごん」を配し、親しみやすさと技術の広がりを両立。QR コードとキャッチコピーで登録導線を強調した。",
   },
   {
     slug: "gishohaku-13",
@@ -78,18 +35,54 @@ export const GISHOHAKU_ITEMS: DesignItem[] = [
     venue: "大田区産業プラザ PiO 大展示ホール",
     description:
       "「本から広がる世界」をモチーフに、本と木々が空へ舞い上がるビジュアルを合成。#12 の表面と対になる裏面として、次々回への期待感を演出。",
-    url: "https://gishohaku.dev/",
   },
   {
-    slug: "gishohaku-15",
-    image: "/design/gishohaku-15.jpg",
-    title: "技術書同人誌博覧会 #15",
-    subtitle: "サークル & 一般参加者募集チラシ",
-    date: "2027 年 5 月 15 日（土）",
+    slug: "gishohaku-12",
+    image: "/design/gishohaku-12.jpg",
+    title: "技術書同人誌博覧会 #12",
+    subtitle: "一般参加者募集チラシ（2025 夏配布・表面）",
+    date: "2025 年 10 月 26 日（日）",
+    venue: "大宮ソニックシティ",
+    description:
+      "深緑を基調に、大きな #12 の見出しと QR コードで登録動線を明確化。夏の配布物として、次回イベントを短時間で理解してもらう構成にした。",
+  },
+  {
+    slug: "gishohaku-11",
+    image: "/design/gishohaku-11.jpg",
+    title: "技術書同人誌博覧会 #11",
+    subtitle: "開催告知チラシ",
+    date: "2025 年 1 月 25 日（土）",
+    venue: "横浜産貿ホール マリネリア",
+    description:
+      "初の横浜開催に合わせ、みなとみらいの夜景写真を薄く敷いたダークネイビー基調。中央のワードクラウドで扱う技術領域の幅広さを一望させるレイアウトに。",
+  },
+  {
+    slug: "gishohaku-10",
+    image: "/design/gishohaku-10.jpg",
+    title: "技術書同人誌博覧会 #10",
+    subtitle: "10th Anniversaries. チラシ",
+    date: "2024 年 5 月 12 日（日）",
     venue: "大田区産業プラザ PiO 大展示ホール",
     description:
-      "水彩風の空・歯車・電球のあしらいに公式マスコットのカエルを配し、親しみやすさと技術の広がりを両立。QR コードとキャッチコピーで登録導線を強調した。",
-    url: "https://gishohaku.dev/",
+      "10 回目の節目という祝祭感をガーランドと明るいスカイブルーで表現。写真素材のサークル切り抜きで過去回の空気感も添えた記念デザイン。",
+  },
+  {
+    slug: "gishohaku-9",
+    image: "/design/gishohaku-9.jpg",
+    title: "技術書同人誌博覧会 #9",
+    subtitle: "一般参加募集チラシ",
+    date: "2023 年 11 月 25 日（土）",
+    venue: "大田区産業プラザ PiO 大展示ホール",
+    description:
+      "木目調のブラウンをベースに、カフェスペース／出版社企画／即売会の 3 コンテンツを整理して案内するチラシ。会場での落ち着いた回遊イメージを大切に配色を決めた。",
+  },
+  {
+    slug: "gishohaku-mini-osc",
+    image: "/design/gishohaku-mini-osc.jpg",
+    title: "技書博 mini in OSC",
+    subtitle: "全国 OSC 出展告知",
+    description:
+      "全国のオープンソースカンファレンス（OSC）出展ブランド用ビジュアル。桜と一杯のお茶、本の水彩イラストで、地方回遊と読書の穏やかな時間を表現。",
   },
 ];
 
@@ -99,7 +92,7 @@ export const OYAKATA_ITEMS: DesignItem[] = [
     slug: "oyakata-monodukuri-cover",
     image: "/design/oyakata-monodukuri-cover.jpg",
     title: "『チラシで伝えるものづくり』表紙",
-    subtitle: "親方 Project 合同誌 寄稿",
+    subtitle: "親方Project合同誌寄稿",
     description:
       "工房の道具を主役にした写真の上にセリフ体で大きく「チラシで伝えるものづくり」と重ねた表紙。ものづくりの温度と、それをチラシとして届ける行為の重なりをそのまま画に落とし込んだ。",
     url: "https://oyakata2024.booth.pm/",
