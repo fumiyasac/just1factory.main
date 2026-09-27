@@ -858,3 +858,116 @@ i.amazon_color {
 .sns_link:hover .sns_title {
   text-decoration: underline;
 }
+
+/* === showcase/ShowcaseRepos === */
+/* Repo リスト内で使う技術スタックチップ (小さめ・アウトライン) */
+.showcase_stack_chip {
+  display: inline-block;
+  padding: 1px 8px;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  color: #555555;
+  font-family: 'Menlo', Consolas, 'Liberation Mono', monospace;
+  font-size: 11px;
+  line-height: 1.4;
+  border-radius: 8px;
+}
+.showcase_description {
+  color: #555555;
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 6px 0 10px 0;
+}
+.showcase_links {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+/* GitHub チップは Manuscript の contribution_link_chip と同じ濃いグレー統一 */
+.showcase_github_chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  background-color: #444444;
+  color: #ffffff;
+  font-size: 11px;
+  line-height: 1.4;
+  border-radius: 8px;
+  text-decoration: none;
+  border: none;
+}
+.showcase_github_chip:hover {
+  background-color: #333333;
+  color: #ffffff;
+  text-decoration: none;
+}
+.showcase_github_chip i.fa {
+  margin-right: 4px;
+}
+
+/* === showcase/ShowcaseGishohaku === */
+.showcase_gishohaku_card {
+  padding: 24px 26px;
+  background-color: #fafafa;
+  border: 1px solid #eeeeee;
+  border-radius: 6px;
+}
+.showcase_gishohaku_role {
+  display: inline-block;
+  padding: 3px 10px;
+  background-color: #17a2b8;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+  border-radius: 10rem;
+  margin-bottom: 16px;
+}
+.showcase_gishohaku_body {
+  color: #555555;
+  font-size: 14px;
+  line-height: 1.9;
+  margin-bottom: 20px;
+}
+.showcase_gishohaku_subhead {
+  color: #444444;
+  font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 20px 0 10px 0;
+}
+.showcase_gishohaku_highlights {
+  padding-left: 20px;
+  color: #555555;
+  font-size: 13.5px;
+  line-height: 1.8;
+  margin-bottom: 8px;
+}
+.showcase_gishohaku_stack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.showcase_gishohaku_stack_group {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.showcase_gishohaku_stack_label {
+  min-width: 190px;
+  color: #2867B2;
+  font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.6;
+}
+.showcase_gishohaku_stack_items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.showcase_gishohaku_links {
+  margin-top: 10px;
+}
