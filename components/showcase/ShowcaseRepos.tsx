@@ -1,5 +1,5 @@
-// 個人開発ショーケース。Talks archive と同じ構造(カテゴリー凡例 + グルーピング + タイムライン風リスト)で
-// 6 カテゴリーに分類したリポジトリを表示する。
+// 個人開発ショーケース。Talks archiveと同じ構造(カテゴリー凡例 + グルーピング + タイムライン風リスト)で
+// 6カテゴリーに分類したリポジトリを表示する。
 import {
   REPOS,
   REPO_CATEGORIES,
@@ -43,7 +43,7 @@ function RepoRow({ item }: { item: RepoItem }) {
           </span>
           {item.featured ? (
             <span className="badge badge-pill badge-info archive_platform">
-              <i className="fa fa-star" aria-hidden="true" /> 公開 OSS
+              <i className="fa fa-star" aria-hidden="true" /> 公開OSS
             </span>
           ) : null}
           {item.stack.map((tag) => (
@@ -78,9 +78,9 @@ export default function ShowcaseRepos() {
   return (
     <div className="container">
       <div className="talks_archive_block">
-        <h2>個人開発 Showcase（全{REPOS.length}件）</h2>
+        <h2>個人開発Showcase（全{REPOS.length}件）</h2>
         <p className="archive_lead">
-          iOS / Android / Flutter エンジニアとしての実務で登場する UI 実装・状態管理・アーキテクチャ選定の判断を、GitHub上で追試できる形にストックしてきたリポジトリ群です。
+          iOS / Android / Flutterエンジニアとしての実務で登場するUI実装・状態管理・アーキテクチャ選定の判断を、GitHub上で追試できる形にストックしてきたリポジトリ群です。
           いずれも「業務コードにそのまま持ち込むことは難しいが、実装アプローチの引き出しとして繰り返し役立つ」ことを重視しています。
         </p>
         <CategoryLegend />
