@@ -27,6 +27,16 @@ export const GISHOHAKU_ITEMS: DesignItem[] = [
       "水彩風の空・歯車・電球のあしらいに公式マスコットの「ありどらごん」を配し、親しみやすさと技術の広がりを両立。QRコードとキャッチコピーで登録導線を強調した。",
   },
   {
+    slug: "gishohaku-14",
+    image: "/design/gishohaku-14.jpg",
+    title: "技術書同人誌博覧会#14",
+    subtitle: "サークル & 一般参加者募集チラシ",
+    date: "2026年9月13日（日）",
+    venue: "大田区産業プラザPiO大展示ホール",
+    description:
+      "秋開催に合わせ、紅葉と開かれた本のフォト素材にオレンジ〜ブラウンのグラデーションを重ねた温かみのある構成。「A lot of input, a lot of output.」のキャッチコピーで、読む・書くの循環を秋の景色と重ねた。",
+  },
+  {
     slug: "gishohaku-13",
     image: "/design/gishohaku-13.jpg",
     title: "技術書同人誌博覧会#13",
