@@ -20,11 +20,11 @@ export type RepoCategoryInfo = {
 };
 
 export const REPO_CATEGORIES: Record<RepoCategory, RepoCategoryInfo> = {
-  oss:      { label: "公開 OSS",              desc: "実運用アプリで利用できる公開 OSS として継続メンテナンスしているリポジトリ" },
-  swiftui:  { label: "SwiftUI",               desc: "SwiftUI・Observation・SwiftData など新しい iOS API の UI 実装検証" },
-  uikit:    { label: "UIKit",                 desc: "UIKit・UICollectionView・UIScrollView を組み合わせた UI 実装検証" },
-  rx:       { label: "RxSwift / Redux",       desc: "RxSwift・Redux による状態管理と UI 実装の組み合わせ検証" },
-  flutter:  { label: "Flutter",               desc: "Flutter + Riverpod / Drift / Firestore を組み合わせた UI 実装検証" },
+  oss:      { label: "公開 OSS",              desc: "実運用アプリで利用できる公開OSSとして継続メンテナンスしているリポジトリ" },
+  swiftui:  { label: "SwiftUI",               desc: "SwiftUI・Observation・SwiftData など新しい iOS APIのUI実装検証" },
+  uikit:    { label: "UIKit",                 desc: "UIKit・UICollectionView・UIScrollViewを組み合わせたUI実装検証" },
+  rx:       { label: "RxSwift / Redux",       desc: "RxSwift・Redux による状態管理とUI実装の組み合わせ検証" },
+  flutter:  { label: "Flutter",               desc: "Flutter + Riverpod / Drift / Firestoreを組み合わせたUI実装検証" },
   research: { label: "技術調査",              desc: "ライブラリのバージョン差分やアーキテクチャ移行を目的とした比較用リポジトリ" },
 };
 
