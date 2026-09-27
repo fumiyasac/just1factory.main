@@ -1,5 +1,5 @@
-// 技術書同人誌博覧会（技書博）公式サイトの運用保守 Contribution セクション。
-// Manuscript の contribution_card スタイルを踏襲した 1 プロジェクトカード + 技術スタックチップ。
+// 技術書同人誌博覧会（技書博）公式サイトの運用保守Contributionセクション。
+// Manuscriptのcontribution_cardスタイルを踏襲した1プロジェクトカード + 技術スタックチップ。
 import {
   GISHOHAKU_HIGHLIGHTS,
   GISHOHAKU_SITE_URL,
@@ -25,9 +25,9 @@ export default function ShowcaseGishohaku() {
 
           <p className="showcase_gishohaku_body">
             イベント開催に必要な情報更新だけでなく、長期間更新が難しかったフロントエンドの技術スタック・依存ライブラリ・開発環境・運用スクリプトを整理し、既存機能やデザインを維持しながら段階的な改善を進めています。
-            Next.js / React / Node.js / Firebase / Emotion / Tailwind CSS / TypeScript など複数の技術要素が古いバージョンのまま相互依存していたため、単純な一括アップデートではなく、影響範囲の調査・ビルド確認・型チェック・画面比較・実行環境確認を組み合わせながら移行しています。
-            アップデート前後では主要画面のスクリーンショットを取得し、Visual Regression Testで差分を確認。Docker 環境でのビルド・起動確認まで行い、本番Cloud Run相当の実行経路も検証しています。
-            Firestoreデータ投入・メール送信スクリプトは、誤操作を防ぐため<strong>DryRun をデフォルト</strong>とする安全設計へ変更し、実際の更新は明示的なオプション指定が必要な方式に改めました。
+            Next.js / React / Node.js / Firebase / Emotion / Tailwind CSS / TypeScriptなど複数の技術要素が古いバージョンのまま相互依存していたため、単純な一括アップデートではなく、影響範囲の調査・ビルド確認・型チェック・画面比較・実行環境確認を組み合わせながら移行しています。
+            アップデート前後では主要画面のスクリーンショットを取得し、Visual Regression Testで差分を確認。Docker環境でのビルド・起動確認まで行い、本番Cloud Run相当の実行経路も検証しています。
+            Firestoreデータ投入・メール送信スクリプトは、誤操作を防ぐため<strong>DryRunをデフォルト</strong>とする安全設計へ変更し、実際の更新は明示的なオプション指定が必要な方式に改めました。
           </p>
 
           <h4 className="showcase_gishohaku_subhead">主な取り組み</h4>
