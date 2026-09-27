@@ -442,3 +442,419 @@ i.amazon_color {
   line-height: 1.7;
   margin: 0;
 }
+
+/* === manuscript/ManuscriptIOSDC === */
+/* Talks archive セクションと配色を統一(タイトル:青 #2867B2、チップ:濃いグレー #444444) */
+.iosdc_block {
+  padding-top: 80px;
+}
+.iosdc_block h2 {
+  padding: 0 0 20px 0;
+  color: #444444;
+  font-size: 26px;
+  font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
+}
+.iosdc_lead {
+  color: #555555;
+  margin-bottom: 28px;
+}
+.iosdc_card {
+  height: 100%;
+  padding: 18px 20px;
+  background-color: #fafafa;
+  border: 1px solid #eeeeee;
+  border-radius: 6px;
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+.iosdc_card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border-color: #cccccc;
+}
+.iosdc_year_row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+/* Talks の SpeakerDeck / Zenn プラットフォームチップ(Bootstrap badge-info)と同色 */
+.iosdc_featured {
+  padding: 3px 10px;
+  background-color: #17a2b8;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+  border-radius: 10rem;
+  margin-right: 8px;
+}
+.iosdc_year {
+  color: #888888;
+  font-family: 'Menlo', 'Consolas', monospace;
+  font-size: 12px;
+}
+.iosdc_title_link {
+  display: inline-block;
+  color: #2867B2;
+  font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5;
+  text-decoration: none;
+  margin-bottom: 14px;
+}
+.iosdc_title_link:hover {
+  text-decoration: underline;
+}
+.iosdc_links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.iosdc_pdf_btn,
+.iosdc_github_chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  background-color: #444444;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: normal;
+  line-height: 1.4;
+  border-radius: 8px;
+  text-decoration: none;
+  border: none;
+}
+.iosdc_pdf_btn:hover,
+.iosdc_github_chip:hover {
+  background-color: #333333;
+  color: #ffffff;
+  text-decoration: none;
+}
+.iosdc_pdf_btn i.fa,
+.iosdc_github_chip i.fa {
+  margin-right: 4px;
+}
+
+/* === manuscript/ManuscriptContributions === */
+.contribution_block {
+  padding-top: 80px;
+}
+.contribution_block h2 {
+  padding: 0 0 20px 0;
+  color: #444444;
+  font-size: 26px;
+  font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
+}
+.contribution_lead {
+  color: #555555;
+  margin-bottom: 28px;
+}
+.contribution_card {
+  height: 100%;
+  padding: 18px 20px;
+  background-color: #fafafa;
+  border: 1px solid #eeeeee;
+  border-radius: 6px;
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+.contribution_card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border-color: #cccccc;
+}
+.contribution_publisher {
+  color: #2867B2;
+  font-size: 12px;
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+.contribution_title_link {
+  display: inline-block;
+  color: #2867B2;
+  font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1.5;
+  text-decoration: none;
+  margin-bottom: 12px;
+}
+.contribution_title_link:hover {
+  text-decoration: underline;
+}
+.contribution_links {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+/* チップは Talks の category_badge と揃えて濃いグレー統一 */
+.contribution_link_chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  background-color: #444444;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: normal;
+  line-height: 1.4;
+  border-radius: 8px;
+  text-decoration: none;
+  border: none;
+}
+.contribution_link_chip:hover {
+  background-color: #333333;
+  color: #ffffff;
+  text-decoration: none;
+}
+.contribution_link_chip i.fa {
+  margin-right: 4px;
+}
+.contribution_link_primary {
+  /* 主リンク・補助リンクとも同じ濃いグレーで統一 */
+  background-color: #444444;
+}
+.contribution_link_primary:hover {
+  background-color: #333333;
+}
+
+/* === manuscript/ManuscriptTranslations === */
+.translation_block {
+  padding-top: 80px;
+}
+.translation_block h2 {
+  padding: 0 0 20px 0;
+  color: #444444;
+  font-size: 26px;
+  font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
+}
+.translation_lead {
+  color: #555555;
+  margin-bottom: 24px;
+}
+.translation_list {
+  margin: 0;
+}
+.translation_item {
+  padding: 12px 0;
+  border-top: 1px solid #eeeeee;
+}
+.translation_item:first-child {
+  border-top: none;
+}
+.translation_link {
+  display: flex;
+  align-items: flex-start;
+  color: #2867B2;
+  text-decoration: none;
+}
+.translation_link:hover {
+  color: #2867B2;
+  text-decoration: none;
+}
+.translation_link i.fa {
+  color: #888888;
+  margin-right: 10px;
+  margin-top: 4px;
+  font-size: 16px;
+}
+.translation_title {
+  font-weight: bold;
+  line-height: 1.5;
+}
+.translation_link:hover .translation_title {
+  text-decoration: underline;
+}
+
+/* === manuscript/ManuscriptDroidKaigi === */
+.droidkaigi_block {
+  padding-top: 80px;
+}
+.droidkaigi_block h2 {
+  padding: 0 0 20px 0;
+  color: #444444;
+  font-size: 26px;
+  font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
+}
+.droidkaigi_lead {
+  color: #555555;
+  margin-bottom: 28px;
+}
+.droidkaigi_year {
+  margin-bottom: 32px;
+}
+.droidkaigi_year_heading {
+  margin: 0 0 12px 0;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #dddddd;
+  color: #333333;
+}
+.droidkaigi_year_num {
+  font-size: 28px;
+  font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: bold;
+}
+.droidkaigi_year_suffix {
+  font-size: 16px;
+  color: #666666;
+  margin-left: 2px;
+}
+.droidkaigi_year_count {
+  font-size: 14px;
+  color: #666666;
+  font-weight: normal;
+  margin-left: 4px;
+}
+.droidkaigi_list {
+  margin: 0;
+}
+.droidkaigi_item {
+  padding: 12px 0;
+  border-top: 1px solid #eeeeee;
+}
+.droidkaigi_item:first-child {
+  border-top: none;
+}
+.droidkaigi_title_link {
+  display: inline-block;
+  color: #2867B2;
+  font-family: 'Menlo', 'Consolas', monospace;
+  font-size: 14px;
+  text-decoration: none;
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+.droidkaigi_title_link:hover {
+  text-decoration: underline;
+}
+.droidkaigi_summary {
+  color: #555555;
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 6px;
+}
+.droidkaigi_meta {
+  display: flex;
+  gap: 6px;
+}
+.droidkaigi_pr_chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  background-color: #f5f5f5;
+  color: #666666;
+  font-size: 11px;
+  border-radius: 10px;
+}
+.droidkaigi_pr_chip i.fa {
+  margin-right: 4px;
+}
+
+/* === manuscript/ManuscriptTechBlog === */
+.techblog_block {
+  padding-top: 80px;
+}
+.techblog_block h2 {
+  padding: 0 0 20px 0;
+  color: #444444;
+  font-size: 26px;
+  font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
+}
+.techblog_lead {
+  color: #555555;
+  margin-bottom: 28px;
+}
+.techblog_company {
+  margin-bottom: 32px;
+}
+.techblog_company_heading {
+  margin: 0 0 12px 0;
+  padding-bottom: 8px;
+  color: #333333;
+  font-size: 18px;
+  font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
+  border-bottom: 1px solid #dddddd;
+}
+.techblog_company_count {
+  font-size: 13px;
+  color: #666666;
+  font-weight: normal;
+  margin-left: 4px;
+}
+.techblog_list {
+  margin: 0;
+}
+.techblog_item {
+  padding: 10px 0 10px 16px;
+  position: relative;
+  border-top: 1px solid #f0f0f0;
+}
+.techblog_item:first-child {
+  border-top: none;
+}
+.techblog_item::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 18px;
+  width: 6px;
+  height: 6px;
+  background-color: #2867B2;
+  border-radius: 50%;
+}
+.techblog_title_link {
+  color: #2867B2;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.6;
+  text-decoration: none;
+}
+.techblog_title_link:hover {
+  text-decoration: underline;
+}
+
+/* === manuscript/ManuscriptSNS === */
+.sns_block {
+  padding-top: 80px;
+}
+.sns_block h2 {
+  padding: 0 0 20px 0;
+  color: #444444;
+  font-size: 26px;
+  font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
+}
+.sns_lead {
+  color: #555555;
+  margin-bottom: 24px;
+}
+.sns_list {
+  margin: 0;
+}
+.sns_item {
+  padding: 10px 0;
+  border-top: 1px solid #eeeeee;
+}
+.sns_item:first-child {
+  border-top: none;
+}
+.sns_link {
+  display: flex;
+  align-items: flex-start;
+  color: #2867B2;
+  text-decoration: none;
+}
+.sns_link:hover {
+  color: #2867B2;
+  text-decoration: none;
+}
+.sns_link i.fa {
+  color: #00aced;
+  margin-right: 10px;
+  margin-top: 4px;
+  font-size: 14px;
+}
+.sns_title {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+.sns_link:hover .sns_title {
+  text-decoration: underline;
+}
