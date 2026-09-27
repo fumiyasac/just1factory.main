@@ -26,7 +26,7 @@ CLAUDE.md から `@docs/ROADMAP.md` で参照する。
 - [x] 登壇 & 技術記事ページ（`/talks`）追加 ※「登壇アーカイブ」と「執筆・寄稿一覧」を統合
 - [x] Design ページ（`/design`）追加 ※技書博チラシ・親方 Project 寄稿等のグラフィック制作をまとめる
 - [x] Manuscript ページ（`/manuscript`）追加 ※iOSDC 原稿・書籍寄稿・翻訳レビュー・DroidKaigi Contribution・テックブログ・自筆ノートを統合
-- [ ] Showcase ページ（UI実装ショーケース・GitHub 実装事例）追加
+- [x] Showcase ページ（`/showcase`）追加 ※UI 実装サンプル GitHub リポジトリ群 + 技書博公式サイト運用保守を統合
 - [ ] Timeline ページ（キャリア年表）追加
 
 ## Phase 3: CMS 化
