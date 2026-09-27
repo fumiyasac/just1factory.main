@@ -10,14 +10,18 @@ const SKILLS = [
   "Flutter",
   "Dart",
   "Ruby",
+  "Ruby on Rails",
   "PHP",
+  "Laravel",
   "Go",
+  "Node.js",
   "TypeScript",
   "React",
   "Next.js",
   "UI Desigin",
   "ReactNative",
   "Kotlin Multiplatform",
+  "Google Cloud Platform",
 ];
 
 export default function Skills() {
