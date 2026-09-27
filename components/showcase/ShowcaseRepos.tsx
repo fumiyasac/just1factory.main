@@ -51,6 +51,14 @@ function RepoRow({ item }: { item: RepoItem }) {
               {tag}
             </span>
           ))}
+          <a
+            className="showcase_github_chip"
+            href={item.url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fa fa-github" aria-hidden="true" /> GitHub
+          </a>
         </div>
         <a
           className="archive_title_link"
@@ -61,16 +69,6 @@ function RepoRow({ item }: { item: RepoItem }) {
           {item.title}
         </a>
         <div className="showcase_description">{item.description}</div>
-        <div className="showcase_links">
-          <a
-            className="showcase_github_chip"
-            href={item.url}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className="fa fa-github" aria-hidden="true" /> GitHub
-          </a>
-        </div>
       </div>
     </li>
   );
