@@ -1,0 +1,513 @@
+// Manuscript & Writings ページで表示する原稿・寄稿・レビュー・Contributionのデータ。
+// セクション構成:
+//   1) iOSDC Japan パンフレット原稿(featured)
+//   2) 寄稿(書籍・合同誌)
+//   3) 翻訳レビュー参加
+//   4) DroidKaigi 公式アプリ Contribution
+//   5) テックブログ執筆
+//   6) 自筆ノート・SNS 発信
+
+// ============================
+// 1) iOSDC Japan パンフレット原稿
+// ============================
+export type IOSDCEntry = {
+  slug: string;
+  year: string; // "2026" 等
+  variant?: string; // "vol.1" のように同一年に複数ある場合の識別
+  title: string;
+  manuscriptUrl: string; // 掲載原稿(Dropbox)
+  githubUrl: string; // 原稿の元ソース(GitHub)
+};
+
+// 新しい年が先に来る(降順)。
+export const IOSDC_MANUSCRIPTS: IOSDCEntry[] = [
+  {
+    slug: "iosdc-2026",
+    year: "2026",
+    title: "StickyHeaderやCarousel等のスクロール連動UIをSwiftUIで実装する際の状態管理の勘所",
+    manuscriptUrl:
+      "https://www.dropbox.com/scl/fi/db4lqba1lks4o9ys3wfhh/iOSDC2026-4-_StickyHeader-Carousel-UI-SwiftUI-_.pdf?rlkey=kuq1hhokbj4tlxefogaeouh7m&st=xg245z61&e=1&dl=0",
+    githubUrl:
+      "https://github.com/fumiyasac/iosdc2026_pamphlet_manuscript/blob/main/manuscript.md",
+  },
+  {
+    slug: "iosdc-2025",
+    year: "2025",
+    title:
+      "見た目に惑わされないUI設計と実装の勘どころ 〜SwiftUI・UIKitで読み解く複雑度の見極め方〜",
+    manuscriptUrl:
+      "https://www.dropbox.com/scl/fi/ijxpnmd78f0t0p1gdoet9/iOSDC2025-8.pdf?rlkey=3qlri0p7rat86e9rwpt9jc4wg&e=2&st=lzuabt8y&dl=0",
+    githubUrl:
+      "https://github.com/fumiyasac/iosdc2025_pamphlet_manuscript/blob/main/manuscript.md",
+  },
+  {
+    slug: "iosdc-2024-1",
+    year: "2024",
+    variant: "vol.1",
+    title:
+      "Combineベースの実装をSwift Concurrencyへ少しずつ置き換えていく際のアイデアとヒントのご紹介",
+    manuscriptUrl:
+      "https://www.dropbox.com/scl/fi/guu3p2gcjgrgbmfoyogfx/iOSDC2024-8.pdf?rlkey=8osmv541nal5ai3zmgpnysdq3&st=gjued2j5&e=1&dl=0",
+    githubUrl:
+      "https://github.com/fumiyasac/iosdc2024_pamphlet_manuscript_vol1/blob/main/manuscript.md",
+  },
+  {
+    slug: "iosdc-2024-2",
+    year: "2024",
+    variant: "vol.2",
+    title: "UIKitを利用した複雑な表現をSwiftUIで再現する際の考え方と事例紹介",
+    manuscriptUrl:
+      "https://www.dropbox.com/scl/fi/3z7k5ql2q7287dkd61hck/iOSDC2024-4.pdf?rlkey=1870s47ni8bv8k1cd7v970eed&st=5zzy66zj&e=1&dl=0",
+    githubUrl:
+      "https://github.com/fumiyasac/iosdc2024_pamphlet_manuscript_vol2/blob/main/manuscript.md",
+  },
+  {
+    slug: "iosdc-2023-1",
+    year: "2023",
+    variant: "vol.1",
+    title: "実はそのUI実装や機能はDIYできちゃう！個人的にも活用している実現Tips集",
+    manuscriptUrl:
+      "https://www.dropbox.com/scl/fi/ike1o4hdr5ddpd1uk22k7/iOSDC2023-4.pdf?rlkey=lbt9bu3uy7089owwiykir1zvs&e=1&dl=0",
+    githubUrl:
+      "https://github.com/fumiyasac/iosdc2023_pamphlet_manuscript_vol1/blob/main/manuscript.md",
+  },
+  {
+    slug: "iosdc-2023-2",
+    year: "2023",
+    variant: "vol.2",
+    title: "UIKit＆SwiftUIとCombineを組み合わせた処理で上手にUnitTestを整えていくアイデア解説",
+    manuscriptUrl:
+      "https://www.dropbox.com/scl/fi/fu9ekduob36e3mxe5iqts/iOSDC2023-8.pdf?rlkey=hytabg2j5g95t9lgh354kr683&e=1&dl=0",
+    githubUrl:
+      "https://github.com/fumiyasac/iosdc2023_pamphlet_manuscript_vol2/blob/main/manuscript.md",
+  },
+  {
+    slug: "iosdc-2022",
+    year: "2022",
+    title: "不具合や仕様もれを減らすための勘所とユニットテストで学ぶ簡単事例集",
+    manuscriptUrl:
+      "https://www.dropbox.com/scl/fi/5q16ahosrroejfump32jn/iosdc_2022_-_.pdf?rlkey=g2ah090k6ly485xaw2u0vu69f&e=1&dl=0",
+    githubUrl:
+      "https://github.com/fumiyasac/iosdc2022_pamphlet_manuscript/blob/main/manuscript.md",
+  },
+  {
+    slug: "iosdc-2021",
+    year: "2021",
+    title: "円滑なUI＆機能実装やデザイナーとの共同作業を進めるために心がけてきた事",
+    manuscriptUrl:
+      "https://www.dropbox.com/scl/fi/n3629z8xqu3hdrug6iimo/iosdc_2021_-_-UI-_.pdf?rlkey=f1p36h8rg6lqlc2qz867xnxfm&e=1&dl=0",
+    githubUrl:
+      "https://github.com/fumiyasac/iosdc2021_pamphlet_manuscript/blob/main/manuscript.md",
+  },
+];
+
+// ============================
+// 2) 寄稿(書籍・合同誌)
+// ============================
+export type Contribution = {
+  slug: string;
+  publisher: string; // 書名や合同誌のタイトル
+  title: string; // 章タイトル
+  bookUrl?: string; // 書籍ページ(あれば優先)
+  githubUrl?: string; // GitHub の原稿ソース(補助・書籍URL無しの場合は主)
+};
+
+// 新しいもの順。Good Morning シリーズは #03→#02→#01 の順。
+export const CONTRIBUTIONS: Contribution[] = [
+  {
+    slug: "minna-agile",
+    publisher: "みんなのアジャイル",
+    title: "デザインから逆算して実装の難易度を見積もる",
+    bookUrl: "https://gihyo.jp/book/2025/978-4-297-14669-6",
+  },
+  {
+    slug: "good-morning-03",
+    publisher: "GMOインターネットグループ有志「Good Morning #03」",
+    title: "Quick + Nimbleで書かれたUnitTestを「swift-testing」に置き換える道標",
+    githubUrl:
+      "https://github.com/fumiyasac/good_morning/blob/main/manuscript03.md",
+  },
+  {
+    slug: "good-morning-02",
+    publisher: "GMOインターネットグループ有志「Good Morning #02」",
+    title: "画面遷移処理カスタマイズの基本と宣言的UIにおける考え方の違い",
+    githubUrl:
+      "https://github.com/fumiyasac/good_morning/blob/main/manuscript02.md",
+  },
+  {
+    slug: "good-morning-01",
+    publisher: "GMOインターネットグループ有志「Good Morning #01」",
+    title: "Androidアプリで見る「あの動き」をSwiftUIで実現してみる試み",
+    githubUrl:
+      "https://github.com/fumiyasac/good_morning/blob/main/manuscript01.md",
+  },
+  {
+    slug: "onestop-job",
+    publisher: "親方Project「ワンストップ職」",
+    title: "モバイルアプリエンジニアという職を作り直す",
+    githubUrl:
+      "https://github.com/fumiyasac/onestop-job-fumiyasac/blob/main/manuscript.md",
+  },
+  {
+    slug: "hello-30s",
+    publisher: "有志企画「入門30代」",
+    title:
+      "遠回りでも接続はできる：30歳からモバイル開発を始めた私が今考えていること",
+    githubUrl:
+      "https://github.com/fumiyasac/hello-30s-guidance-fumiyasac/blob/main/manuscript.md",
+  },
+  {
+    slug: "onestop-output",
+    publisher:
+      "アウトプットの背中を押すカンファレンス「ワンストップ アウトプット！」公式ガイドブック",
+    title:
+      "デザイナー出身モバイルエンジニアが、好きなUIノートと技術同人誌からアウトプットを連鎖させて世界を広げ続ける話",
+    githubUrl:
+      "https://github.com/fumiyasac/onestop-data-kanri-fumiyasac/blob/main/manuscript.md",
+  },
+  {
+    slug: "monodukuri",
+    publisher: "親方Project「メイカーのためのチラシで伝えるものづくり」",
+    title: "2章 コンテンツを構成する ＆ 3章 チラシのデザインとレイアウト",
+    bookUrl:
+      "https://techbookfest.org/product/a35GqPb1C0bTDz3qMgq8C8?productVariantID=gA67T6DhKHiAJBarLrBt0B",
+  },
+  {
+    slug: "onestop-backup",
+    publisher: "親方Project「ワンストップバックアップ」",
+    title: "プライベートブログとしてのアウトプット管理",
+    bookUrl:
+      "https://techbookfest.org/product/mkb6ae5hjnYWBkwxvSkzcY?productVariantID=nNkf6L1TWjxfJHUB6sxA4e",
+    githubUrl:
+      "https://github.com/fumiyasac/onestop-data-kanri-fumiyasac/blob/main/manuscript.md",
+  },
+  {
+    slug: "onestop-learning-2",
+    publisher: "親方Project「ワンストップ学び」(2)",
+    title: "良いアウトプットのためのインプットとノート整理",
+    bookUrl:
+      "https://techbookfest.org/product/wWXp3aEmNcjD6Dn0wLY9dS?productVariantID=pQyumWQr98bdpBiJ7LngQe",
+    githubUrl:
+      "https://github.com/fumiyasac/onestop-learning-fumiyasac/blob/main/manuscript2.md",
+  },
+  {
+    slug: "onestop-learning-1",
+    publisher: "親方Project「ワンストップ学び」(1)",
+    title: "技術書同人誌博覧会の次回案内デザイン制作で画像生成AIを活用する",
+    bookUrl:
+      "https://techbookfest.org/product/wWXp3aEmNcjD6Dn0wLY9dS?productVariantID=pQyumWQr98bdpBiJ7LngQe",
+    githubUrl:
+      "https://github.com/fumiyasac/onestop-learning-fumiyasac/blob/main/manuscript.md",
+  },
+];
+
+// ============================
+// 3) 翻訳レビュー参加
+// ============================
+export type TranslationReview = {
+  slug: string;
+  title: string;
+  bookUrl: string;
+};
+
+export const TRANSLATION_REVIEWS: TranslationReview[] = [
+  {
+    slug: "architect-decision",
+    title:
+      "ソフトウェアアーキテクトのための意思決定術 リーダーシップ/技術/プロダクトマネジメントの活用",
+    bookUrl: "https://book.impress.co.jp/books/1123101159",
+  },
+  {
+    slug: "simplicity",
+    title: "シンプリシティ ―持続可能かつ人間的で効果的なソフトウェア開発",
+    bookUrl: "https://www.oreilly.co.jp/books/9784814401710/",
+  },
+];
+
+// ============================
+// 4) DroidKaigi 公式アプリ Contribution
+// ============================
+export type DroidKaigiPR = {
+  originalTitle: string; // PR タイトル(英)
+  summary: string; // 簡潔な日本語概要
+  url: string;
+};
+
+export type DroidKaigiYear = {
+  year: string;
+  prs: DroidKaigiPR[];
+};
+
+// 新しい年が先。年内は PR 番号(=時系列)順。
+export const DROIDKAIGI: DroidKaigiYear[] = [
+  {
+    year: "2026",
+    prs: [
+      {
+        originalTitle: "Document why the iOS top bar stays Compose",
+        summary:
+          "iOSのトップバーをComposeのまま採用する意思決定の背景をドキュメント化。",
+        url: "https://github.com/DroidKaigi/conference-app-2026/pull/130",
+      },
+      {
+        originalTitle: "Rework the About screen for the 2026 redesign",
+        summary: "2026年リデザインに合わせたAbout画面の刷新。",
+        url: "https://github.com/DroidKaigi/conference-app-2026/pull/197",
+      },
+      {
+        originalTitle: "Clip press ripples to the hand-drawn shapes",
+        summary:
+          "手描き形状のボタンでプレス時リップルを形にクリップする処理の実装。",
+        url: "https://github.com/DroidKaigi/conference-app-2026/pull/251",
+      },
+    ],
+  },
+  {
+    year: "2025",
+    prs: [
+      {
+        originalTitle: '[README] Specific steps to pass a path to "nest"',
+        summary: "READMEにnestコマンドへのパス指定手順を追記。",
+        url: "https://github.com/DroidKaigi/conference-app-2025/pull/302",
+      },
+      {
+        originalTitle: "[iOS] Remove favorite heartmark animation",
+        summary:
+          "iOSのお気に入りハートマークアニメーションを取り除く整理対応。",
+        url: "https://github.com/DroidKaigi/conference-app-2025/pull/469",
+      },
+      {
+        originalTitle:
+          "[iOS] Apply design to search functionality & improve filtering logic",
+        summary:
+          "iOS検索機能へのデザイン適用とフィルタリングロジックの改善。",
+        url: "https://github.com/DroidKaigi/conference-app-2025/pull/487",
+      },
+    ],
+  },
+  {
+    year: "2024",
+    prs: [
+      {
+        originalTitle: "Add Trouble shooting section in iOS project README",
+        summary:
+          "iOSプロジェクトのREADMEにトラブルシューティング節を追加。",
+        url: "https://github.com/DroidKaigi/conference-app-2024/pull/633",
+      },
+      {
+        originalTitle:
+          "English translation support for About Screen Title & Search Chips",
+        summary: "About画面タイトルとSearch Chipsの英訳対応。",
+        url: "https://github.com/DroidKaigi/conference-app-2024/pull/644",
+      },
+      {
+        originalTitle:
+          "Enable to display category chip data (from State) in SearchView",
+        summary:
+          "SearchViewでState由来のカテゴリーChipデータを表示可能にする改修。",
+        url: "https://github.com/DroidKaigi/conference-app-2024/pull/684",
+      },
+      {
+        originalTitle: "[iOS] Fix timeline grid unexpected margin.",
+        summary: "iOSタイムライングリッドの意図しないマージンを修正。",
+        url: "https://github.com/DroidKaigi/conference-app-2024/pull/872",
+      },
+      {
+        originalTitle:
+          "[iOS] Add animation when you tap heartmark in timetable list.",
+        summary:
+          "タイムテーブル一覧でハートマークをタップした際のアニメーションを追加。",
+        url: "https://github.com/DroidKaigi/conference-app-2024/pull/944",
+      },
+    ],
+  },
+  {
+    year: "2023",
+    prs: [
+      {
+        originalTitle: "[iOS] Add Dynamic Tab Animation in TimetableDayHeader.",
+        summary: "TimetableDayHeaderに動的タブアニメーションを追加。",
+        url: "https://github.com/DroidKaigi/conference-app-2023/pull/765",
+      },
+      {
+        originalTitle:
+          "[Bug][iOS] Fix to reflect foregroundStyle for bookmark icons in TimetableListItemView",
+        summary:
+          "TimetableListItemView内bookmarkアイコンのforegroundStyle反映バグを修正。",
+        url: "https://github.com/DroidKaigi/conference-app-2023/pull/844",
+      },
+      {
+        originalTitle:
+          "[iOS] Enable to open GoogleMap application (or GoogleMap Web Page) from about screen.",
+        summary:
+          "About画面からGoogleMapアプリ(またはWebページ)を開けるように改修。",
+        url: "https://github.com/DroidKaigi/conference-app-2023/pull/973",
+      },
+      {
+        originalTitle:
+          "[iOS] Add search word highlight decoration when user inputs search word in SearchView.",
+        summary: "SearchViewで検索ワード入力時のハイライト装飾を追加。",
+        url: "https://github.com/DroidKaigi/conference-app-2023/pull/975",
+      },
+      {
+        originalTitle:
+          '[iOS] Shrink timetable tab like "CoodinatorLayout" Component.',
+        summary:
+          "CoordinatorLayout風の縮小挙動をタイムテーブルタブに実装。",
+        url: "https://github.com/DroidKaigi/conference-app-2023/pull/979",
+      },
+      {
+        originalTitle:
+          "[iOS] Fix supported language display according to user's locale settings.",
+        summary: "ユーザーロケール設定に応じた対応言語の表示を修正。",
+        url: "https://github.com/DroidKaigi/conference-app-2023/pull/997",
+      },
+      {
+        originalTitle: "Fix margin when is collapsing state.",
+        summary: "折りたたみ状態時のマージンを修正。",
+        url: "https://github.com/DroidKaigi/conference-app-2023/pull/1177",
+      },
+    ],
+  },
+];
+
+// ============================
+// 5) テックブログ執筆
+// ============================
+export type TechBlogArticle = {
+  title: string;
+  url: string;
+};
+
+export type TechBlogCompany = {
+  company: string;
+  articles: TechBlogArticle[];
+};
+
+// 会社ごとにグルーピング。各社内で新しい順。
+export const TECH_BLOG: TechBlogCompany[] = [
+  {
+    company: "GMOペパボ",
+    articles: [
+      {
+        title: "【非公式】きのこカンファレンスin関西に参加＆登壇しました！",
+        url: "https://tech.pepabo.com/2025/08/01/kinoko-conf-in-kansai-2025/",
+      },
+      {
+        title: "t_wadaさんによる2025年度版TDDワークショップを開催しました",
+        url: "https://tech.pepabo.com/2025/07/03/tdd-workshop-2025/",
+      },
+      {
+        title:
+          "第89回potatotips iOS/Android開発Tips共有会レポート：主催から学んだ勉強会開催のポイント",
+        url: "https://tech.pepabo.com/2024/11/21/potatotips-89/",
+      },
+      {
+        title: "DevRel/Japan CONFERENCE 2024に参加しました",
+        url: "https://tech.pepabo.com/2024/09/30/devrel-conf-2024/",
+      },
+      {
+        title:
+          "最新技術トレンドと今後のヒントに出会えたDroidKaigi 2024参加レポート",
+        url: "https://tech.pepabo.com/2024/09/27/droid-kaigi-2024/",
+      },
+      {
+        title: "iOSDC Japan 2024に参加しました",
+        url: "https://tech.pepabo.com/2024/09/11/iosdc-japan-2024/",
+      },
+      {
+        title: "Kotlin Fest 2024に参加しました",
+        url: "https://tech.pepabo.com/2024/07/19/kotlin-fest-2024/",
+      },
+      {
+        title: "技術書典16への参加と2回目の合同誌制作を振り返って",
+        url: "https://tech.pepabo.com/2024/07/12/teckbook16/",
+      },
+      {
+        title: "モバイルエンジニアがminneのWeb開発を始めるにあたり取り組んできた事",
+        url: "https://tech.pepabo.com/2024/05/30/web-mobile-tsunagime/",
+      },
+      {
+        title: "try! Swift Tokyo 2024に参加しました",
+        url: "https://tech.pepabo.com/2024/04/02/try-swift-tokyo-2024/",
+      },
+      {
+        title:
+          "仕様をより深く理解する＆Webエンジニアとより円滑に連携する際に取り組んできた事",
+        url: "https://tech.pepabo.com/2023/12/01/web-backend-and-mobile-relationship/",
+      },
+      {
+        title: "iOSDC Japan 2023に参加しました",
+        url: "https://tech.pepabo.com/2023/10/11/iosdc2023-report/",
+      },
+      {
+        title: "iOSDCパンフレット原稿執筆から得た教訓と醍醐味",
+        url: "https://tech.pepabo.com/2023/08/29/iosdc-pamphlet/",
+      },
+      {
+        title:
+          "minne iOS内のUIKit+MVC構成画面をSwiftUI+MVVM構成へのリプレイスした時の振り返り",
+        url: "https://tech.pepabo.com/2023/05/24/minne-ios-refactoring-swiftui/",
+      },
+    ],
+  },
+  {
+    company: "GMOインターネットグループ",
+    articles: [
+      {
+        title:
+          "iOS/Androidで同じUI体験をネイティブで作成する際に気をつけたい落とし穴",
+        url: "https://developers.gmo.jp/technology/57444/",
+      },
+    ],
+  },
+];
+
+// ============================
+// 6) 自筆ノート・SNS 発信
+// ============================
+export type SNSNote = {
+  title: string;
+  url: string;
+};
+
+export const SNS_NOTES: SNSNote[] = [
+  {
+    title: "TCAとReduxにおける特徴的な相違点をまとめたもの",
+    url: "https://twitter.com/fumiyasac/status/1592062777388339204",
+  },
+  {
+    title: "Netflixに似たUI構造をSwiftUIで再現する",
+    url: "https://twitter.com/fumiyasac/status/1590499801095081986",
+  },
+  {
+    title: "SwiftUIをReduxを組み合わせた画面実装に関するまとめ",
+    url: "https://twitter.com/fumiyasac/status/1582883611681861632",
+  },
+  {
+    title: "無限Carousel表現のUI実装をSwiftUIだけで作るコード例",
+    url: "https://x.com/fumiyasac/status/1866847799859720583",
+  },
+  {
+    title: "SwiftUIを用いた要素の無限循環スクロールに関するまとめ",
+    url: "https://x.com/fumiyasac/status/1867563988843999507",
+  },
+  {
+    title: "Androidでは良く利用するChip型のUI実装に関するまとめ",
+    url: "https://x.com/fumiyasac/status/1867910140349042881",
+  },
+  {
+    title:
+      "Swift Zoomin'で取り扱ったObservationに関する内容の復習に関するまとめ",
+    url: "https://x.com/fumiyasac/status/1868624747439038642",
+  },
+  {
+    title:
+      "Swift Zoomin'で取り扱った感覚的に理解するConcurrencyに関するまとめ",
+    url: "https://x.com/fumiyasac/status/1868987003284378081",
+  },
+  {
+    title: "XのProfile画面の様なLayoutや振る舞いに関するまとめ",
+    url: "https://x.com/fumiyasac/status/1869506926750646580",
+  },
+];
