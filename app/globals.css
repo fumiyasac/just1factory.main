@@ -443,16 +443,13 @@ i.amazon_color {
   margin: 0;
 }
 
-/* === manuscript/ManuscriptIOSDC(featured) === */
+/* === manuscript/ManuscriptIOSDC === */
+/* Talks archive セクションと配色を統一(タイトル:青 #2867B2、チップ:濃いグレー #444444) */
 .iosdc_block {
-  padding: 40px 24px 32px 24px;
-  margin-top: 80px;
-  background-color: #fdf6ed; /* 温かみのある淡いクリーム(iOSDCらしいアクセント) */
-  border: 1px solid #f0e6d2;
-  border-radius: 8px;
+  padding-top: 80px;
 }
 .iosdc_block h2 {
-  padding: 0 0 12px 0;
+  padding: 0 0 20px 0;
   color: #444444;
   font-size: 26px;
   font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
@@ -463,85 +460,77 @@ i.amazon_color {
 }
 .iosdc_card {
   height: 100%;
-  padding: 20px;
-  background-color: #ffffff;
+  padding: 18px 20px;
+  background-color: #fafafa;
   border: 1px solid #eeeeee;
-  border-left: 4px solid #E97706; /* iOSDC を想起させる温かいオレンジ */
   border-radius: 6px;
-  transition: box-shadow 0.15s ease;
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
 }
 .iosdc_card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border-color: #cccccc;
 }
 .iosdc_year_row {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
 }
+/* Talks の SpeakerDeck / Zenn プラットフォームチップ(Bootstrap badge-info)と同色 */
 .iosdc_featured {
-  padding: 2px 8px;
-  background-color: #E97706;
+  padding: 3px 10px;
+  background-color: #17a2b8;
   color: #ffffff;
   font-size: 11px;
-  font-weight: bold;
-  border-radius: 8px;
+  font-weight: 700;
+  line-height: 1;
+  border-radius: 10rem;
   margin-right: 8px;
 }
 .iosdc_year {
   color: #888888;
   font-family: 'Menlo', 'Consolas', monospace;
-  font-size: 13px;
+  font-size: 12px;
 }
 .iosdc_title_link {
   display: inline-block;
-  color: #333333;
+  color: #2867B2;
   font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: bold;
   line-height: 1.5;
   text-decoration: none;
   margin-bottom: 14px;
 }
 .iosdc_title_link:hover {
-  color: #E97706;
   text-decoration: underline;
 }
 .iosdc_links {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   flex-wrap: wrap;
 }
-.iosdc_pdf_btn {
-  background-color: #E97706;
-  border-color: #E97706;
-  color: #ffffff;
-  font-size: 13px;
-}
-.iosdc_pdf_btn:hover {
-  background-color: #C66300;
-  border-color: #C66300;
-  color: #ffffff;
-}
-.iosdc_pdf_btn i.fa {
-  margin-right: 4px;
-}
+.iosdc_pdf_btn,
 .iosdc_github_chip {
   display: inline-flex;
   align-items: center;
-  padding: 3px 10px;
-  background-color: #f5f5f5;
-  color: #444444;
-  font-size: 12px;
-  border-radius: 12px;
+  padding: 2px 8px;
+  background-color: #444444;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: normal;
+  line-height: 1.4;
+  border-radius: 8px;
   text-decoration: none;
-  border: 1px solid #dddddd;
+  border: none;
 }
+.iosdc_pdf_btn:hover,
 .iosdc_github_chip:hover {
-  background-color: #eeeeee;
-  color: #222222;
+  background-color: #333333;
+  color: #ffffff;
   text-decoration: none;
 }
+.iosdc_pdf_btn i.fa,
 .iosdc_github_chip i.fa {
   margin-right: 4px;
 }
@@ -580,7 +569,7 @@ i.amazon_color {
 }
 .contribution_title_link {
   display: inline-block;
-  color: #333333;
+  color: #2867B2;
   font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
   font-size: 15px;
   font-weight: bold;
@@ -589,7 +578,6 @@ i.amazon_color {
   margin-bottom: 12px;
 }
 .contribution_title_link:hover {
-  color: #2867B2;
   text-decoration: underline;
 }
 .contribution_links {
@@ -597,34 +585,34 @@ i.amazon_color {
   gap: 8px;
   flex-wrap: wrap;
 }
+/* チップは Talks の category_badge と揃えて濃いグレー統一 */
 .contribution_link_chip {
   display: inline-flex;
   align-items: center;
-  padding: 3px 10px;
-  background-color: #f5f5f5;
-  color: #444444;
-  font-size: 12px;
-  border-radius: 12px;
+  padding: 2px 8px;
+  background-color: #444444;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: normal;
+  line-height: 1.4;
+  border-radius: 8px;
   text-decoration: none;
-  border: 1px solid #dddddd;
+  border: none;
 }
 .contribution_link_chip:hover {
-  background-color: #eeeeee;
-  color: #222222;
+  background-color: #333333;
+  color: #ffffff;
   text-decoration: none;
 }
 .contribution_link_chip i.fa {
   margin-right: 4px;
 }
 .contribution_link_primary {
-  background-color: #2867B2;
-  color: #ffffff;
-  border-color: #2867B2;
+  /* 主リンク・補助リンクとも同じ濃いグレーで統一 */
+  background-color: #444444;
 }
 .contribution_link_primary:hover {
-  background-color: #204F87;
-  color: #ffffff;
-  border-color: #204F87;
+  background-color: #333333;
 }
 
 /* === manuscript/ManuscriptTranslations === */
@@ -654,7 +642,7 @@ i.amazon_color {
 .translation_link {
   display: flex;
   align-items: flex-start;
-  color: #333333;
+  color: #2867B2;
   text-decoration: none;
 }
 .translation_link:hover {
@@ -812,13 +800,13 @@ i.amazon_color {
   border-radius: 50%;
 }
 .techblog_title_link {
-  color: #333333;
+  color: #2867B2;
   font-size: 14px;
+  font-weight: bold;
   line-height: 1.6;
   text-decoration: none;
 }
 .techblog_title_link:hover {
-  color: #2867B2;
   text-decoration: underline;
 }
 
@@ -849,11 +837,11 @@ i.amazon_color {
 .sns_link {
   display: flex;
   align-items: flex-start;
-  color: #333333;
+  color: #2867B2;
   text-decoration: none;
 }
 .sns_link:hover {
-  color: #00aced;
+  color: #2867B2;
   text-decoration: none;
 }
 .sns_link i.fa {
@@ -864,6 +852,7 @@ i.amazon_color {
 }
 .sns_title {
   font-size: 14px;
+  font-weight: bold;
   line-height: 1.5;
 }
 .sns_link:hover .sns_title {
