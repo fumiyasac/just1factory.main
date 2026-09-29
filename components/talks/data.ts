@@ -25,7 +25,7 @@ export type CategoryInfo = {
 // globals.css の .category_badge に集約。プラットフォームバッジ(水色 badge-info)と
 // 役割が視覚的に分離し、Palatino セリフ体基調の落ち着いた世界観と調和させるため。
 export const CATEGORIES: Record<Category, CategoryInfo> = {
-  ui:        { label: "UI 実装",        desc: "UI パーツ・アニメーション・トランジション・レイアウト" },
+  ui:        { label: "UI実装",        desc: "UIパーツ・アニメーション・トランジション・レイアウト" },
   cross:     { label: "クロスプラットフォーム", desc: "iOS/Android の比較や React Native・Flutter" },
   arch:      { label: "アーキテクチャ",  desc: "状態管理・DI・レイヤー設計（Redux/TCA/MVVM/Riverpod 等）" },
   async:     { label: "非同期・テスト",  desc: "RxSwift・Combine・Concurrency・UnitTest・swift-testing" },
