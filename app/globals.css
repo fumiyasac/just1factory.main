@@ -971,3 +971,94 @@ i.amazon_color {
 .showcase_gishohaku_links {
   margin-top: 10px;
 }
+
+/* === timeline/TimelineList === */
+/* 年 + 一言テーマの行 */
+.timeline_year_row {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.timeline_year_num {
+  color: #2867B2;
+  font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1;
+}
+.timeline_year_subtitle {
+  color: #333333;
+  font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+/* 本文段落 */
+.timeline_paragraph {
+  color: #555555;
+  font-size: 14px;
+  line-height: 1.9;
+  margin: 0 0 8px 0;
+}
+/* キーワード行(chipはshowcase_stack_chipを再利用) */
+.timeline_keywords {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+}
+.timeline_keywords_head {
+  color: #888888;
+  font-size: 12px;
+  margin-right: 4px;
+}
+/* 年間隔をアーカイブより広めに取り、章立てとして読みやすくする */
+.timeline_list .archive_item {
+  padding-bottom: 24px;
+}
+
+/* === timeline/TimelineClosing === */
+.timeline_closing_block {
+  padding: 40px 0 80px 0;
+}
+.timeline_closing_block h2 {
+  padding: 0 0 20px 0;
+  color: #444444;
+  font-size: 26px;
+  font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
+}
+.timeline_forces {
+  margin: 0 0 24px 0;
+  padding: 20px 24px;
+  background-color: #fafafa;
+  border: 1px solid #eeeeee;
+  border-radius: 6px;
+}
+.timeline_force_item {
+  padding: 6px 0;
+  color: #555555;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.timeline_force_item + .timeline_force_item {
+  border-top: 1px dashed #dddddd;
+}
+.timeline_force_era {
+  color: #666666;
+}
+.timeline_force_label {
+  margin-left: 6px;
+  color: #2867B2;
+  font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+.timeline_closing_body {
+  color: #555555;
+  font-size: 14px;
+  line-height: 1.9;
+  margin: 0 0 10px 0;
+}

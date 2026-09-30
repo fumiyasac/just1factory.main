@@ -58,6 +58,11 @@ export default function NavigationBar() {
             </Link>
           </li>
           <li className="nav-item">
+            <Link className="nav-link" href="/timeline">
+              Timeline
+            </Link>
+          </li>
+          <li className="nav-item">
             <a
               className="nav-link"
               href="https://techblog-just1factory.vercel.app/"
