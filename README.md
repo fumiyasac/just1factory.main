@@ -1,64 +1,74 @@
-# just1factory.main
+# Just1factory Official Website
 
-Just1factory（Fumiya Sakai）公式サイト。**Next.js（App Router / React / TypeScript）** 製の静的サイトで、**Firebase Hosting** に配信しています。
+酒井文也（fumiyasac）のポートフォリオサイト。経歴・書籍・登壇・デザイン制作等のアウトプットをアーカイブとして公開しています。
 
-> もともと Nuxt.js 2 (Vue 2) 製でしたが、デザインを維持したまま Next.js へ移行しました。移行の詳細な記録は [`PROGRESS.md`](./PROGRESS.md) を参照してください。
+🔗 **https://just1factory.net**
 
-## 技術スタック
+## About
 
-- **Next.js 16**（App Router, 静的エクスポート `output: 'export'`）
-- **React 19 / TypeScript**
-- **Bootstrap 4.6** + **Font Awesome 4.7**（デザイン維持のためバージョン固定）
-- ホスティング: **Firebase Hosting**（プロジェクト: `just1factory-main`）
+Web制作、サーバーサイド、iOS、Android、Flutter、技術書、登壇、コミュニティ運営へと領域を広げながら、必要な技術をその都度身につけ、手を動かしてきた記録です。
 
-## 必要環境
+<!-- AUTO-GENERATED-START -->
+<!-- このセクションは readme-updater Subagent が自動生成しています。手動で編集しないでください。 -->
+<!-- 最終更新: 2026-10-02 -->
 
-- **Node.js 22**（`.nvmrc` あり）
-  ```bash
-  nvm use        # .nvmrc により 22 が選択される
-  ```
-- Firebase CLI（デプロイ時のみ・`firebase login` 済みであること）
+## Tech Stack
 
-## ローカル開発
+| Category | Technology |
+|---|---|
+| Framework | Next.js 16 (App Router, Static Export) |
+| Language | TypeScript / React 19 |
+| CSS | Bootstrap 4.6 + Font Awesome 4.7 |
+| Hosting | Firebase Hosting |
+
+## Pages
+
+| Page | Path | Description |
+|---|---|---|
+| Home | `/` | トップページ（Just1factory のメインビュー） |
+| Books | `/books` | 技術書・寄稿書籍のアーカイブ |
+| Talks & Articles | `/talks` | 登壇資料・技術記事のアーカイブ |
+| Design | `/design` | 技書博チラシ・親方Project 寄稿等のデザイン制作一覧 |
+| Manuscript & Writings | `/manuscript` | iOSDC 原稿・書籍寄稿・翻訳レビュー・DroidKaigi Contribution・テックブログ等の執筆記録 |
+| Development Showcase | `/showcase` | UI実装サンプルの GitHub リポジトリ群と技書博公式サイト運用保守 |
+| Career Timeline | `/timeline` | 2003年から現在までの越境キャリアを年別にまとめた年表 |
+
+**Total: 7 pages**
+
+<!-- AUTO-GENERATED-END -->
+
+## Development
 
 ```bash
-npm install        # 初回のみ
-npm run dev        # http://localhost:3000 で起動
+npm run dev       # 開発サーバー起動（http://localhost:3000）
+npm run build     # 静的ビルド → out/ に出力
+firebase deploy   # Firebase Hosting へデプロイ
 ```
 
-## ビルド（静的エクスポート）
+## CI/CD
 
-```bash
-npm run build      # out/ に静的ファイルを出力（output: 'export'）
-npm run lint       # ESLint
-```
+| Workflow | Trigger | Action |
+|---|---|---|
+| `ci.yml` | PR / master push | TypeScript型チェック + ビルド検証 |
+| `deploy-preview.yml` | PR | Firebase Preview Channelにデプロイ、PRにURLコメント |
+| `deploy-production.yml` | master push | Firebase Hosting 本番環境にデプロイ |
 
-- 出力先は `out/`（`/` と `/books/` の HTML、`404.html` などを生成）。
-- `trailingSlash: true` のため、`/books` は `/books/` に正規化されます。
+## Claude Code
 
-## デプロイ
+このプロジェクトは Claude Code による開発効率化を導入しています。
 
-`firebase.json` の `public` は `out` を指しています。リポジトリルートで実行してください。
+| 種別 | 名前 | 用途 |
+|---|---|---|
+| Command | `/add-page` | 新しいページを雛形から作成し、READMEも更新 |
+| Command | `/pre-deploy` | デプロイ前チェック |
+| Command | `/update-roadmap` | ROADMAPのタスクを完了にする |
+| Skill | `content-entry` | コンテンツ追加パターン・Bootstrap規約 |
+| Skill | `firebase-deploy` | デプロイ・キャッシュ戦略の知識 |
+| Skill | `seo-metadata` | OGP/SEOメタデータ規約 |
+| Agent | `content-auditor` | サイト全体の整合性チェック |
+| Agent | `code-reviewer` | PR差分のプロジェクト規約レビュー |
+| Agent | `readme-updater` | READMEの自動生成セクション更新 |
 
-```bash
-# プレビュー配信（本番前ステージング。一時URL・本番無影響・7日で失効）
-firebase hosting:channel:deploy preview --expires 7d
+## License
 
-# 本番デプロイ
-npm run build
-firebase deploy --only hosting
-```
-
-本番URL: https://just1factory-main.web.app
-
-## ディレクトリ構成
-
-```
-.
-├─ app/            # App Router（page.tsx / books/page.tsx / layout.tsx）
-├─ components/     # global / index / books のコンポーネント
-├─ public/         # 静的アセット（summaries/, books/ の画像）
-├─ next.config.ts  # 静的エクスポート設定
-├─ firebase.json   # Hosting 設定（public: out）
-└─ PROGRESS.md     # 移行記録
-```
+This project is private.
