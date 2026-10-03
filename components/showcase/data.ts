@@ -341,3 +341,23 @@ export const GISHOHAKU_STACK: GishohakuStackGroup[] = [
 ];
 
 export const GISHOHAKU_SITE_URL = "https://gishohaku.dev/";
+
+// -----------------------------------------------------------------------------
+// Open Source Conference (OSC) 技書博コアスタッフ登壇
+// -----------------------------------------------------------------------------
+
+export type GishohakuOscTalk = {
+  title: string;      // スライド/セッション題
+  event: string;      // 登壇イベント名
+  slideUrl: string;   // 掲載元(閲覧用の正規URL)
+  embedUrl: string;   // 埋め込み用iframe URL
+};
+
+export const GISHOHAKU_OSC: GishohakuOscTalk = {
+  title: "技術同人誌を書こう",
+  event: "OSC Online / Fall",
+  slideUrl:
+    "https://www.docswell.com/s/gishohaku/K9NDL7-2026-10-03-104611",
+  embedUrl:
+    "https://www.docswell.com/slide/K9NDL7-2026-10-03-104611/embed",
+};

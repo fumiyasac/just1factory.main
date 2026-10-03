@@ -2,6 +2,7 @@
 // Manuscriptのcontribution_cardスタイルを踏襲した1プロジェクトカード + 技術スタックチップ。
 import {
   GISHOHAKU_HIGHLIGHTS,
+  GISHOHAKU_OSC,
   GISHOHAKU_SITE_URL,
   GISHOHAKU_STACK,
 } from "@/components/showcase/data";
@@ -53,17 +54,66 @@ export default function ShowcaseGishohaku() {
             ))}
           </div>
 
-          <div className="showcase_gishohaku_links">
+          <ul className="list-unstyled showcase_gishohaku_links">
+            <li className="mt-4 mb-2">
+              <a
+                className="showcase_gishohaku_site_link"
+                href={GISHOHAKU_SITE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i
+                  className="fa fa-external-link gishohaku_color link_icon"
+                  aria-hidden="true"
+                />
+                技術書同人誌博覧会 公式サイト
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <section className="showcase_gishohaku_osc">
+          <h3 className="showcase_gishohaku_osc_heading">
+            Open Source Conference 登壇（技書博コアスタッフとして）
+          </h3>
+          <p className="showcase_gishohaku_osc_lead">
+            公式サイトの運用保守に加え、
+            <strong>Open Source Conference</strong>
+            でも技書博のコアスタッフとして登壇し、「技術同人誌を書く」文化と技書博というイベントそのものを広く紹介する活動にも関わっています。
+          </p>
+          <div className="showcase_gishohaku_osc_meta">
+            <span className="badge badge-pill badge-info">{GISHOHAKU_OSC.event}</span>
             <a
-              className="contribution_link_chip contribution_link_primary"
-              href={GISHOHAKU_SITE_URL}
+              className="showcase_gishohaku_osc_title_link"
+              href={GISHOHAKU_OSC.slideUrl}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="fa fa-external-link" aria-hidden="true" /> 技術書同人誌博覧会 公式サイト
+              『{GISHOHAKU_OSC.title}』
             </a>
           </div>
-        </div>
+          <div className="showcase_gishohaku_osc_embed">
+            <iframe
+              src={GISHOHAKU_OSC.embedUrl}
+              title={`${GISHOHAKU_OSC.event}『${GISHOHAKU_OSC.title}』スライド`}
+              allowFullScreen
+              loading="lazy"
+            />
+          </div>
+          <div className="showcase_gishohaku_osc_fallback">
+            <a
+              href={GISHOHAKU_OSC.slideUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i
+                className="fa fa-external-link link_icon"
+                aria-hidden="true"
+              />
+              Docswellでスライドを開く
+            </a>
+          </div>
+        </section>
       </div>
     </div>
   );

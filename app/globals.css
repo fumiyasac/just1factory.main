@@ -1062,3 +1062,83 @@ i.amazon_color {
   line-height: 1.9;
   margin: 0 0 10px 0;
 }
+
+/* === showcase/ShowcaseGishohaku 公式サイトリンクを目立たせる(Books スタイル準拠) === */
+i.gishohaku_color {
+  color: #2867B2;
+}
+.showcase_gishohaku_site_link {
+  color: #2867B2;
+  font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.showcase_gishohaku_site_link:hover {
+  text-decoration: underline;
+}
+
+/* === showcase/ShowcaseGishohaku OSC 登壇セクション === */
+.showcase_gishohaku_osc {
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid #eeeeee;
+}
+.showcase_gishohaku_osc_heading {
+  color: #444444;
+  font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 14px;
+}
+.showcase_gishohaku_osc_lead {
+  color: #555555;
+  font-size: 14px;
+  line-height: 1.9;
+  margin-bottom: 18px;
+}
+.showcase_gishohaku_osc_meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.showcase_gishohaku_osc_title_link {
+  color: #2867B2;
+  font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.showcase_gishohaku_osc_title_link:hover {
+  text-decoration: underline;
+}
+/* Docswell 埋め込み(16:9 レスポンシブ) */
+.showcase_gishohaku_osc_embed {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  background-color: #000000;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+.showcase_gishohaku_osc_embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.showcase_gishohaku_osc_fallback {
+  font-size: 13px;
+}
+.showcase_gishohaku_osc_fallback a {
+  color: #2867B2;
+  text-decoration: none;
+}
+.showcase_gishohaku_osc_fallback a:hover {
+  text-decoration: underline;
+}
