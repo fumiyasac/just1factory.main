@@ -1078,31 +1078,21 @@ i.gishohaku_color {
   text-decoration: underline;
 }
 
-/* === showcase/ShowcaseGishohaku OSC 登壇セクション === */
-.showcase_gishohaku_osc {
-  margin-top: 40px;
-  padding-top: 32px;
-  border-top: 1px solid #eeeeee;
-}
-.showcase_gishohaku_osc_heading {
-  color: #444444;
-  font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 14px;
-}
+/* === showcase/ShowcaseGishohaku OSC 登壇項目 ===
+   card 内で「主な取り組み」「技術スタック」と同じ階層の見出し項目として扱うため、
+   見出し自体は showcase_gishohaku_subhead を再利用する。 */
 .showcase_gishohaku_osc_lead {
   color: #555555;
   font-size: 14px;
   line-height: 1.9;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 .showcase_gishohaku_osc_meta {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 10px;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
 }
 .showcase_gishohaku_osc_title_link {
   color: #2867B2;
@@ -1113,24 +1103,6 @@ i.gishohaku_color {
 }
 .showcase_gishohaku_osc_title_link:hover {
   text-decoration: underline;
-}
-/* Docswell 埋め込み(16:9 レスポンシブ) */
-.showcase_gishohaku_osc_embed {
-  position: relative;
-  width: 100%;
-  padding-top: 56.25%;
-  background-color: #000000;
-  border-radius: 6px;
-  overflow: hidden;
-  margin-bottom: 12px;
-}
-.showcase_gishohaku_osc_embed iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
 }
 .showcase_gishohaku_osc_fallback {
   font-size: 13px;

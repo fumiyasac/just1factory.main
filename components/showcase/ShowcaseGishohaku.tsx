@@ -70,12 +70,10 @@ export default function ShowcaseGishohaku() {
               </a>
             </li>
           </ul>
-        </div>
 
-        <section className="showcase_gishohaku_osc">
-          <h3 className="showcase_gishohaku_osc_heading">
+          <h4 className="showcase_gishohaku_subhead">
             Open Source Conference 登壇（技書博コアスタッフとして）
-          </h3>
+          </h4>
           <p className="showcase_gishohaku_osc_lead">
             公式サイトの運用保守に加え、
             <strong>Open Source Conference</strong>
@@ -92,14 +90,6 @@ export default function ShowcaseGishohaku() {
               『{GISHOHAKU_OSC.title}』
             </a>
           </div>
-          <div className="showcase_gishohaku_osc_embed">
-            <iframe
-              src={GISHOHAKU_OSC.embedUrl}
-              title={`${GISHOHAKU_OSC.event}『${GISHOHAKU_OSC.title}』スライド`}
-              allowFullScreen
-              loading="lazy"
-            />
-          </div>
           <div className="showcase_gishohaku_osc_fallback">
             <a
               href={GISHOHAKU_OSC.slideUrl}
@@ -113,7 +103,7 @@ export default function ShowcaseGishohaku() {
               Docswellでスライドを開く
             </a>
           </div>
-        </section>
+        </div>
       </div>
     </div>
   );
