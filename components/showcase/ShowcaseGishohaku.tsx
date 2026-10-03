@@ -2,6 +2,7 @@
 // Manuscriptのcontribution_cardスタイルを踏襲した1プロジェクトカード + 技術スタックチップ。
 import {
   GISHOHAKU_HIGHLIGHTS,
+  GISHOHAKU_OSC,
   GISHOHAKU_SITE_URL,
   GISHOHAKU_STACK,
 } from "@/components/showcase/data";
@@ -53,14 +54,51 @@ export default function ShowcaseGishohaku() {
             ))}
           </div>
 
-          <div className="showcase_gishohaku_links">
+          <div className="container text-center pt-3 pb-2">
+            <ul className="list-unstyled list-inline">
+              <li className="list-inline-item">
+                <a
+                  className="btn btn-secondary mt0"
+                  href={GISHOHAKU_SITE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  技術書同人誌博覧会 公式サイト
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <h4 className="showcase_gishohaku_subhead">
+            Open Source Conference 登壇（技書博コアスタッフとして）
+          </h4>
+          <p className="showcase_gishohaku_osc_lead">
+            公式サイトの運用保守に加え、
+            <strong>Open Source Conference</strong>
+            でも技書博のコアスタッフとして登壇し、「技術同人誌を書く」文化と技書博というイベントそのものを広く紹介する活動にも関わっています。
+          </p>
+          <div className="showcase_gishohaku_osc_meta">
+            <span className="badge badge-pill badge-info">{GISHOHAKU_OSC.event}</span>
             <a
-              className="contribution_link_chip contribution_link_primary"
-              href={GISHOHAKU_SITE_URL}
+              className="showcase_gishohaku_osc_title_link"
+              href={GISHOHAKU_OSC.slideUrl}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="fa fa-external-link" aria-hidden="true" /> 技術書同人誌博覧会 公式サイト
+              『{GISHOHAKU_OSC.title}』
+            </a>
+          </div>
+          <div className="showcase_gishohaku_osc_fallback">
+            <a
+              href={GISHOHAKU_OSC.slideUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i
+                className="fa fa-external-link link_icon"
+                aria-hidden="true"
+              />
+              Docswellでスライドを開く
             </a>
           </div>
         </div>
