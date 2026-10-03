@@ -1,0 +1,108 @@
+[
+  {
+    "id": "design-001",
+    "section": "gishohaku",
+    "slug": "gishohaku-15",
+    "image": "/design/gishohaku-15.jpg",
+    "title": "技術書同人誌博覧会#15",
+    "subtitle": "サークル & 一般参加者募集チラシ",
+    "date": "2027年5月15日（土）",
+    "venue": "大田区産業プラザPiO大展示ホール",
+    "description": "水彩風の空・歯車・電球のあしらいに公式マスコットの「ありどらごん」を配し、親しみやすさと技術の広がりを両立。QRコードとキャッチコピーで登録導線を強調した。"
+  },
+  {
+    "id": "design-002",
+    "section": "gishohaku",
+    "slug": "gishohaku-14",
+    "image": "/design/gishohaku-14.jpg",
+    "title": "技術書同人誌博覧会#14",
+    "subtitle": "サークル & 一般参加者募集チラシ",
+    "date": "2026年9月13日（日）",
+    "venue": "大田区産業プラザPiO大展示ホール",
+    "description": "秋開催に合わせ、紅葉と開かれた本のフォト素材にオレンジ〜ブラウンのグラデーションを重ねた温かみのある構成。「A lot of input, a lot of output.」のキャッチコピーで、読む・書くの循環を秋の景色と重ねた。"
+  },
+  {
+    "id": "design-003",
+    "section": "gishohaku",
+    "slug": "gishohaku-13",
+    "image": "/design/gishohaku-13.jpg",
+    "title": "技術書同人誌博覧会#13",
+    "subtitle": "開催告知チラシ（2025夏配布・裏面）",
+    "date": "2026年5月10日（日）",
+    "venue": "大田区産業プラザPiO大展示ホール",
+    "description": "「本から広がる世界」をモチーフに、本と木々が空へ舞い上がるビジュアルを合成。#12の表面と対になる裏面として、次々回への期待感を演出。"
+  },
+  {
+    "id": "design-004",
+    "section": "gishohaku",
+    "slug": "gishohaku-12",
+    "image": "/design/gishohaku-12.jpg",
+    "title": "技術書同人誌博覧会#12",
+    "subtitle": "一般参加者募集チラシ（2025夏配布・表面）",
+    "date": "2025年10月26日（日）",
+    "venue": "大宮ソニックシティ",
+    "description": "深緑を基調に、大きな#12の見出しとQRコードで登録動線を明確化。夏の配布物として、次回イベントを短時間で理解してもらう構成にした。"
+  },
+  {
+    "id": "design-005",
+    "section": "gishohaku",
+    "slug": "gishohaku-11",
+    "image": "/design/gishohaku-11.jpg",
+    "title": "技術書同人誌博覧会#11",
+    "subtitle": "開催告知チラシ",
+    "date": "2025年1月25日（土）",
+    "venue": "横浜産貿ホール マリネリア",
+    "description": "初の横浜開催に合わせ、みなとみらいの夜景写真を薄く敷いたダークネイビー基調。中央のワードクラウドで扱う技術領域の幅広さを一望させるレイアウトに。"
+  },
+  {
+    "id": "design-006",
+    "section": "gishohaku",
+    "slug": "gishohaku-10",
+    "image": "/design/gishohaku-10.jpg",
+    "title": "技術書同人誌博覧会#10",
+    "subtitle": "10th Anniversaries. チラシ",
+    "date": "2024年5月12日（日）",
+    "venue": "大田区産業プラザPiO大展示ホール",
+    "description": "10回目の節目という祝祭感をガーランドと明るいスカイブルーで表現。写真素材のサークル切り抜きで過去回の空気感も添えた記念デザイン。"
+  },
+  {
+    "id": "design-007",
+    "section": "gishohaku",
+    "slug": "gishohaku-9",
+    "image": "/design/gishohaku-9.jpg",
+    "title": "技術書同人誌博覧会#9",
+    "subtitle": "一般参加募集チラシ",
+    "date": "2023年11月25日（土）",
+    "venue": "大田区産業プラザPiO大展示ホール",
+    "description": "木目調のブラウンをベースに、カフェスペース／出版社企画／即売会の3コンテンツを整理して案内するチラシ。会場での落ち着いた回遊イメージを大切に配色を決めた。"
+  },
+  {
+    "id": "design-008",
+    "section": "gishohaku",
+    "slug": "gishohaku-mini-osc",
+    "image": "/design/gishohaku-mini-osc.jpg",
+    "title": "技書博mini in OSC",
+    "subtitle": "全国OSC出展告知",
+    "description": "全国のオープンソースカンファレンス（OSC）出展ブランド用ビジュアル。桜と一杯のお茶、本の水彩イラストで、地方回遊と読書の穏やかな時間を表現。"
+  },
+  {
+    "id": "design-009",
+    "section": "oyakata",
+    "slug": "oyakata-monodukuri-cover",
+    "image": "/design/oyakata-monodukuri-cover.jpg",
+    "title": "『メイカーのためのチラシで伝えるものづくり』表紙",
+    "subtitle": "親方Project合同誌寄稿",
+    "description": "工房の道具を主役にした写真の上にセリフ体で大きく「チラシで伝えるものづくり」と重ねた表紙。ものづくりの温度と、それをチラシとして届ける行為の重なりをそのまま画に落とし込んだ。",
+    "url": "https://techbookfest.org/product/a35GqPb1C0bTDz3qMgq8C8?productVariantID=gA67T6DhKHiAJBarLrBt0B"
+  },
+  {
+    "id": "design-010",
+    "section": "oyakata",
+    "slug": "oyakata-shochu-server",
+    "image": "/design/oyakata-shochu-server.jpg",
+    "title": "「インターネット接続 焼酎サーバー」チラシ",
+    "subtitle": "『メイカーのためのチラシで伝えるものづくり』掲載作例",
+    "description": "同誌に作例として掲載した、遊び心のあるIoTプロダクト紹介チラシ。悩み → 解決 → 構成部品 → 費用と誘導線を段階化し、技術要素（ESP32 / 電磁弁 / スマホアプリ）を一枚で伝わる形に。",
+    "url": "https://techbookfest.org/product/a35GqPb1C0bTDz3qMgq8C8?productVariantID=gA67T6DhKHiAJBarLrBt0B"
+  }
+]
