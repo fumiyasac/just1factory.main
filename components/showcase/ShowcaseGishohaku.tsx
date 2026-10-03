@@ -54,22 +54,20 @@ export default function ShowcaseGishohaku() {
             ))}
           </div>
 
-          <ul className="list-unstyled showcase_gishohaku_links">
-            <li className="mt-4 mb-2">
-              <a
-                className="showcase_gishohaku_site_link"
-                href={GISHOHAKU_SITE_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i
-                  className="fa fa-external-link gishohaku_color link_icon"
-                  aria-hidden="true"
-                />
-                技術書同人誌博覧会 公式サイト
-              </a>
-            </li>
-          </ul>
+          <div className="container text-center pt-3 pb-2">
+            <ul className="list-unstyled list-inline">
+              <li className="list-inline-item">
+                <a
+                  className="btn btn-secondary mt0"
+                  href={GISHOHAKU_SITE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  技術書同人誌博覧会 公式サイト
+                </a>
+              </li>
+            </ul>
+          </div>
 
           <h4 className="showcase_gishohaku_subhead">
             Open Source Conference 登壇（技書博コアスタッフとして）

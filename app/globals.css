@@ -1063,21 +1063,6 @@ i.amazon_color {
   margin: 0 0 10px 0;
 }
 
-/* === showcase/ShowcaseGishohaku 公式サイトリンクを目立たせる(Books スタイル準拠) === */
-i.gishohaku_color {
-  color: #2867B2;
-}
-.showcase_gishohaku_site_link {
-  color: #2867B2;
-  font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  font-weight: bold;
-  text-decoration: none;
-}
-.showcase_gishohaku_site_link:hover {
-  text-decoration: underline;
-}
-
 /* === showcase/ShowcaseGishohaku OSC 登壇項目 ===
    card 内で「主な取り組み」「技術スタック」と同じ階層の見出し項目として扱うため、
    見出し自体は showcase_gishohaku_subhead を再利用する。 */
