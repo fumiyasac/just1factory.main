@@ -33,12 +33,13 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
+    // title / description はあえて未設定にする。
+    // Next.js はこの 2 つが未指定のとき openGraph.title / openGraph.description を
+    // 自動フォールバックに使うため、各ページ側で openGraph を上書きするだけで
+    // twitter:title / twitter:description もページ固有値になる。
     card: "summary_large_image",
     site: "@fumiyasac",
     creator: "@fumiyasac",
-    title: "Just1factory - fumiyasac (Fumiya Sakai)",
-    description:
-      "酒井文也（fumiyasac）のポートフォリオサイト。iOS/Androidアプリ開発に関する技術書・登壇資料・OSSなどのアウトプットを公開しています。",
     images: ["/og-image.png"],
   },
   icons: {
