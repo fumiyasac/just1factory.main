@@ -2,6 +2,22 @@ import type { Metadata } from "next";
 import DesignHeadline from "@/components/design/DesignHeadline";
 import DesignGallery from "@/components/design/DesignGallery";
 import { GISHOHAKU_ITEMS, OYAKATA_ITEMS } from "@/components/design/data";
+import JsonLd from "@/components/global/JsonLd";
+
+const SITE_URL = "https://just1factory.net";
+const AUTHOR = { "@type": "Person", name: "酒井文也" } as const;
+
+// 構造化データは本人がデザインを担当した技書博セクション(gishohaku)のみを対象にする。
+// 親方Project 側(oyakata)は制作者クレジットの扱いが異なるため含めない。
+const DESIGN_JSONLD = GISHOHAKU_ITEMS.map((item) => ({
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  name: item.title,
+  description: item.description,
+  creator: AUTHOR,
+  image: `${SITE_URL}${item.image}`,
+  url: `${SITE_URL}/design#${item.slug}`,
+}));
 
 export const metadata: Metadata = {
   title: "Design",
@@ -18,6 +34,7 @@ export const metadata: Metadata = {
 export default function Design() {
   return (
     <div>
+      <JsonLd data={DESIGN_JSONLD} />
       <DesignHeadline />
       <DesignGallery
         heading="技術書同人誌博覧会（技書博）"
