@@ -1,12 +1,20 @@
+"use client";
+
 // 全 176 本を年別・日付降順で並べたアーカイブ。
 // 各項目には日付・プラットフォーム・カテゴリー・タイトル・登壇イベント名を表示。
+// 画面上部のカテゴリーフィルター(選択中/すべて)で絞り込める。
 // これが Talks & Articles ページのメインコンテンツになる。
+import { useMemo, useState } from "react";
 import {
   ARCHIVE,
   CATEGORIES,
   type Category,
   type TalkItem,
 } from "@/components/talks/data";
+
+type Filter = Category | "all";
+
+const CATEGORY_KEYS = Object.keys(CATEGORIES) as Category[];
 
 function groupByYear(items: TalkItem[]): Array<[number, TalkItem[]]> {
   const map = new Map<number, TalkItem[]>();
@@ -35,23 +43,49 @@ function CategoryBadge({ category }: { category: Category }) {
   );
 }
 
-function CategoryLegend() {
-  const cats = Object.keys(CATEGORIES) as Category[];
+function CategoryFilter({
+  selected,
+  onSelect,
+  counts,
+  total,
+}: {
+  selected: Filter;
+  onSelect: (f: Filter) => void;
+  counts: Record<Category, number>;
+  total: number;
+}) {
+  const btn = (active: boolean) =>
+    `btn btn-sm ${active ? "btn-secondary active" : "btn-outline-secondary"} mr-2 mb-2`;
   return (
     <div className="category_legend">
       <span className="category_legend_head">カテゴリー：</span>
-      {cats.map((key) => {
-        const info = CATEGORIES[key];
-        return (
-          <span
-            key={key}
-            className="category_badge"
-            title={info.desc}
-          >
-            {info.label}
-          </span>
-        );
-      })}
+      <div className="d-flex flex-wrap">
+        <button
+          type="button"
+          className={btn(selected === "all")}
+          onClick={() => onSelect("all")}
+          aria-pressed={selected === "all"}
+        >
+          すべて <span className="badge badge-light ml-1">{total}</span>
+        </button>
+        {CATEGORY_KEYS.map((key) => {
+          const info = CATEGORIES[key];
+          const active = selected === key;
+          return (
+            <button
+              key={key}
+              type="button"
+              className={btn(active)}
+              onClick={() => onSelect(key)}
+              title={info.desc}
+              aria-pressed={active}
+            >
+              {info.label}{" "}
+              <span className="badge badge-light ml-1">{counts[key] ?? 0}</span>
+            </button>
+          );
+        })}
+      </div>
     </div>
   );
 }
@@ -116,7 +150,27 @@ function YearBlock({ year, items }: { year: number; items: TalkItem[] }) {
 }
 
 export default function TalksArchive() {
-  const years = groupByYear(ARCHIVE);
+  const [selected, setSelected] = useState<Filter>("all");
+
+  // カテゴリー毎の全体件数(フィルタボタン横のバッジ用)。
+  const counts = useMemo(() => {
+    const c = {} as Record<Category, number>;
+    for (const key of CATEGORY_KEYS) c[key] = 0;
+    for (const t of ARCHIVE) c[t.category] += 1;
+    return c;
+  }, []);
+
+  const filtered = useMemo(
+    () =>
+      selected === "all"
+        ? ARCHIVE
+        : ARCHIVE.filter((t) => t.category === selected),
+    [selected],
+  );
+
+  const years = useMemo(() => groupByYear(filtered), [filtered]);
+  const activeLabel = selected === "all" ? "すべて" : CATEGORIES[selected].label;
+
   return (
     <div className="container">
       <div className="talks_archive_block">
@@ -124,10 +178,23 @@ export default function TalksArchive() {
         <p className="archive_lead">
           年別・日付降順で、登壇資料と技術記事のすべてをカテゴリータグ付きで並べています。時系列で辿ると、UI実装の掘り下げから始まり、バックエンド／クロスプラットフォームの視点、アーキテクチャ、非同期・テスト、そして直近のAI×越境へと関心が移り変わってきた軌跡が見えます。
         </p>
-        <CategoryLegend />
-        {years.map(([year, items]) => (
-          <YearBlock key={year} year={year} items={items} />
-        ))}
+        <CategoryFilter
+          selected={selected}
+          onSelect={setSelected}
+          counts={counts}
+          total={ARCHIVE.length}
+        />
+        <div className="archive_filter_summary small text-muted mb-3">
+          絞り込み結果：<strong>{activeLabel}</strong>
+          <strong>{filtered.length}</strong> 本 / 全 {ARCHIVE.length} 本
+        </div>
+        {years.length === 0 ? (
+          <p className="text-muted">該当する登壇・記事はありません。</p>
+        ) : (
+          years.map(([year, items]) => (
+            <YearBlock key={year} year={year} items={items} />
+          ))
+        )}
       </div>
     </div>
   );
