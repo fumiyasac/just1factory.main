@@ -1195,7 +1195,12 @@ i.amazon_color {
   background-color: #ffffff;
   color: #444444;
   font-size: 13px;
-  font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
+  /* Palatino は旧式数字(descender 付き)を使うため「2026年」のような ASCII 数字 +
+     CJK 混在ラベルでベースラインが揺れ、視覚的に文字が上寄せに見える。
+     Chip は UI コンポーネントなので、.category_badge と同じく sans-serif 系に
+     統一して Latin / CJK 混在時でも縦位置が揃うようにする。 */
+  font-family: 'Helvetica Neue', 'Hiragino Sans', 'Yu Gothic', Arial, sans-serif;
+  font-variant-numeric: lining-nums tabular-nums;
   line-height: 1;
   white-space: nowrap;
   border: 1px solid #cccccc;
