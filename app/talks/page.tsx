@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import TalksHeadline from "@/components/talks/TalksHeadline";
-import TalksStats from "@/components/talks/TalksStats";
-import TalksArchive from "@/components/talks/TalksArchive";
+import TalksMain from "@/components/talks/TalksMain";
 import TalksPlatforms from "@/components/talks/TalksPlatforms";
 import JsonLd from "@/components/global/JsonLd";
 import talksData from "@/data/talks.json";
@@ -42,8 +41,7 @@ export default function Talks() {
     <div>
       <JsonLd data={TALKS_JSONLD} />
       <TalksHeadline />
-      <TalksStats />
-      <TalksArchive />
+      <TalksMain />
       <TalksPlatforms />
     </div>
   );

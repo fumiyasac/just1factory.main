@@ -2,9 +2,10 @@
 
 // 全 176 本を年別・日付降順で並べたアーカイブ。
 // 各項目には日付・プラットフォーム・カテゴリー・タイトル・登壇イベント名を表示。
-// 画面上部のカテゴリーフィルター(選択中/すべて)で絞り込める。
-// これが Talks & Articles ページのメインコンテンツになる。
-import { useMemo, useState } from "react";
+// 画面上部の chip 型フィルター(「すべて」+ 7 カテゴリー)で絞り込める。
+// 選択中カテゴリーの state は親 (TalksMain) 側で保持し、本コンポーネントは
+// props として受け取る(TalksStats との連動のため)。
+import { useEffect, useRef, useState } from "react";
 import {
   ARCHIVE,
   CATEGORIES,
@@ -13,7 +14,6 @@ import {
 } from "@/components/talks/data";
 
 type Filter = Category | "all";
-
 const CATEGORY_KEYS = Object.keys(CATEGORIES) as Category[];
 
 function groupByYear(items: TalkItem[]): Array<[number, TalkItem[]]> {
@@ -21,23 +21,16 @@ function groupByYear(items: TalkItem[]): Array<[number, TalkItem[]]> {
   for (const it of items) {
     const y = Number(it.date.slice(0, 4));
     const bucket = map.get(y);
-    if (bucket) {
-      bucket.push(it);
-    } else {
-      map.set(y, [it]);
-    }
+    if (bucket) bucket.push(it);
+    else map.set(y, [it]);
   }
-  // ARCHIVE 自体が日付降順なので、年内順は既に降順。年の並びのみ降順化。
   return Array.from(map.entries()).sort((a, b) => b[0] - a[0]);
 }
 
 function CategoryBadge({ category }: { category: Category }) {
   const info = CATEGORIES[category];
   return (
-    <span
-      className="category_badge"
-      title={info.desc}
-    >
+    <span className="category_badge" title={info.desc}>
       {info.label}
     </span>
   );
@@ -54,19 +47,20 @@ function CategoryFilter({
   counts: Record<Category, number>;
   total: number;
 }) {
-  const btn = (active: boolean) =>
-    `btn btn-sm ${active ? "btn-secondary active" : "btn-outline-secondary"} mr-2 mb-2`;
+  const chip = (active: boolean) =>
+    `talks_filter_chip${active ? " is-active" : ""}`;
   return (
-    <div className="category_legend">
-      <span className="category_legend_head">カテゴリー：</span>
-      <div className="d-flex flex-wrap">
+    <div className="talks_filter">
+      <span className="talks_filter_head">カテゴリーで絞り込む</span>
+      <div className="talks_filter_bar" role="group" aria-label="カテゴリーフィルター">
         <button
           type="button"
-          className={btn(selected === "all")}
+          className={chip(selected === "all")}
           onClick={() => onSelect("all")}
           aria-pressed={selected === "all"}
         >
-          すべて <span className="badge badge-light ml-1">{total}</span>
+          すべて
+          <span className="talks_filter_count">{total}</span>
         </button>
         {CATEGORY_KEYS.map((key) => {
           const info = CATEGORIES[key];
@@ -75,13 +69,13 @@ function CategoryFilter({
             <button
               key={key}
               type="button"
-              className={btn(active)}
+              className={chip(active)}
               onClick={() => onSelect(key)}
               title={info.desc}
               aria-pressed={active}
             >
-              {info.label}{" "}
-              <span className="badge badge-light ml-1">{counts[key] ?? 0}</span>
+              {info.label}
+              <span className="talks_filter_count">{counts[key] ?? 0}</span>
             </button>
           );
         })}
@@ -125,7 +119,6 @@ function YearBlock({ year, items }: { year: number; items: TalkItem[] }) {
     acc[it.platform] = (acc[it.platform] ?? 0) + 1;
     return acc;
   }, {});
-  // 表示順は Speaker Deck → Zenn → Qiita → SlideShare で安定させる
   const order = ["Speaker Deck", "Zenn", "Qiita", "SlideShare"] as const;
   const breakdown = order
     .filter((p) => platformCounts[p])
@@ -149,27 +142,31 @@ function YearBlock({ year, items }: { year: number; items: TalkItem[] }) {
   );
 }
 
-export default function TalksArchive() {
-  const [selected, setSelected] = useState<Filter>("all");
+export default function TalksArchive({
+  selected,
+  onSelect,
+  counts,
+  filtered,
+}: {
+  selected: Filter;
+  onSelect: (f: Filter) => void;
+  counts: Record<Category, number>;
+  filtered: TalkItem[];
+}) {
+  const years = groupByYear(filtered);
+  const activeLabel =
+    selected === "all" ? "すべて" : CATEGORIES[selected].label;
 
-  // カテゴリー毎の全体件数(フィルタボタン横のバッジ用)。
-  const counts = useMemo(() => {
-    const c = {} as Record<Category, number>;
-    for (const key of CATEGORY_KEYS) c[key] = 0;
-    for (const t of ARCHIVE) c[t.category] += 1;
-    return c;
-  }, []);
-
-  const filtered = useMemo(
-    () =>
-      selected === "all"
-        ? ARCHIVE
-        : ARCHIVE.filter((t) => t.category === selected),
-    [selected],
-  );
-
-  const years = useMemo(() => groupByYear(filtered), [filtered]);
-  const activeLabel = selected === "all" ? "すべて" : CATEGORIES[selected].label;
+  // フィルタ切替時に 200ms フェード (opacity 0 → 1) を発火。
+  const [fade, setFade] = useState(true);
+  const prev = useRef<Filter>(selected);
+  useEffect(() => {
+    if (prev.current === selected) return;
+    prev.current = selected;
+    setFade(false);
+    const t = window.setTimeout(() => setFade(true), 10);
+    return () => window.clearTimeout(t);
+  }, [selected]);
 
   return (
     <div className="container">
@@ -180,21 +177,23 @@ export default function TalksArchive() {
         </p>
         <CategoryFilter
           selected={selected}
-          onSelect={setSelected}
+          onSelect={onSelect}
           counts={counts}
           total={ARCHIVE.length}
         />
         <div className="archive_filter_summary small text-muted mb-3">
-          絞り込み結果：<strong>{activeLabel}</strong>
+          表示中：<strong>{activeLabel}</strong>
           <strong>{filtered.length}</strong> 本 / 全 {ARCHIVE.length} 本
         </div>
-        {years.length === 0 ? (
-          <p className="text-muted">該当する登壇・記事はありません。</p>
-        ) : (
-          years.map(([year, items]) => (
-            <YearBlock key={year} year={year} items={items} />
-          ))
-        )}
+        <div className={`archive_fade${fade ? " is-visible" : ""}`}>
+          {years.length === 0 ? (
+            <p className="text-muted">該当する登壇・記事はありません。</p>
+          ) : (
+            years.map(([year, items]) => (
+              <YearBlock key={year} year={year} items={items} />
+            ))
+          )}
+        </div>
       </div>
     </div>
   );
