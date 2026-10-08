@@ -1227,9 +1227,17 @@ i.amazon_color {
   background-color: #333333;
   border-color: #333333;
 }
+/* ラベル側もバッジ側と同じ inline-flex + min-height でボックス化し、
+   どちらも「同一の 18px のボックスの中央にテキスト」という同じ条件に揃える。
+   こうすることでフォント(script/metric 差)に関係なく、ラベルとバッジの
+   視覚中央が chip の中央に常に重なる。 */
+.talks_filter_label {
+  display: inline-flex;
+  align-items: center;
+  min-height: 18px;
+  line-height: 1;
+}
 .talks_filter_count {
-  /* 件数バッジ自体も flex で中央に組み、line-height ではなく min-width/min-height
-     で高さを確保する。これで親 chip の align-items: center とズレが起きない。 */
   display: inline-flex;
   align-items: center;
   justify-content: center;

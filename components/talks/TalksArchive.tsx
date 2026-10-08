@@ -59,7 +59,7 @@ function CategoryFilter({
           onClick={() => onSelect("all")}
           aria-pressed={selected === "all"}
         >
-          すべて
+          <span className="talks_filter_label">すべて</span>
           <span className="talks_filter_count">{total}</span>
         </button>
         {CATEGORY_KEYS.map((key) => {
@@ -74,7 +74,7 @@ function CategoryFilter({
               title={info.desc}
               aria-pressed={active}
             >
-              {info.label}
+              <span className="talks_filter_label">{info.label}</span>
               <span className="talks_filter_count">{counts[key] ?? 0}</span>
             </button>
           );
@@ -109,7 +109,7 @@ function YearFilterBar({
           onClick={() => onSelectYear("all")}
           aria-pressed={selectedYear === "all"}
         >
-          すべて
+          <span className="talks_filter_label">すべて</span>
           <span className="talks_filter_count">{total}</span>
         </button>
         {years.map((y) => {
@@ -124,7 +124,7 @@ function YearFilterBar({
               title={`${y}年の登壇・記事に絞り込む`}
               aria-pressed={active}
             >
-              {label}
+              <span className="talks_filter_label">{label}</span>
               <span className="talks_filter_count">{yearCounts[y] ?? 0}</span>
             </button>
           );
