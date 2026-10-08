@@ -1141,6 +1141,9 @@ i.amazon_color {
 }
 .scroll_to_top i.fa {
   display: block;
+  /* ★ グローバル .fa { margin-right: 6px } を上書きしないと、flex 中央配置時に
+     アイコン box が右マージン分だけ左に寄って見える。マージンを殺して純粋に中央へ。 */
+  margin: 0;
   font-size: 18px;
   line-height: 1;
   /* Font Awesome 4.7 の fa-chevron-up は数学的な中央と視覚中央がわずかに
@@ -1186,8 +1189,9 @@ i.amazon_color {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  padding: 6px 14px;
+  /* ラベルと件数バッジの間はほんのわずかに空く程度に詰める */
+  gap: 5px;
+  padding: 6px 12px;
   background-color: #ffffff;
   color: #444444;
   font-size: 13px;
