@@ -1183,15 +1183,16 @@ i.amazon_color {
   /* モバイル表示では横スクロールに切り替わる (下の @media で flex-wrap を無効化) */
 }
 .talks_filter_chip {
-  /* ラベルと件数バッジを 1 本の水平フレックスで並べ、cross-axis 中央で揃える。
-     font-size の違い (ラベル 13px / バッジ 11px) で縦位置がずれないよう、
-     line-height: 1 で line-box 高さを統一し flex align で中央配置。 */
+  /* chip 全体を固定高にすることで、ラベルや badge のテキストが CJK / Latin
+     どちらでも常に chip の中央にアンカーされるようにする。padding による
+     「中身の高さ」依存を無くして、chip 種別によるベースライン差を物理的に抑制。 */
   display: inline-flex;
   align-items: center;
   justify-content: center;
   /* ラベルと件数バッジの間はほんのわずかに空く程度に詰める */
   gap: 5px;
-  padding: 6px 12px;
+  padding: 0 12px;
+  height: 28px;
   background-color: #ffffff;
   color: #444444;
   font-size: 13px;
@@ -1227,29 +1228,26 @@ i.amazon_color {
   background-color: #333333;
   border-color: #333333;
 }
-/* ラベル側もバッジ側と同じ inline-flex + min-height でボックス化し、
-   どちらも「同一の 18px のボックスの中央にテキスト」という同じ条件に揃える。
-   こうすることでフォント(script/metric 差)に関係なく、ラベルとバッジの
-   視覚中央が chip の中央に常に重なる。 */
+/* ラベル / 件数バッジはどちらも inline-block + 固定 line-height で
+   「同じ高さの行ボックスの中央でテキストが縦中央」になる構造にし、
+   chip 内でカテゴリー・年のどちらでも同一の baseline 位置になるようにする。
+   line-height を min-height と同値にすることで、flex の baseline 計算に
+   よる揺らぎを避ける。 */
 .talks_filter_label {
-  display: inline-flex;
-  align-items: center;
-  min-height: 18px;
-  line-height: 1;
+  display: inline-block;
+  line-height: 20px;
 }
 .talks_filter_count {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
   min-width: 20px;
-  min-height: 18px;
   padding: 0 6px;
   background-color: #eeeeee;
   color: #666666;
   font-size: 11px;
   font-weight: bold;
-  line-height: 1;
+  line-height: 20px;
   border-radius: 999px;
+  text-align: center;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 .talks_filter_chip.is-active .talks_filter_count {
