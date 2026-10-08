@@ -1183,19 +1183,28 @@ i.amazon_color {
   /* モバイル表示では横スクロールに切り替わる (下の @media で flex-wrap を無効化) */
 }
 .talks_filter_chip {
-  /* ラベルと件数バッジを 1 本の水平フレックスで並べ、cross-axis 中央で揃える。
-     font-size の違い (ラベル 13px / バッジ 11px) で縦位置がずれないよう、
-     line-height: 1 で line-box 高さを統一し flex align で中央配置。 */
+  /* chip 全体を固定高にすることで、ラベルや badge のテキストが CJK / Latin
+     どちらでも常に chip の中央にアンカーされるようにする。padding による
+     「中身の高さ」依存を無くして、chip 種別によるベースライン差を物理的に抑制。 */
   display: inline-flex;
   align-items: center;
   justify-content: center;
   /* ラベルと件数バッジの間はほんのわずかに空く程度に詰める */
   gap: 5px;
-  padding: 6px 12px;
+  padding: 0 12px;
+  height: 28px;
   background-color: #ffffff;
   color: #444444;
   font-size: 13px;
-  font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
+  /* カテゴリー Chip (CJK 中心) と年 Chip (ASCII 数字 + CJK) で同じベースラインに
+     揃うよう、OS の UI 用フォントを優先。これで Latin / CJK とも同一のメトリクス
+     ファミリ内で描画され、「2026年」の数字と「UI実装」の両方が同じ縦位置に収まる。
+     - Mac/iOS: system-ui / -apple-system = San Francisco + Hiragino (ペアで最適化済み)
+     - Windows: Segoe UI + Yu Gothic UI
+     - 他環境: Helvetica Neue / Arial / sans-serif フォールバック
+     あわせて数字は lining-nums + tabular-nums で高さ・字幅を均一化。 */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Yu Gothic UI', 'Yu Gothic', 'Helvetica Neue', Arial, sans-serif;
+  font-variant-numeric: lining-nums tabular-nums;
   line-height: 1;
   white-space: nowrap;
   border: 1px solid #cccccc;
@@ -1219,21 +1228,26 @@ i.amazon_color {
   background-color: #333333;
   border-color: #333333;
 }
+/* ラベル / 件数バッジはどちらも inline-block + 固定 line-height で
+   「同じ高さの行ボックスの中央でテキストが縦中央」になる構造にし、
+   chip 内でカテゴリー・年のどちらでも同一の baseline 位置になるようにする。
+   line-height を min-height と同値にすることで、flex の baseline 計算に
+   よる揺らぎを避ける。 */
+.talks_filter_label {
+  display: inline-block;
+  line-height: 20px;
+}
 .talks_filter_count {
-  /* 件数バッジ自体も flex で中央に組み、line-height ではなく min-width/min-height
-     で高さを確保する。これで親 chip の align-items: center とズレが起きない。 */
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
   min-width: 20px;
-  min-height: 18px;
   padding: 0 6px;
   background-color: #eeeeee;
   color: #666666;
   font-size: 11px;
   font-weight: bold;
-  line-height: 1;
+  line-height: 20px;
   border-radius: 999px;
+  text-align: center;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 .talks_filter_chip.is-active .talks_filter_count {
@@ -1262,4 +1276,114 @@ i.amazon_color {
 }
 .archive_fade.is-visible {
   opacity: 1;
+}
+
+/* === index/RecentActivity ================================================= */
+.recent_activity_block {
+  padding-top: 80px;
+}
+.recent_activity_block h2 {
+  padding: 0 0 20px 0;
+  color: #444444;
+  font-size: 26px;
+  font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
+}
+.recent_activity_lead {
+  color: #555555;
+  margin-bottom: 24px;
+}
+.recent_card {
+  padding: 20px;
+  background-color: #fafafa;
+  border: 1px solid #eeeeee;
+  border-radius: 6px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.recent_card_heading {
+  color: #333333;
+  font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #dddddd;
+}
+.recent_card_list {
+  margin: 0 0 16px;
+  flex: 1 1 auto;
+}
+.recent_item + .recent_item {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px dashed #eeeeee;
+}
+.recent_item_meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+.recent_item_date {
+  color: #888888;
+  font-size: 12px;
+  font-family: 'Menlo', 'Consolas', monospace;
+}
+.recent_item_title {
+  display: inline-block;
+  color: #2867B2;
+  font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.5;
+  text-decoration: none;
+  margin-top: 2px;
+}
+.recent_item_title:hover {
+  text-decoration: underline;
+}
+.recent_card_more {
+  display: inline-block;
+  margin-top: auto;
+  padding-top: 8px;
+  color: #444444;
+  font-size: 13px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.recent_card_more:hover {
+  color: #2867B2;
+  text-decoration: underline;
+}
+.recent_card_more i.fa {
+  margin-left: 4px;
+}
+
+/* === アクセシビリティ: スキップナビゲーション ============================== */
+/* 普段は視覚的に非表示だが、Tab フォーカスで左上に飛び出て表示される。 */
+.skip_to_main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  padding: 10px 16px;
+  background-color: #444444;
+  color: #ffffff;
+  font-size: 14px;
+  text-decoration: none;
+  transform: translateY(-100%);
+  transition: transform 0.2s ease;
+}
+.skip_to_main:focus {
+  transform: translateY(0);
+  outline: 2px solid #2867B2;
+  outline-offset: 2px;
+  color: #ffffff;
+  text-decoration: none;
+}
+/* <main> 自身を tabIndex=-1 でフォーカス可能にしたが、クリック時のアウトラインは不要。 */
+#main-content:focus {
+  outline: none;
 }

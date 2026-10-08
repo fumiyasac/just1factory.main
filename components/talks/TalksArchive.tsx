@@ -2,9 +2,8 @@
 
 // 全 176 本を年別・日付降順で並べたアーカイブ。
 // 各項目には日付・プラットフォーム・カテゴリー・タイトル・登壇イベント名を表示。
-// 画面上部の chip 型フィルター(「すべて」+ 7 カテゴリー)で絞り込める。
-// 選択中カテゴリーの state は親 (TalksMain) 側で保持し、本コンポーネントは
-// props として受け取る(TalksStats との連動のため)。
+// 画面上部の chip 型フィルター 2 本 (カテゴリー × 年) で絞り込める。
+// state は親 (TalksMain) 側で保持し、本コンポーネントは props として受け取る。
 import { useEffect, useRef, useState } from "react";
 import {
   ARCHIVE,
@@ -14,6 +13,7 @@ import {
 } from "@/components/talks/data";
 
 type Filter = Category | "all";
+type YearFilter = string | "all";
 const CATEGORY_KEYS = Object.keys(CATEGORIES) as Category[];
 
 function groupByYear(items: TalkItem[]): Array<[number, TalkItem[]]> {
@@ -59,7 +59,7 @@ function CategoryFilter({
           onClick={() => onSelect("all")}
           aria-pressed={selected === "all"}
         >
-          すべて
+          <span className="talks_filter_label">すべて</span>
           <span className="talks_filter_count">{total}</span>
         </button>
         {CATEGORY_KEYS.map((key) => {
@@ -74,8 +74,58 @@ function CategoryFilter({
               title={info.desc}
               aria-pressed={active}
             >
-              {info.label}
+              <span className="talks_filter_label">{info.label}</span>
               <span className="talks_filter_count">{counts[key] ?? 0}</span>
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+function YearFilterBar({
+  selectedYear,
+  onSelectYear,
+  yearCounts,
+  years,
+  total,
+}: {
+  selectedYear: YearFilter;
+  onSelectYear: (y: YearFilter) => void;
+  yearCounts: Record<string, number>;
+  years: string[];
+  total: number;
+}) {
+  const chip = (active: boolean) =>
+    `talks_filter_chip${active ? " is-active" : ""}`;
+  return (
+    <div className="talks_filter">
+      <span className="talks_filter_head">年で絞り込む</span>
+      <div className="talks_filter_bar" role="group" aria-label="年フィルター">
+        <button
+          type="button"
+          className={chip(selectedYear === "all")}
+          onClick={() => onSelectYear("all")}
+          aria-pressed={selectedYear === "all"}
+        >
+          <span className="talks_filter_label">すべて</span>
+          <span className="talks_filter_count">{total}</span>
+        </button>
+        {years.map((y) => {
+          const active = selectedYear === y;
+          const label = `${y}年`;
+          return (
+            <button
+              key={y}
+              type="button"
+              className={chip(active)}
+              onClick={() => onSelectYear(y)}
+              title={`${y}年の登壇・記事に絞り込む`}
+              aria-pressed={active}
+            >
+              <span className="talks_filter_label">{label}</span>
+              <span className="talks_filter_count">{yearCounts[y] ?? 0}</span>
             </button>
           );
         })}
@@ -146,27 +196,37 @@ export default function TalksArchive({
   selected,
   onSelect,
   counts,
+  selectedYear,
+  onSelectYear,
+  yearCounts,
+  years,
   filtered,
 }: {
   selected: Filter;
   onSelect: (f: Filter) => void;
   counts: Record<Category, number>;
+  selectedYear: YearFilter;
+  onSelectYear: (y: YearFilter) => void;
+  yearCounts: Record<string, number>;
+  years: string[];
   filtered: TalkItem[];
 }) {
-  const years = groupByYear(filtered);
-  const activeLabel =
+  const yearGroups = groupByYear(filtered);
+  const activeCategoryLabel =
     selected === "all" ? "すべて" : CATEGORIES[selected].label;
+  const activeYearLabel = selectedYear === "all" ? "全年" : `${selectedYear}年`;
 
-  // フィルタ切替時に 200ms フェード (opacity 0 → 1) を発火。
+  // いずれかのフィルタが変わったら 200ms フェードを発火。
   const [fade, setFade] = useState(true);
-  const prev = useRef<Filter>(selected);
+  const prev = useRef<string>(`${selected}|${selectedYear}`);
   useEffect(() => {
-    if (prev.current === selected) return;
-    prev.current = selected;
+    const key = `${selected}|${selectedYear}`;
+    if (prev.current === key) return;
+    prev.current = key;
     setFade(false);
     const t = window.setTimeout(() => setFade(true), 10);
     return () => window.clearTimeout(t);
-  }, [selected]);
+  }, [selected, selectedYear]);
 
   return (
     <div className="container">
@@ -181,15 +241,22 @@ export default function TalksArchive({
           counts={counts}
           total={ARCHIVE.length}
         />
+        <YearFilterBar
+          selectedYear={selectedYear}
+          onSelectYear={onSelectYear}
+          yearCounts={yearCounts}
+          years={years}
+          total={ARCHIVE.length}
+        />
         <div className="archive_filter_summary small text-muted mb-3">
-          表示中：<strong>{activeLabel}</strong>
+          表示中：<strong>{activeCategoryLabel}</strong> × <strong>{activeYearLabel}</strong>
           <strong>{filtered.length}</strong> 本 / 全 {ARCHIVE.length} 本
         </div>
         <div className={`archive_fade${fade ? " is-visible" : ""}`}>
-          {years.length === 0 ? (
+          {yearGroups.length === 0 ? (
             <p className="text-muted">該当する登壇・記事はありません。</p>
           ) : (
-            years.map(([year, items]) => (
+            yearGroups.map(([year, items]) => (
               <YearBlock key={year} year={year} items={items} />
             ))
           )}
