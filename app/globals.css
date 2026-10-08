@@ -1140,8 +1140,12 @@ i.amazon_color {
   outline: none;
 }
 .scroll_to_top i.fa {
+  display: block;
   font-size: 18px;
   line-height: 1;
+  /* Font Awesome 4.7 の fa-chevron-up は数学的な中央と視覚中央がわずかに
+     ずれる(1px 分下に寄って見える)ため、1px だけ上に補正。 */
+  transform: translateY(-1px);
 }
 
 /* モバイル(iPhone 系の幅想定)では一回り小さく、位置も内側に寄せる */
@@ -1176,15 +1180,19 @@ i.amazon_color {
   /* モバイル表示では横スクロールに切り替わる (下の @media で flex-wrap を無効化) */
 }
 .talks_filter_chip {
+  /* ラベルと件数バッジを 1 本の水平フレックスで並べ、cross-axis 中央で揃える。
+     font-size の違い (ラベル 13px / バッジ 11px) で縦位置がずれないよう、
+     line-height: 1 で line-box 高さを統一し flex align で中央配置。 */
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  justify-content: center;
+  gap: 8px;
   padding: 6px 14px;
   background-color: #ffffff;
   color: #444444;
   font-size: 13px;
   font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
-  line-height: 1.2;
+  line-height: 1;
   white-space: nowrap;
   border: 1px solid #cccccc;
   border-radius: 999px; /* 完全な chip ピル形状 */
@@ -1208,16 +1216,20 @@ i.amazon_color {
   border-color: #333333;
 }
 .talks_filter_count {
-  display: inline-block;
-  padding: 0 6px;
+  /* 件数バッジ自体も flex で中央に組み、line-height ではなく min-width/min-height
+     で高さを確保する。これで親 chip の align-items: center とズレが起きない。 */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   min-width: 20px;
+  min-height: 18px;
+  padding: 0 6px;
   background-color: #eeeeee;
   color: #666666;
   font-size: 11px;
   font-weight: bold;
-  line-height: 18px;
+  line-height: 1;
   border-radius: 999px;
-  text-align: center;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 .talks_filter_chip.is-active .talks_filter_count {
