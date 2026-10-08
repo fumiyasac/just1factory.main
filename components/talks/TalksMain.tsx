@@ -1,7 +1,8 @@
 "use client";
 
-// Stats + Archive を 1 つのクライアント親で束ね、カテゴリー絞り込みの state を共有する。
-// Stats の「本数」タイルと Archive 側の件数表示・年ブロックが同じ selected に連動する。
+// Stats + Archive を 1 つのクライアント親で束ねる。
+// Stats はサイトの通算値を常時表示する静的コンポーネントで、
+// 絞り込み state は Archive 側だけに閉じる(件数バッジ・年ブロック件数のみ連動)。
 import { useMemo, useState } from "react";
 import {
   ARCHIVE,
@@ -35,11 +36,7 @@ export default function TalksMain() {
 
   return (
     <>
-      <TalksStats
-        selected={selected}
-        filteredCount={filtered.length}
-        totalCount={ARCHIVE.length}
-      />
+      <TalksStats />
       <TalksArchive
         selected={selected}
         onSelect={setSelected}
