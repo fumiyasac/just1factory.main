@@ -85,7 +85,7 @@ export default function RecentActivity() {
       <div className="recent_activity_block">
         <h2>Recent Activity</h2>
         <p className="recent_activity_lead">
-          Talks / Manuscript / Design の各ページから最近のアクティビティを抜粋しています。全体のアーカイブは各セクションのリンクからご覧いただけます。
+          Talks / Manuscript / Designの各ページから最近のアクティビティを抜粋しています。全体のアーカイブは各セクションのリンクからご覧いただけます。
         </p>
         <div className="row">
           {/* Talks */}

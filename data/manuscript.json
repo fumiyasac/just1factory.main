@@ -154,15 +154,15 @@
   "translations": [
     {
       "id": "translation-001",
-      "slug": "architect-decision",
-      "title": "ソフトウェアアーキテクトのための意思決定術 リーダーシップ/技術/プロダクトマネジメントの活用",
-      "bookUrl": "https://book.impress.co.jp/books/1123101159"
-    },
-    {
-      "id": "translation-002",
       "slug": "simplicity",
       "title": "シンプリシティ ―持続可能かつ人間的で効果的なソフトウェア開発",
       "bookUrl": "https://www.oreilly.co.jp/books/9784814401710/"
+    },
+    {
+      "id": "translation-002",
+      "slug": "architect-decision",
+      "title": "ソフトウェアアーキテクトのための意思決定術 リーダーシップ/技術/プロダクトマネジメントの活用",
+      "bookUrl": "https://book.impress.co.jp/books/1123101159"
     }
   ],
   "droidkaigi": [
