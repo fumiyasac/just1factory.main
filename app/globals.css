@@ -1263,3 +1263,86 @@ i.amazon_color {
 .archive_fade.is-visible {
   opacity: 1;
 }
+
+/* === index/RecentActivity ================================================= */
+.recent_activity_block {
+  padding-top: 80px;
+}
+.recent_activity_block h2 {
+  padding: 0 0 20px 0;
+  color: #444444;
+  font-size: 26px;
+  font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
+}
+.recent_activity_lead {
+  color: #555555;
+  margin-bottom: 24px;
+}
+.recent_card {
+  padding: 20px;
+  background-color: #fafafa;
+  border: 1px solid #eeeeee;
+  border-radius: 6px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.recent_card_heading {
+  color: #333333;
+  font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #dddddd;
+}
+.recent_card_list {
+  margin: 0 0 16px;
+  flex: 1 1 auto;
+}
+.recent_item + .recent_item {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px dashed #eeeeee;
+}
+.recent_item_meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+.recent_item_date {
+  color: #888888;
+  font-size: 12px;
+  font-family: 'Menlo', 'Consolas', monospace;
+}
+.recent_item_title {
+  display: inline-block;
+  color: #2867B2;
+  font-family: 'Palatino', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.5;
+  text-decoration: none;
+  margin-top: 2px;
+}
+.recent_item_title:hover {
+  text-decoration: underline;
+}
+.recent_card_more {
+  display: inline-block;
+  margin-top: auto;
+  padding-top: 8px;
+  color: #444444;
+  font-size: 13px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.recent_card_more:hover {
+  color: #2867B2;
+  text-decoration: underline;
+}
+.recent_card_more i.fa {
+  margin-left: 4px;
+}
