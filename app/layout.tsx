@@ -6,7 +6,7 @@ import "font-awesome/css/font-awesome.min.css";
 import "./globals.css";
 import NavigationBar from "@/components/global/NavigationBar";
 import FooterBar from "@/components/global/FooterBar";
-import ScrollTopButton from "@/components/global/ScrollTopButton";
+import ScrollToTop from "@/components/global/ScrollToTop";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://just1factory.net"),
@@ -63,7 +63,7 @@ export default function RootLayout({
           {children}
           <FooterBar />
         </div>
-        <ScrollTopButton />
+        <ScrollToTop />
       </body>
     </html>
   );
