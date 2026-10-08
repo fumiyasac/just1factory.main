@@ -12,20 +12,21 @@ import designData from "@/data/design.json";
 
 const talks = (talksData as TalkItem[]).slice(0, 3);
 const manuscript: Array<{
-  kind: "iosdc" | "contribution";
+  kind: "iosdc" | "contribution" | "translation";
   title: string;
   meta: string;
   url: string;
 }> = (() => {
   const m = manuscriptData as ManuscriptData;
   const items: Array<{
-    kind: "iosdc" | "contribution";
+    kind: "iosdc" | "contribution" | "translation";
     title: string;
     meta: string;
     url: string;
   }> = [];
   const latestIosdc: IOSDCEntry | undefined = m.iosdc[0];
   const latestContrib: Contribution | undefined = m.contributions[0];
+  const latestTranslation = m.translations[0];
   if (latestIosdc) {
     items.push({
       kind: "iosdc",
@@ -42,9 +43,17 @@ const manuscript: Array<{
       url: latestContrib.bookUrl ?? latestContrib.githubUrl ?? "/manuscript",
     });
   }
+  if (latestTranslation) {
+    items.push({
+      kind: "translation",
+      title: latestTranslation.title,
+      meta: "翻訳レビュー参加",
+      url: latestTranslation.bookUrl,
+    });
+  }
   return items;
 })();
-const designItems = (designData as DesignItem[]).slice(0, 2);
+const designItems = (designData as DesignItem[]).slice(0, 3);
 
 function Card({
   heading,
@@ -121,7 +130,11 @@ export default function RecentActivity() {
               <li key={i} className="recent_item">
                 <div className="recent_item_meta">
                   <span className="badge badge-pill badge-info">
-                    {m.kind === "iosdc" ? "iOSDC パンフレット" : "寄稿"}
+                    {m.kind === "iosdc"
+                      ? "iOSDC パンフレット"
+                      : m.kind === "contribution"
+                        ? "寄稿"
+                        : "翻訳レビュー"}
                   </span>
                   <span className="recent_item_date">{m.meta}</span>
                 </div>

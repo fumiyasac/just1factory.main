@@ -114,15 +114,17 @@ function YearFilterBar({
         </button>
         {years.map((y) => {
           const active = selectedYear === y;
+          const label = `${y}年`;
           return (
             <button
               key={y}
               type="button"
               className={chip(active)}
               onClick={() => onSelectYear(y)}
+              title={`${y}年の登壇・記事に絞り込む`}
               aria-pressed={active}
             >
-              {y}年
+              {label}
               <span className="talks_filter_count">{yearCounts[y] ?? 0}</span>
             </button>
           );
