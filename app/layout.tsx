@@ -57,10 +57,17 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body>
+        {/* キーボードフォーカス時のみ表示されるスキップナビゲーションリンク。
+            Tab 一発でメインコンテンツ (#main-content) へ飛べる。 */}
+        <a href="#main-content" className="skip_to_main">
+          メインコンテンツへスキップ
+        </a>
         {/* 旧 layouts/default.vue の #wrapper 構造を踏襲 */}
         <div id="wrapper">
           <NavigationBar />
-          {children}
+          <main id="main-content" tabIndex={-1}>
+            {children}
+          </main>
           <FooterBar />
         </div>
         <ScrollToTop />

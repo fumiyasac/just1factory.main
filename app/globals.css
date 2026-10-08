@@ -1346,3 +1346,30 @@ i.amazon_color {
 .recent_card_more i.fa {
   margin-left: 4px;
 }
+
+/* === アクセシビリティ: スキップナビゲーション ============================== */
+/* 普段は視覚的に非表示だが、Tab フォーカスで左上に飛び出て表示される。 */
+.skip_to_main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  padding: 10px 16px;
+  background-color: #444444;
+  color: #ffffff;
+  font-size: 14px;
+  text-decoration: none;
+  transform: translateY(-100%);
+  transition: transform 0.2s ease;
+}
+.skip_to_main:focus {
+  transform: translateY(0);
+  outline: 2px solid #2867B2;
+  outline-offset: 2px;
+  color: #ffffff;
+  text-decoration: none;
+}
+/* <main> 自身を tabIndex=-1 でフォーカス可能にしたが、クリック時のアウトラインは不要。 */
+#main-content:focus {
+  outline: none;
+}

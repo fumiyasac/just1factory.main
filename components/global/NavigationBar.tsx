@@ -25,14 +25,17 @@ export default function NavigationBar() {
     `nav-link${isActive(href) ? " active" : ""}`;
 
   return (
-    <nav className="navbar navbar-expand-md navbar-dark bg-dark sticky-top navbar_block">
+    <nav
+      className="navbar navbar-expand-md navbar-dark bg-dark sticky-top navbar_block"
+      aria-label="メインナビゲーション"
+    >
       {/* 旧 DOM 順（トグル → ブランド → メニュー）を踏襲 */}
       <button
         className={`navbar-toggler${expanded ? "" : " collapsed"}`}
         type="button"
         aria-controls="nav_collapse"
         aria-expanded={expanded}
-        aria-label="Toggle navigation"
+        aria-label={expanded ? "メニューを閉じる" : "メニューを開く"}
         onClick={() => setExpanded((v) => !v)}
       >
         <span className="navbar-toggler-icon" />
