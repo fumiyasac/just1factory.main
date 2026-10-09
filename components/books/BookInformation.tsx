@@ -12,6 +12,12 @@ const BOOKS: Book[] = [...(booksData as Book[])].sort(
   (a, b) => a.sortOrder - b.sortOrder,
 );
 
+// "2018-10-08" → "2018年10月8日" (発行日表示は漢字区切りで統一)
+function formatReleasedAt(iso: string): string {
+  const [y, m, d] = iso.split("-");
+  return `${Number(y)}年${Number(m)}月${Number(d)}日`;
+}
+
 // 書籍ごとに本文中へ "\n" を含めうる段落を <br /> に変換して描画する。
 function renderParagraphLines(line: string) {
   const parts = line.split("\n");
@@ -47,6 +53,9 @@ function BookCard({ book, isFirst }: { book: Book; isFirst: boolean }) {
                 {i < book.publishedAt.length - 1 ? <>&nbsp;</> : null}
               </Fragment>
             ))}
+            <br />
+            <span className="small">発行日</span>:{" "}
+            <span className="small">{formatReleasedAt(book.releasedAt)}</span>
           </p>
         </div>
         <div className="container pt-3">

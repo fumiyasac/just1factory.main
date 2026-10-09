@@ -10,6 +10,8 @@ export interface Book {
   title: string;
   /** 初回頒布イベント名(複数併記あり: 例「技術書典7」「第1回技術書同人誌博覧会」) */
   publishedAt: string[];
+  /** 発行日 (YYYY-MM-DD)。表示は「2018年10月8日」形式に整形する */
+  releasedAt: string;
   /** 表紙画像パス (public 配下の相対パス) */
   coverImage: string;
   /** 表紙画像の alt 属性 */
