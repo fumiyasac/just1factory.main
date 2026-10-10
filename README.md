@@ -173,8 +173,8 @@ CMS化に備え以下を定義済み。本番Firestoreへの反映は未実施�
 | [`CLAUDE.md`](./CLAUDE.md) | Claude Code向けのプロジェクト指針(Tech Stack / Do NOT / Architecture Notes) |
 | [`AGENTS.md`](./AGENTS.md) | AIエージェントへの注意書き(Next.js 16系のドキュメント参照指示) |
 | [`PROGRESS.md`](./PROGRESS.md) | Nuxt.js 2からNext.js 16への移行作業ログ |
-| [`docs/ROADMAP.md`](./docs/ROADMAP.md) | 本サイトの中期ロードマップ(Phase 1〜4) |
-| [`docs/FIREBASE_CMS_DESIGN.md`](./docs/FIREBASE_CMS_DESIGN.md) | Firestoreコレクション設計のたたき台 |
+| [`docs/roadmap.md`](./docs/ROADMAP.md) | 本サイトの中期ロードマップ(Phase 1〜4) |
+| [`docs/firebase_cms_design.md`](./docs/FIREBASE_CMS_DESIGN.md) | Firestoreコレクション設計のたたき台 |
 | [`docs/firestore-migration-spec.md`](./docs/firestore-migration-spec.md) | 現状の `data/*.json` とFirestore設計の突き合わせ結果 + 管理画面フォーム案 |
 | [`docs/isr-migration-impact.md`](./docs/isr-migration-impact.md) | `output: 'export'` を外してISR/SSRへ切り替えた場合の影響範囲分析 |
 | [`docs/firebase-emulator-guide.md`](./docs/firebase-emulator-guide.md) | Firestoreルール検証用のEmulator操作手順 |
@@ -214,7 +214,6 @@ CMS化に備え以下を定義済み。本番Firestoreへの反映は未実施�
 - **Bootstrap 4.6 / Font Awesome 4.7はバージョン固定**。デザインリニューアルまで触らない
 - **`output: 'export'` を外さない**(Phase 3の正式切り替えまで)
 - **`out/` をgit管理対象にしない**
-- **英数字・記号と日本語の境界に半角スペースを入れない**(表示テキスト全般のtypography規約)
 - 新しいページを追加した際は `app/sitemap.ts` にもエントリを追加する
 - コミットメッセージは日本語でも可。変更意図が伝わる単位で分割する
 
