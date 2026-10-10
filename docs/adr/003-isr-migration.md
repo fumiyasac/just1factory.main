@@ -81,7 +81,7 @@
 
 ### ISR化する3ページ(`/`, `/talks`, `/manuscript`)
 
-各 `page.tsx` に revalidate を1行追加する。
+各 `page.tsx` にrevalidateを1行追加する。
 
 ```ts
 export const revalidate = 3600; // 1時間
@@ -108,7 +108,7 @@ export const revalidate = 3600; // 1時間
 
 ### Firestore読み取りコストの見積もり
 
-- ISR 3ページ × revalidate 3600秒 × 1ページあたり5〜10読み取り = 1時間あたり15〜30読み取り。Firestoreの無料枠50,000読み取り / 日に対して3桁の余裕がある。ただし [ADR-002](./002-hosting-strategy.md) で Blaze プランへの切り替えは別途必要。
+- ISR 3ページ × revalidate 3600秒 × 1ページあたり5〜10読み取り = 1時間あたり15〜30読み取り。Firestoreの無料枠50,000読み取り / 日に対して3桁の余裕がある。ただし [ADR-002](./002-hosting-strategy.md) でBlazeプランへの切り替えは別途必要。
 - SSG 4ページは再ビルド時のみ読み取りが発生する。デプロイ頻度(月数回) × エントリ数(100件以下)で、月数百読み取り程度に収まる。
 
 ### トレードオフ

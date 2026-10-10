@@ -59,7 +59,7 @@ Firebase Firestoreを採用する。
 1. **Firebase Hosting / Auth / Storageを同一プロジェクトでそのまま使える**
    `.firebaserc` の `default: just1factory-main` に統合済みで、Firestoreを追加すればAdmin SDK・クライアントSDK・セキュリティルール・ローカルEmulatorの4つが即座に揃う。他サービスを選ぶと別プロジェクト・別課金・別認証連携の管理コストが追加で発生する。
 
-2. **データ構造の設計が既に Firestore 寄り**
+2. **データ構造の設計が既にFirestore寄り**
    [`docs/firestore-migration-spec.md`](../firestore-migration-spec.md) で6セクション(292件)の全フィールドをFirestoreコレクション設計にマッピング済み。移行時にスキーマを書き起こす工程を省ける。
 
 3. **セキュリティモデルの実装が完了している**

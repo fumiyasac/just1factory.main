@@ -6,7 +6,7 @@
 
 ## コンテキスト
 
-[ADR-001](./001-why-firestore.md) でFirestore採用を決めたことで、ビルド時あるいはリクエスト時にFirestoreからデータを取得する構成へ移行する前提ができた。これに伴い `next.config.ts` の `output: "export"` を外す必要があり、現在の「静的HTMLをFirebase Hostingから配信する」運用モデルでは対応できなくなる(静的エクスポートでは ISR のようなリクエスト時レンダリングが動かないため)。
+[ADR-001](./001-why-firestore.md) でFirestore採用を決めたことで、ビルド時あるいはリクエスト時にFirestoreからデータを取得する構成へ移行する前提ができた。これに伴い `next.config.ts` の `output: "export"` を外す必要があり、現在の「静的HTMLをFirebase Hostingから配信する」運用モデルでは対応できなくなる(静的エクスポートではISRのようなリクエスト時レンダリングが動かないため)。
 
 [`docs/isr-migration-impact.md`](../isr-migration-impact.md) にビルド出力・ページ別戦略・ホスティング・CI/CD・Claude設定の5系統で影響範囲を整理済み。本ADRでは、このうちホスティング先を1つに絞る。
 
@@ -16,11 +16,11 @@
 
 ### Firebase Hosting + Cloud Functions for Firebase
 
-Firebaseエコシステムで完結させる構成。Next.js SSRアダプタ(例: Firebase Extensions の `nextjs` extension)を介してCloud FunctionsでNext.jsサーバーを動かし、Hostingの `rewrites` で振り分ける。
+Firebaseエコシステムで完結させる構成。Next.js SSRアダプタ(例: Firebase Extensionsの `nextjs` extension)を介してCloud FunctionsでNext.jsサーバーを動かし、Hostingの `rewrites` で振り分ける。
 
 ### Firebase Hosting + Cloud Run
 
-Firebase と GCP を併用する構成。Next.jsをDockerfileでコンテナ化してCloud Runにデプロイし、Hostingの `rewrites` で動的HTMLをCloud Runへ振り分ける。静的アセットは引き続きFirebase Hostingから配信する。
+FirebaseとGCPを併用する構成。Next.jsをDockerfileでコンテナ化してCloud Runにデプロイし、Hostingの `rewrites` で動的HTMLをCloud Runへ振り分ける。静的アセットは引き続きFirebase Hostingから配信する。
 
 ### Vercel に完全移行
 
@@ -36,7 +36,7 @@ Cloud RunにNext.jsサーバーを置き、静的アセットもCloud Runから�
 |---|---|---|---|---|
 | Next.js ISR / SSGサポート | △(アダプタ経由、公式サポート弱) | **○(標準runtimeをコンテナ化、安定稼働)** | ◎(純正サポート) | ○(標準runtime) |
 | 現在の構成からの移行コスト | 中(Functions実装 + rewrites) | **中(Dockerfile + Cloud Build CI + rewrites)** | 高(Firebaseから全移管、OGPや解析の再設定が発生) | 中(静的配信もCloud Runに乗せるぶん手間増) |
-| `firebase.json` headers 維持 | ◎(静的アセットは従来通り) | **◎(静的アセットは従来通り)** | ×(`vercel.json` に書き直し) | ×(Cloud Run側で再定義) |
+| `firebase.json` headers維持 | ◎(静的アセットは従来通り) | **◎(静的アセットは従来通り)** | ×(`vercel.json` に書き直し) | ×(Cloud Run側で再定義) |
 | Cold Start | あり(Functionsの冷起動) | **あり(min-instancesで緩和可、課金増)** | なし(Edge Network) | あり |
 | 料金(月数百PV規模) | Blaze必須(従量) | **Blaze + Cloud Run従量(無料枠180 K vCPU秒 / 月)** | Hobby無料枠は商用不可 / Pro $20/月 | Cloud Run従量のみ |
 | Firestoreとの親和性 | ◎(同一プロジェクト) | **◎(同じGCPプロジェクト、サービスアカウント連携容易)** | ○(SDKは使えるがIAM分離) | ◎(同じGCPプロジェクト) |
@@ -86,13 +86,13 @@ Firebase Hosting + Cloud Runを採用する。
 
 - Blazeプランへの切り替えが必要になる(SparkではCloud FunctionsとCloud Runへの接続および外部egressが制限されるため)。
 - 月数百PV規模ではCloud Runの無料枠(月180,000 vCPU秒・2 Mリクエスト)に2桁以上の余裕があり、実質的な新規コストは発生しない見込み。
-- 無料枠超過時のアラートをFirebase Consoleおよび GCPの予算アラートで設定して備える。
+- 無料枠超過時のアラートをFirebase ConsoleおよびGCPの予算アラートで設定して備える。
 
 ### トレードオフ
 
 - Cold Startが数100 msから数秒の範囲で発生する。トップページを含む低トラフィック時間帯の初回アクセスで体感される可能性がある。緩和策として `min-instances: 1` を設定できるが、月数ドルの追加課金が発生する。
 - CIにDockerビルドの工程が加わり、所要時間が現状の2〜3分から5〜7分程度に伸びる。
-- 運用対象のシステムが Hosting / Cloud Run / Firestore / Auth の4系統に増える。
+- 運用対象のシステムがHosting / Cloud Run / Firestore / Authの4系統に増える。
 
 ## 参考資料
 
