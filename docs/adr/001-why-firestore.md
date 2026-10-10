@@ -1,98 +1,96 @@
 # ADR-001: データストアとしてFirestoreを採用する
 
-## ステータス: 提案(Proposed)
+## ステータス
 
-## 日付: 2026-10-11
+提案(Proposed) / 2026-10-11起票。本書は分析に基づく推奨を提示するに留まり、採否はサイトオーナーのレビューで確定する。
 
-## コンテキスト(なぜこの決定が必要か)
+## コンテキスト
 
-現状、本サイトのコンテンツは `data/*.json`(5 ファイル)と `components/timeline/data.ts` に TypeScript 配列として保存されており、更新のたびに **git コミット + CI ビルド + Firebase Hosting デプロイ** という開発者フローが必要になる。これはサイトオーナー自身が開発者だから成立しているが、以下 2 点の課題がある。
+本サイトのコンテンツは `data/*.json`(5ファイル)と `components/timeline/data.ts` にTypeScript配列として保存している。更新のたびにgitコミット・CIビルド・Firebase Hostingデプロイを踏む構成で、サイトオーナー自身が開発者である今は成立しているものの、以下の課題を抱える。
 
-- **運用の属人化**: コンテンツ追加が常にコードリポジトリ経由となり、将来的に開発者以外(編集補助者等)が触れない
-- **即時性の欠如**: 誤字修正や登壇情報の追記のたびに master マージ → 再ビルド待ちが必要。管理画面からの編集 → 即時反映を目指す Phase 3 の目標と不整合
+- **運用が属人化している**: コンテンツ追加がリポジトリ経由に固定されており、将来的に開発者以外が触れる余地がない。
+- **反映が即時でない**: 誤字修正や登壇情報の追記ごとにmasterマージと再ビルドを待つ必要がある。管理画面から編集して即時反映することを目指すPhase 3の方針と整合しない。
 
-Phase 3 では **コードデプロイなしでコンテンツを更新できる状態** を実現したい。そのための外部データストアを 1 つ選定する必要がある。
+Phase 3ではコードデプロイを介さずにコンテンツを更新できる状態を実現する。本ADRでは、そのための外部データストアを1つ選定する。
 
-関連する前提として、[`docs/firestore-migration-spec.md`](../firestore-migration-spec.md) で全 6 セクション(292 件)のデータ構造と Firestore コレクション設計との突き合わせが完了しており、[`firestore.rules`](../../firestore.rules) で既にセキュリティモデル(read 全員許可 / write は `admins/{uid}` 名簿制)の実装が済んでいる。
+前提として、[`docs/firestore-migration-spec.md`](../firestore-migration-spec.md) で全6セクション(292件)のデータ構造とFirestoreコレクション設計の突き合わせを完了しており、[`firestore.rules`](../../firestore.rules) でセキュリティモデル(readは全員許可、writeは `admins/{uid}` 名簿制)まで実装している。
 
 ## 検討した選択肢
 
-### 選択肢A: Firebase Firestore
+### Firebase Firestore
 
-NoSQL ドキュメント指向データベース。Firebase エコシステムに統合済み。
+NoSQLドキュメント指向データベース。Firebaseエコシステムに統合済み。
 
-### 選択肢B: Supabase
+### Supabase
 
-PostgreSQL ベースの BaaS。リレーショナル + リアルタイム + Auth + Storage を提供。
+PostgreSQLベースのBaaS。リレーショナル・リアルタイム・Auth・Storageを単一の管理コンソールで扱える。
 
-### 選択肢C: PlanetScale
+### PlanetScale
 
-MySQL ベースのサーバーレス DB。スキーマ変更の branching 機能が特徴。
+MySQLベースのサーバーレスDB。スキーマ変更のbranching機能を売りにしている。
 
-### 選択肢D: Contentful / microCMS 等のヘッドレス CMS
+### Contentful / microCMS などのヘッドレスCMS
 
-編集 UI 込みの SaaS。コードを書かずにスキーマ定義と編集が可能。
+編集UI込みのSaaS。コードを書かずにスキーマ定義と記事編集ができる。
 
-### 選択肢E: JSON ファイル + GitHub API
+### JSONファイル + GitHub API
 
-現状の `data/*.json` を維持し、管理画面から GitHub API 経由でコミット・PR 作成する方式。
+現状の `data/*.json` を維持し、管理画面からGitHub API経由でコミット・PRを作成する方式。
 
 ### 比較表
 
-| 観点 | A: Firestore | B: Supabase | C: PlanetScale | D: ヘッドレス CMS | E: GitHub API |
+| 観点 | Firestore | Supabase | PlanetScale | ヘッドレスCMS | GitHub API |
 |---|---|---|---|---|---|
-| 既存 Firebase エコシステムとの親和性 | ◎(同一プロジェクト) | ×(別サービス) | ×(別サービス) | △(連携 OK だが別口) | ○(リポジトリ経由) |
-| 個人サイト規模の無料枠 | ◎(1 GB storage / 50 K reads/day) | ◎(500 MB DB / 月 50 K MAU) | ○(5 GB / 10 億 row read/月) | △(microCMS 10 K リクエスト/月) | ◎(GitHub 無料枠内) |
-| `firestore-migration-spec.md` のデータ構造との相性 | ◎(そのまま適用) | ○(リレーショナルに正規化必要) | △(スキーマ設計工数) | △(CMS のスキーマ機能に再マッピング) | ◎(現状維持) |
-| `firestore.rules` 設計との整合性 | ◎(既に実装済み) | △(RLS で再実装) | △(アプリ層で再実装) | ×(SaaS 側の権限モデル) | ×(GitHub 権限で代替) |
-| リアルタイム同期 | ◎(標準機能) | ◎(標準機能) | ×(ポーリング要) | ×(Webhook のみ) | ×(なし) |
-| 学習コスト | ○(Admin SDK + ルール記法) | ○(SQL + RLS) | 中(スキーマ branching) | 低(SaaS 操作のみ) | 低(既存知識で可) |
-| ベンダーロックイン | 中 | 低(オープンソース PostgreSQL 互換) | 中 | 高 | 低 |
-| 管理画面開発コスト | 中(自前実装) | 中(自前実装) | 中(自前実装) | 0(SaaS 標準装備) | 中(自前実装 + Git 操作 UI) |
+| 既存Firebase環境との親和性 | ◎(同一プロジェクト) | ×(別サービス) | ×(別サービス) | △(連携可だが別口) | ○(リポジトリ経由) |
+| 個人サイト規模の無料枠 | ◎(1 GB storage / 50 K reads/day) | ◎(500 MB DB / 月50 K MAU) | ○(5 GB / 10億row read/月) | △(microCMS 10 Kリクエスト/月) | ◎(GitHub無料枠内) |
+| `firestore-migration-spec.md` との整合 | ◎(そのまま適用) | ○(リレーショナルに正規化必要) | △(スキーマ設計工数) | △(CMSスキーマへ再マッピング) | ◎(現状維持) |
+| `firestore.rules` 設計との整合 | ◎(実装済み) | △(RLSで再実装) | △(アプリ層で再実装) | ×(SaaS側の権限モデル) | ×(GitHub権限で代替) |
+| リアルタイム同期 | ◎ | ◎ | ×(ポーリング要) | ×(Webhookのみ) | × |
+| 学習コスト | ○(Admin SDK + ルール記法) | ○(SQL + RLS) | 中(スキーマbranching) | 低(SaaS操作のみ) | 低(既存知識) |
+| ベンダーロックイン | 中 | 低(PostgreSQL互換) | 中 | 高 | 低 |
+| 管理画面の開発コスト | 中(自前実装) | 中(自前実装) | 中(自前実装) | ゼロ(SaaS標準装備) | 中(自前実装 + Git操作UI) |
 
 ## 決定
 
-**Firebase Firestore(選択肢A)を採用する。**
+Firebase Firestoreを採用する。
 
-ただし本決定は本書の分析に基づく推奨であり、**最終判断はサイトオーナーのレビューを経て行う** 想定。
+## 根拠
 
-## 根拠(先行ドキュメントからの具体的な裏付け)
+1. **Firebase Hosting / Auth / Storageを同一プロジェクトでそのまま使える**
+   `.firebaserc` の `default: just1factory-main` に統合済みで、Firestoreを追加すればAdmin SDK・クライアントSDK・セキュリティルール・ローカルEmulatorの4つが即座に揃う。他サービスを選ぶと別プロジェクト・別課金・別認証連携の管理コストが追加で発生する。
 
-1. **Firebase Hosting / Auth / Storage がすでに同一プロジェクトで利用可能**
-   `.firebaserc` の `default: just1factory-main` で単一プロジェクトに統合されており、Firestore を追加するだけで Admin SDK・クライアント SDK・セキュリティルール・ローカル Emulator の 4 つが揃う。他サービスを選ぶと別プロジェクト・別課金・別認証連携のオーバーヘッドが発生する。
+2. **データ構造の設計が既に Firestore 寄り**
+   [`docs/firestore-migration-spec.md`](../firestore-migration-spec.md) で6セクション(292件)の全フィールドをFirestoreコレクション設計にマッピング済み。移行時にスキーマを書き起こす工程を省ける。
 
-2. **データ構造が Firestore 向けに設計済み**
-   [`docs/firestore-migration-spec.md`](../firestore-migration-spec.md) にて 6 セクション(292 件)の全フィールドが Firestore コレクション設計にマッピング済み。マイグレーション時のスキーマ書き起こしコストがゼロ。
+3. **セキュリティモデルの実装が完了している**
+   [`firestore.rules`](../../firestore.rules) に `isAdmin()` ヘルパーと `admins/{uid}` 名簿制のルールが揃っており、[`docs/firebase-emulator-guide.md`](../firebase-emulator-guide.md) で検証手順も整備済み。他のDBを選ぶとこの資産を破棄して書き直すことになる。
 
-3. **セキュリティモデルの実装が既に完了**
-   [`firestore.rules`](../../firestore.rules) で `isAdmin()` ヘルパー + `admins/{uid}` 名簿制のルールが完成しており、[`docs/firebase-emulator-guide.md`](../firebase-emulator-guide.md) で検証手順も整備済み。他 DB を選ぶとこの資産を破棄して書き直すことになる。
+4. **想定規模に対して無料枠に充分な余裕がある**
+   月数百PV・292件のエントリ規模では、Firestoreの無料枠(1 GB storage / 50 K reads/day / 20 K writes/day)に2桁以上の余裕がある。Blazeプラン移行後も実質的な新規コストは発生しない見込み。
 
-4. **個人サイトの規模感に対するコスト**
-   想定アクセス量(月数百 PV・292 件のエントリ)は Firestore 無料枠(1 GB storage / 50 K reads/day / 20 K writes/day)に 2 桁以上の余裕があり、Blaze プラン移行後も実質 $0 で運用できる。
+5. **ヘッドレスCMSは編集UIを標準装備している点が強みだが、既存の `firestore.rules`・`data/*.json` 構造・設計ドキュメント一式を再マッピングする必要があり、本プロジェクトでは移行コストが上回る**。将来的に編集補助者を増やす必要が生じた段階で再検討する。
 
-5. **ヘッドレス CMS(選択肢D)は編集 UI が標準装備という魅力があるが、既存の `firestore.rules`・`data/*.json` 構造・ドキュメント一式がすべて再マッピング対象になるため、本プロジェクトのコンテキストでは移行コストが上回る**。将来的に編集補助者を増やす必要が生じた際には再検討候補。
+## 影響
 
-## 影響(この決定によって何が変わるか)
+### 得られるもの
 
-### 肯定的な影響
+- `data/*.json` からFirestore読み出しへの置き換えが、既存の `types/*.ts` と `FirestoreDataConverter<T>` の組み合わせで最小差分で実装できる。
+- 管理画面(Firebase Auth連携 + Firestore書き込み)を同じエコシステム内で構築できるため、認証・権限・デプロイ・課金の管理ポイントが1つにまとまる。
+- Emulatorで本番Firestoreに影響させずにE2Eテストを完結できる。
 
-- `data/*.json` → Firestore 読み出しへの置き換えが、既存の `types/*.ts` + `FirestoreDataConverter<T>` の組み合わせで最小差分で実装可能
-- 管理画面(Firebase Auth 連携 + Firestore 書き込み)を同じエコシステム内で構築できるため、認証・権限・デプロイ・課金の管理ポイントが単一化
-- Emulator でローカル完結の E2E テストが可能(本番 Firestore に影響なし)
+### トレードオフ
 
-### 否定的な影響・リスク
+- Blazeプラン(従量課金)への切り替えが必要になる。Hostingで想定外の請求が発生するリスクには、無料枠超過時のアラート設定で備える。
+- NoSQL特有の集計クエリの弱さが残る。全エントリをまたぐ横断集計(例: 全セクションを混ぜたタイムライン)はクライアント側またはCloud Functions側で補う。
+- 複合クエリにはインデックスの事前定義が必要になる。[`firestore.indexes.json`](../../firestore.indexes.json) に現時点で3本定義済み。クエリを追加する際は更新を忘れないよう運用で担保する。
+- ベンダーロックインは中程度残る。将来SupabaseなどへAdmin SDK経由で再移行する余地は残すが、エクスポートと再マッピングのスクリプトは別途必要になる。
 
-- **Blaze プラン(従量課金) への移行が必要**(現状 Spark 無料プラン)。Hosting の請求発生リスクはあるが、無料枠超過時のアラート設定で対応
-- NoSQL ゆえの **複雑な集計クエリは苦手**。全エントリの横断集計(例: 全セクションを混ぜたタイムライン)はクライアント or Cloud Functions 側で工夫が必要
-- インデックスの事前定義が必要([`firestore.indexes.json`](../../firestore.indexes.json) に 3 本定義済み。追加クエリ時は更新忘れに注意)
-- **ベンダーロックインが中程度**。将来 Supabase 等へ再移行する際は Admin SDK + Firestore 構造からの一括エクスポート + 再マッピングのスクリプトが必要
+### Phase 3本体で発生する作業
 
-### 変更が必要になるファイル(Phase 3 本体フェーズで対応)
-
-- 各 `app/<section>/page.tsx`: `import` を `data/*.json` から Firestore クライアント経由に変更
-- 新規 `lib/firestore/converters/*.ts`: `types/*.ts` から導出した `FirestoreDataConverter<T>`
-- 新規 `scripts/seed-firestore.ts`: `data/*.json` → Firestore 初期投入(Admin SDK)
-- 新規 `app/admin/`: 管理画面(別途 ADR で詳細化予定)
+- 各 `app/<section>/page.tsx` の `import` を `data/*.json` からFirestoreクライアント経由に差し替える。
+- `lib/firestore/converters/*.ts` を新設し、`types/*.ts` から導出した `FirestoreDataConverter<T>` を配置する。
+- `scripts/seed-firestore.ts` を追加し、`data/*.json` の内容をAdmin SDKでFirestoreへ初期投入する。
+- `app/admin/` 以下に管理画面を実装する(詳細は別ADRで扱う想定)。
 
 ## 参考資料
 
