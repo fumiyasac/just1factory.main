@@ -1,0 +1,67 @@
+rules_version = '2';
+
+// Just1factory の Firestore セキュリティルール。
+// 公開サイトのため全コンテンツコレクションは read: 全員許可、
+// write は Firestore の admins コレクションに UID が登録されたユーザーだけに制限する。
+//
+// コレクション一覧 (詳細は docs/firestore-migration-spec.md 参照):
+//   - talks       登壇資料・技術記事
+//   - books       書籍データ
+//   - design      デザイン制作物
+//   - manuscript  執筆・寄稿
+//   - showcase    GitHub 作品集
+//   - timeline    キャリア年表
+//   - admins      管理者 UID の名簿 (uid がドキュメント ID)
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // --- 共通ヘルパー ---------------------------------------------------
+    // Firebase Auth で認証済み + 当該 UID が admins/{uid} として存在する場合のみ true。
+    // 直書き・環境変数ではなく Firestore 側で名簿管理することで、UID 追加に
+    // コードデプロイを不要にする (Firebase Console or 管理画面から編集)。
+    function isAdmin() {
+      return request.auth != null
+        && exists(/databases/$(database)/documents/admins/$(request.auth.uid));
+    }
+
+    // --- 公開コンテンツコレクション -----------------------------------
+    // いずれも read 自由 / write は管理者のみ。
+    // サブコレクションも含めて同一ルールを適用するため {document=**} を使用。
+    match /talks/{document=**} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /books/{document=**} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /design/{document=**} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /manuscript/{document=**} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /showcase/{document=**} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /timeline/{document=**} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // --- 管理者名簿 ---------------------------------------------------
+    // 読み書きとも管理者のみ (他人の UID を一覧されないように read も制限)。
+    // 初回の 1 件目は Firebase Console から直接追加する想定 (chicken-and-egg)。
+    match /admins/{uid} {
+      allow read, write: if isAdmin();
+    }
+  }
+}
