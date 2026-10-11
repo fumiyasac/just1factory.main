@@ -37,7 +37,7 @@ CLAUDE.md から `@docs/ROADMAP.md` で参照する。
 
 ## Phase 4: デザインリニューアル
 
-- [ ] Bootstrap 4.6 → Tailwind CSS 移行
+- ~~[] Bootstrap 4.6 → Tailwind CSS 移行~~ 👉 現在は検討中
 - [ ] Framer Motion によるインタラクション追加
 - [ ] レスポンシブ改善・モバイル最適化
 - [ ] OGP / SEO 強化
