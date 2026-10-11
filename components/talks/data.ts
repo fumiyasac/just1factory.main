@@ -30,7 +30,7 @@ export const CATEGORIES: Record<Category, CategoryInfo> = {
 
 export const STATS = [
   { num: "13", unit: "年", label: "2014年から発信を継続" },
-  { num: "176", unit: "本", label: "登壇資料と技術記事の合計" },
+  { num: "178", unit: "本", label: "登壇資料と技術記事の合計" },
   { num: "4", unit: "媒体", label: "Speaker Deck / Zenn / Qiita / SlideShare" },
   { num: "70+", unit: "登壇", label: "potatotips・iOSDC・DroidKaigi系ほか" },
 ] as const;
@@ -56,7 +56,7 @@ export const PLATFORMS: PlatformInfo[] = [
   },
   {
     platform: "Zenn",
-    count: 9,
+    count: 11,
     since: "2022",
     role: "登壇内容の解説記事化や、実装ノウハウをまとまった読み物として整理する場。",
     icon: "fa-folder-open",
