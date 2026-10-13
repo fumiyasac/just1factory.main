@@ -10,13 +10,13 @@ Web制作・サーバーサイド・iOS・Android・Flutter・技術書執筆・
 
 <!-- AUTO-GENERATED-START -->
 <!-- このセクションはreadme-updater Subagentが自動生成しています。手動で編集しないでください。 -->
-<!-- 最終更新: 2026-10-10 -->
+<!-- 最終更新: 2026-10-14 -->
 
 ## Tech Stack
 
 | Category | Technology |
 |---|---|
-| Framework | Next.js 16.3.8 (App Router, Static Export) |
+| Framework | Next.js 16.4.0 (App Router, Static Export) |
 | Language | TypeScript 5 / React 19.3.0 |
 | CSS | Bootstrap 4.6 + Font Awesome 4.7(いずれもバージョン固定) |
 | Node | 22.x(`.nvmrc`) |
