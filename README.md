@@ -31,7 +31,7 @@ Web制作・サーバーサイド・iOS・Android・Flutter・技術書執筆・
 | Talks & Articles | `/talks` | 登壇資料・技術記事176本をカテゴリー×年のフィルターで探索 |
 | Design | `/design` | 技書博チラシ8件 + 親方Project寄稿2件のデザイン制作一覧 |
 | Manuscript & Writings | `/manuscript` | iOSDCパンフレット原稿8 + 書籍寄稿11 + 翻訳レビュー2 + DroidKaigi Contribution 18 + テックブログ15 + 自筆ノート9 |
-| Development Showcase | `/showcase` | GitHub公開リポジトリ27件 + 技術書同人誌博覧会公式サイト運用保守の記録 |
+| Development Showcase | `/showcase` | GitHub公開リポジトリ28件 + 技術書同人誌博覧会公式サイト運用保守の記録 |
 | Career Timeline | `/timeline` | 2003年〜2025年のキャリア年表 全17章 |
 
 **Total: 7 pages**
