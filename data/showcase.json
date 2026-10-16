@@ -276,6 +276,19 @@
     },
     {
       "id": "repo-022",
+      "slug": "recipe_search_app",
+      "category": "flutter",
+      "title": "Flutter + Riverpod + driftによるレシピ検索・献立管理アプリサンプル",
+      "description": "Flutter 3.47.7とRiverpod・driftを組み合わせ、9条件の複合フィルタ・カレンダー献立・PFC栄養グラフまでを備えたレシピ検索アプリとして実装したサンプル。MVVM + Repositoryパターンの設計をベースに、Claude Codeを活用した段階的なAI駆動開発と、lint・テスト自動化を含む品質ゲート整備の実践の場としても位置付けている。",
+      "stack": [
+        "Flutter",
+        "Riverpod",
+        "Drift"
+      ],
+      "url": "https://github.com/fumiyasac/recipe_search_app"
+    },
+    {
+      "id": "repo-023",
       "slug": "vocabulary_learning",
       "category": "flutter",
       "title": "Flutter + Riverpod + Driftの擬似単語帳アプリサンプル",
@@ -288,7 +301,7 @@
       "url": "https://github.com/fumiyasac/vocabulary_learning"
     },
     {
-      "id": "repo-023",
+      "id": "repo-024",
       "slug": "searchable_combobox",
       "category": "flutter",
       "title": "複数ライブラリを組み合わせたFlutterの複合検索UI実装",
@@ -301,7 +314,7 @@
       "url": "https://github.com/fumiyasac/searchable_combobox"
     },
     {
-      "id": "repo-024",
+      "id": "repo-025",
       "slug": "riverpod_firestore_example",
       "category": "flutter",
       "title": "Flutter + Riverpod + Firestoreの学習参考書メモアプリ",
@@ -314,7 +327,7 @@
       "url": "https://github.com/fumiyasac/riverpod_firestore_example"
     },
     {
-      "id": "repo-025",
+      "id": "repo-026",
       "slug": "commerce_style_sample_app",
       "category": "flutter",
       "title": "Flutter + Riverpodによるプロダクト一覧の無限スクロール実装",
@@ -327,7 +340,7 @@
       "url": "https://github.com/fumiyasac/commerce_style_sample_app"
     },
     {
-      "id": "repo-026",
+      "id": "repo-027",
       "slug": "todo_style_example_app",
       "category": "flutter",
       "title": "Flutter + RiverpodによるToDoリスト型UI実装サンプル",
@@ -340,7 +353,7 @@
       "url": "https://github.com/fumiyasac/todo_style_example_app"
     },
     {
-      "id": "repo-027",
+      "id": "repo-028",
       "slug": "SimpleGraphQLPractice",
       "category": "research",
       "title": "Apollo 0.x / 1.x系の差分調査用リポジトリ",
