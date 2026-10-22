@@ -22,7 +22,9 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v7
         with:
-          node-version: '20'
+          # .nvmrc と揃える。2026/10/21公開のNode.jsセキュリティリリースを取り込むため
+          # 22.23.4以上を指定(.nvmrcで固定、ここでは明示的に同値を宣言)
+          node-version-file: '.nvmrc'
           cache: 'npm'
 
       - name: Install dependencies
