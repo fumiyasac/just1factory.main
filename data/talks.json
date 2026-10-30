@@ -1,6 +1,55 @@
 [
   {
     "id": "talk-001",
+    "date": "2026-10-30",
+    "platform": "Speaker Deck",
+    "category": "cross",
+    "title": "スマートロックを支えるFlutter × ネイティブ連携の実践",
+    "event": "FlutterKaigi 2026",
+    "url": "https://speakerdeck.com/bitkey/flutter-and-native-integration-in-practice-powering-smart-locks"
+  },
+  {
+    "id": "talk-002",
+    "date": "2026-10-26",
+    "platform": "Zenn",
+    "category": "ui",
+    "title": "SwiftDataを使った簡易ノートアプリの様な形を実現してみる",
+    "url": "https://zenn.dev/fumiyasac/articles/261440149b5cb3"
+  },
+  {
+    "id": "talk-003",
+    "date": "2026-10-24",
+    "platform": "Zenn",
+    "category": "ui",
+    "title": "NestedScrollを利用した表現とSwiftUIでの再現方法のまとめ",
+    "url": "https://zenn.dev/fumiyasac/articles/bf42026007b6f8"
+  },
+  {
+    "id": "talk-004",
+    "date": "2026-10-21",
+    "platform": "Zenn",
+    "category": "ui",
+    "title": "Scroll要素と連動して動くTab要素をiOS/Androidで実現してみる",
+    "url": "https://zenn.dev/fumiyasac/articles/9c7178ee4c413d"
+  },
+  {
+    "id": "talk-005",
+    "date": "2026-10-19",
+    "platform": "Zenn",
+    "category": "ui",
+    "title": "Headerを折りたたむ様な表現をiOS/Androidの宣言的UIで実装してみる",
+    "url": "https://zenn.dev/fumiyasac/articles/b949eb188f244f"
+  },
+  {
+    "id": "talk-006",
+    "date": "2026-10-18",
+    "platform": "Zenn",
+    "category": "ui",
+    "title": "X(旧Twitter)のProfile画面の様な形を宣言的UIで実装してみる",
+    "url": "https://zenn.dev/fumiyasac/articles/04a100d5811953"
+  },
+  {
+    "id": "talk-007",
     "date": "2026-10-16",
     "platform": "Zenn",
     "category": "ui",
@@ -8,7 +57,7 @@
     "url": "https://zenn.dev/fumiyasac/articles/94dc73e3985b19"
   },
   {
-    "id": "talk-002",
+    "id": "talk-008",
     "date": "2026-10-15",
     "platform": "Zenn",
     "category": "cross",
@@ -16,7 +65,7 @@
     "url": "https://zenn.dev/fumiyasac/articles/305ba0c5a8a9d0"
   },
   {
-    "id": "talk-003",
+    "id": "talk-009",
     "date": "2026-10-13",
     "platform": "Zenn",
     "category": "ui",
@@ -24,7 +73,7 @@
     "url": "https://zenn.dev/fumiyasac/articles/b422ccf24d8907"
   },
   {
-    "id": "talk-004",
+    "id": "talk-010",
     "date": "2026-10-12",
     "platform": "Zenn",
     "category": "ui",
@@ -32,7 +81,7 @@
     "url": "https://zenn.dev/fumiyasac/articles/b9dc6cce31bcd7"
   },
   {
-    "id": "talk-005",
+    "id": "talk-011",
     "date": "2026-10-11",
     "platform": "Zenn",
     "category": "ui",
@@ -40,7 +89,7 @@
     "url": "https://zenn.dev/fumiyasac/articles/c2a90ce9d7f91e"
   },
   {
-    "id": "talk-006",
+    "id": "talk-012",
     "date": "2026-09-01",
     "platform": "Zenn",
     "category": "ai",
@@ -48,7 +97,7 @@
     "url": "https://zenn.dev/fumiyasac/articles/808da3b5cf8df7"
   },
   {
-    "id": "talk-007",
+    "id": "talk-013",
     "date": "2026-08-18",
     "platform": "Speaker Deck",
     "category": "cross",
@@ -57,7 +106,7 @@
     "url": "https://speakerdeck.com/bitkey/building-custom-flutter-ble-central-plugins"
   },
   {
-    "id": "talk-008",
+    "id": "talk-014",
     "date": "2026-07-27",
     "platform": "Speaker Deck",
     "category": "community",
@@ -66,7 +115,7 @@
     "url": "https://speakerdeck.com/bitkey/scary-memories-of-swift-and-xcode-updates"
   },
   {
-    "id": "talk-009",
+    "id": "talk-015",
     "date": "2026-07-22",
     "platform": "Speaker Deck",
     "category": "ai",
@@ -75,7 +124,7 @@
     "url": "https://speakerdeck.com/bitkey/dual-platform-mobile-engineer-shifts-to-flutter-and-typescript-the-view-and-real-thrill-of-going-flutter-first"
   },
   {
-    "id": "talk-010",
+    "id": "talk-016",
     "date": "2026-07-15",
     "platform": "Speaker Deck",
     "category": "ai",
@@ -84,7 +133,7 @@
     "url": "https://speakerdeck.com/bitkey/the-seedbed-for-large-scale-design-from-ai-era-solo-projects-to-professional-knowledge"
   },
   {
-    "id": "talk-011",
+    "id": "talk-017",
     "date": "2026-05-18",
     "platform": "Speaker Deck",
     "category": "ai",
@@ -93,7 +142,7 @@
     "url": "https://speakerdeck.com/bitkey/flutter-with-llm-a-former-native-engineers-fast-track-to-large-scale-apps"
   },
   {
-    "id": "talk-012",
+    "id": "talk-018",
     "date": "2026-01-22",
     "platform": "Speaker Deck",
     "category": "arch",
@@ -102,7 +151,7 @@
     "url": "https://speakerdeck.com/fumiyasac0921/riverpod3-dot-xdeshi-xian-surushi-jian-de-uishi-zhuang"
   },
   {
-    "id": "talk-013",
+    "id": "talk-019",
     "date": "2025-12-07",
     "platform": "Zenn",
     "category": "arch",
@@ -110,7 +159,7 @@
     "url": "https://zenn.dev/fumiyasac/articles/a8a5101656ecdd"
   },
   {
-    "id": "talk-014",
+    "id": "talk-020",
     "date": "2025-12-07",
     "platform": "Zenn",
     "category": "ai",
@@ -118,7 +167,7 @@
     "url": "https://zenn.dev/fumiyasac/articles/ba2b0a19f563f0"
   },
   {
-    "id": "talk-015",
+    "id": "talk-021",
     "date": "2025-11-02",
     "platform": "Speaker Deck",
     "category": "ai",
@@ -127,7 +176,7 @@
     "url": "https://speakerdeck.com/fumiyasac0921/claude-codewoli-yong-sitedroidkaigi2025gong-shi-iosapurinicontributionwositemitahua"
   },
   {
-    "id": "talk-016",
+    "id": "talk-022",
     "date": "2025-10-21",
     "platform": "Speaker Deck",
     "category": "arch",
@@ -136,7 +185,7 @@
     "url": "https://speakerdeck.com/fumiyasac0921/android-architecture-and-unidirectional-data-flow-guidance-and-essence"
   },
   {
-    "id": "talk-017",
+    "id": "talk-023",
     "date": "2025-10-03",
     "platform": "Speaker Deck",
     "category": "ui",
@@ -144,7 +193,7 @@
     "url": "https://speakerdeck.com/fumiyasac0921/swiftuinogeometryreadertoscrollviewwoji-chu-karaying-yong-madexue-bizhi-su-she-ji-tohuo-yong-shi-li"
   },
   {
-    "id": "talk-018",
+    "id": "talk-024",
     "date": "2025-07-26",
     "platform": "Speaker Deck",
     "category": "community",
@@ -153,7 +202,7 @@
     "url": "https://speakerdeck.com/fumiyasac0921/xing-wei-nobao-zi-woyu-te-ye-wu-toji-shu-niguang-garu-kinokoli"
   },
   {
-    "id": "talk-019",
+    "id": "talk-025",
     "date": "2025-07-21",
     "platform": "Speaker Deck",
     "category": "ui",
@@ -162,7 +211,7 @@
     "url": "https://speakerdeck.com/fumiyasac0921/stickyheadertoscrollzhui-cong-nogou-zao-woniu-jie-ku"
   },
   {
-    "id": "talk-020",
+    "id": "talk-026",
     "date": "2025-06-26",
     "platform": "Speaker Deck",
     "category": "ui",
@@ -171,7 +220,7 @@
     "url": "https://speakerdeck.com/fumiyasac0921/uikitjin-hua"
   },
   {
-    "id": "talk-021",
+    "id": "talk-027",
     "date": "2025-05-26",
     "platform": "Speaker Deck",
     "category": "cross",
@@ -180,7 +229,7 @@
     "url": "https://speakerdeck.com/fumiyasac0921/androiddewu-xian-xun-huan-carouselbiao-xian-wokao-etemiru"
   },
   {
-    "id": "talk-022",
+    "id": "talk-028",
     "date": "2025-05-17",
     "platform": "Speaker Deck",
     "category": "community",
@@ -189,7 +238,7 @@
     "url": "https://speakerdeck.com/fumiyasac0921/notowoqu-ruxi-guan-wosok-keteitanode-sonoji-lu-no-bu-woshu-ji-nimatometemimasita"
   },
   {
-    "id": "talk-023",
+    "id": "talk-029",
     "date": "2025-04-17",
     "platform": "Zenn",
     "category": "ui",
@@ -197,7 +246,7 @@
     "url": "https://zenn.dev/fumiyasac/articles/3104ae6e8eb416"
   },
   {
-    "id": "talk-024",
+    "id": "talk-030",
     "date": "2025-04-14",
     "platform": "Zenn",
     "category": "arch",
@@ -205,7 +254,7 @@
     "url": "https://zenn.dev/fumiyasac/articles/1ae699ccac36a6"
   },
   {
-    "id": "talk-025",
+    "id": "talk-031",
     "date": "2025-04-08",
     "platform": "Zenn",
     "category": "ui",
@@ -213,7 +262,7 @@
     "url": "https://zenn.dev/fumiyasac/articles/6bca90bac89ce7"
   },
   {
-    "id": "talk-026",
+    "id": "talk-032",
     "date": "2025-03-25",
     "platform": "Speaker Deck",
     "category": "arch",
@@ -222,7 +271,7 @@
     "url": "https://speakerdeck.com/fumiyasac0921/riverpod-and-riverpod-generatorwoli-yong-sitezhuang-tai-guan-li-bu-fen-nochu-li-woshu-kihuan-etemirujian-dan-nashi-li-shao-jie"
   },
   {
-    "id": "talk-027",
+    "id": "talk-033",
     "date": "2025-03-16",
     "platform": "Zenn",
     "category": "arch",
@@ -230,7 +279,7 @@
     "url": "https://zenn.dev/fumiyasac/articles/66023a2b2b0691"
   },
   {
-    "id": "talk-028",
+    "id": "talk-034",
     "date": "2025-02-05",
     "platform": "Speaker Deck",
     "category": "community",
@@ -239,7 +288,7 @@
     "url": "https://speakerdeck.com/fumiyasac0921/dezainkarani-suan-sitenan-yi-du-wojian-ji-morutamenoguan-dian"
   },
   {
-    "id": "talk-029",
+    "id": "talk-035",
     "date": "2025-01-28",
     "platform": "Speaker Deck",
     "category": "cross",
@@ -248,7 +297,7 @@
     "url": "https://speakerdeck.com/fumiyasac0921/androidjian-deuishi-zhuang-wojin-dukeruhintotodao-biao"
   },
   {
-    "id": "talk-030",
+    "id": "talk-036",
     "date": "2025-01-07",
     "platform": "Speaker Deck",
     "category": "ui",
@@ -257,7 +306,7 @@
     "url": "https://speakerdeck.com/fumiyasac0921/geometryreaderyasukuroruwoyong-itabiao-xian-toniu-jie-kifang"
   },
   {
-    "id": "talk-031",
+    "id": "talk-037",
     "date": "2024-11-27",
     "platform": "Speaker Deck",
     "category": "ui",
@@ -266,7 +315,7 @@
     "url": "https://speakerdeck.com/fumiyasac0921/swiftuidezuo-biao-wei-zhi-woqu-rixi-uchang-he-noxi-kanapointowotan-rou"
   },
   {
-    "id": "talk-032",
+    "id": "talk-038",
     "date": "2024-11-14",
     "platform": "Speaker Deck",
     "category": "cross",
@@ -275,7 +324,7 @@
     "url": "https://speakerdeck.com/fumiyasac0921/androiddetong-ziuiti-yan-wone-iteibudezuo-cheng-suruji-niqi-wotu-ketailuo-tosixue"
   },
   {
-    "id": "talk-033",
+    "id": "talk-039",
     "date": "2024-10-11",
     "platform": "Speaker Deck",
     "category": "community",
@@ -284,7 +333,7 @@
     "url": "https://speakerdeck.com/fumiyasac0921/droidkaigi2024gong-shi-apuriiosce-contributionli-hua"
   },
   {
-    "id": "talk-034",
+    "id": "talk-040",
     "date": "2024-09-09",
     "platform": "Speaker Deck",
     "category": "cross",
@@ -293,7 +342,7 @@
     "url": "https://speakerdeck.com/fumiyasac0921/androidkotlindenokai-fa-wojia-su-saseta3nian-jian-noshi-jian-tekunituku-jian-yi-ban"
   },
   {
-    "id": "talk-035",
+    "id": "talk-041",
     "date": "2024-07-23",
     "platform": "Speaker Deck",
     "category": "cross",
@@ -302,7 +351,7 @@
     "url": "https://speakerdeck.com/fumiyasac0921/androidjian-deshi-zhuang-wohe-waseruhinto"
   },
   {
-    "id": "talk-036",
+    "id": "talk-042",
     "date": "2024-07-14",
     "platform": "Speaker Deck",
     "category": "ui",
@@ -311,7 +360,7 @@
     "url": "https://speakerdeck.com/fumiyasac0921/konnauituteswiftuidekouzuo-runoka-wojie-pou-sitemita"
   },
   {
-    "id": "talk-037",
+    "id": "talk-043",
     "date": "2024-07-05",
     "platform": "Speaker Deck",
     "category": "async",
@@ -320,7 +369,7 @@
     "url": "https://speakerdeck.com/fumiyasac0921/nimblekaranozhi-kihuan-enozui-chu-no-bu"
   },
   {
-    "id": "talk-038",
+    "id": "talk-044",
     "date": "2024-06-06",
     "platform": "Speaker Deck",
     "category": "backend",
@@ -329,7 +378,7 @@
     "url": "https://speakerdeck.com/fumiyasac0921/mobairuapuri-and-graphqlhua-tobi-wochao-etakoraboresiyonwoshi-xian-surutameni-dekisounaguan-dian-wotan-ru"
   },
   {
-    "id": "talk-039",
+    "id": "talk-045",
     "date": "2024-05-21",
     "platform": "Speaker Deck",
     "category": "ui",
@@ -338,7 +387,7 @@
     "url": "https://speakerdeck.com/fumiyasac0921/jian-dan-naarji-neng-touishi-zhuang-wozu-mihe-wasetemitaji-lu"
   },
   {
-    "id": "talk-040",
+    "id": "talk-046",
     "date": "2024-05-07",
     "platform": "Speaker Deck",
     "category": "cross",
@@ -347,7 +396,7 @@
     "url": "https://speakerdeck.com/fumiyasac0921/androidjian-dehe-waserudao-biao-no-dot-1"
   },
   {
-    "id": "talk-041",
+    "id": "talk-047",
     "date": "2024-04-26",
     "platform": "Speaker Deck",
     "category": "cross",
@@ -356,7 +405,7 @@
     "url": "https://speakerdeck.com/fumiyasac0921/androidjian-dehe-waseruhintono-dot-2"
   },
   {
-    "id": "talk-042",
+    "id": "talk-048",
     "date": "2024-03-17",
     "platform": "Speaker Deck",
     "category": "arch",
@@ -365,7 +414,7 @@
     "url": "https://speakerdeck.com/fumiyasac0921/tcaru-men-sitatenanode-zi-fen-gaxun-ran-minoarushi-zhuang-tobi-jiao-sinagarakiyatutiatupusitemiru"
   },
   {
-    "id": "talk-043",
+    "id": "talk-049",
     "date": "2024-03-13",
     "platform": "Speaker Deck",
     "category": "async",
@@ -374,7 +423,7 @@
     "url": "https://speakerdeck.com/fumiyasac0921/combinewozhong-xin-tositachu-li-woswift-concurrencyhe-koremademodiao-betadiao-cha-toxiang-kihe-i"
   },
   {
-    "id": "talk-044",
+    "id": "talk-050",
     "date": "2024-02-15",
     "platform": "Speaker Deck",
     "category": "community",
@@ -383,7 +432,7 @@
     "url": "https://speakerdeck.com/fumiyasac0921/zhi-bi-nozhong-shi-kiyong-nisiteiruinpututodenoxin-gua-ke"
   },
   {
-    "id": "talk-045",
+    "id": "talk-051",
     "date": "2024-02-07",
     "platform": "Speaker Deck",
     "category": "arch",
@@ -392,7 +441,7 @@
     "url": "https://speakerdeck.com/fumiyasac0921/overviewing-tca-v1-dot-7-and-back-and-forth-with-mvvm"
   },
   {
-    "id": "talk-046",
+    "id": "talk-052",
     "date": "2023-12-26",
     "platform": "Zenn",
     "category": "backend",
@@ -400,7 +449,7 @@
     "url": "https://zenn.dev/fumiyasac/articles/39e1d398bf8637"
   },
   {
-    "id": "talk-047",
+    "id": "talk-053",
     "date": "2023-12-13",
     "platform": "Speaker Deck",
     "category": "cross",
@@ -409,7 +458,7 @@
     "url": "https://speakerdeck.com/fumiyasac0921/androidjian-dehe-waseruhinto"
   },
   {
-    "id": "talk-048",
+    "id": "talk-054",
     "date": "2023-10-17",
     "platform": "Speaker Deck",
     "category": "backend",
@@ -418,7 +467,7 @@
     "url": "https://speakerdeck.com/fumiyasac0921/apollo-ios-v1-dot-xxi-nobian-geng-deinpakutogaarudian-woosaraisuru"
   },
   {
-    "id": "talk-049",
+    "id": "talk-055",
     "date": "2023-09-13",
     "platform": "Speaker Deck",
     "category": "community",
@@ -427,7 +476,7 @@
     "url": "https://speakerdeck.com/fumiyasac0921/footprints-about-contribution-of-droidkaigi-2023"
   },
   {
-    "id": "talk-050",
+    "id": "talk-056",
     "date": "2023-09-02",
     "platform": "Speaker Deck",
     "category": "community",
@@ -436,7 +485,7 @@
     "url": "https://speakerdeck.com/fumiyasac0921/minnewotong-zitegan-zitali-shi-tosonoxian-wojian-ju-etaqu-rizu-miyatiao-zhan-nihong-rete"
   },
   {
-    "id": "talk-051",
+    "id": "talk-057",
     "date": "2023-06-20",
     "platform": "Speaker Deck",
     "category": "async",
@@ -445,7 +494,7 @@
     "url": "https://speakerdeck.com/fumiyasac0921/quickwoli-yong-sitaunittestniokeruxi-kanatips"
   },
   {
-    "id": "talk-052",
+    "id": "talk-058",
     "date": "2023-06-15",
     "platform": "Zenn",
     "category": "arch",
@@ -453,7 +502,7 @@
     "url": "https://zenn.dev/fumiyasac/articles/01f1bc86bf8c40"
   },
   {
-    "id": "talk-053",
+    "id": "talk-059",
     "date": "2023-05-15",
     "platform": "Speaker Deck",
     "category": "community",
@@ -462,7 +511,7 @@
     "url": "https://speakerdeck.com/fumiyasac0921/nototo-xu-nile-sikujin-merusutairu"
   },
   {
-    "id": "talk-054",
+    "id": "talk-060",
     "date": "2023-05-07",
     "platform": "Speaker Deck",
     "category": "ui",
@@ -471,7 +520,7 @@
     "url": "https://speakerdeck.com/fumiyasac0921/uikitniyorucustomtransitionswiftuidenolei-si-biao-xian-and-herotransitionguan-lian-niguan-suruyomoyamahua"
   },
   {
-    "id": "talk-055",
+    "id": "talk-061",
     "date": "2023-03-07",
     "platform": "Speaker Deck",
     "category": "arch",
@@ -480,7 +529,7 @@
     "url": "https://speakerdeck.com/fumiyasac0921/swiftui-and-reduxwoli-yong-sitauishi-zhuang-sanpuruniokerupointojie-shuo"
   },
   {
-    "id": "talk-056",
+    "id": "talk-062",
     "date": "2022-12-24",
     "platform": "Qiita",
     "category": "ui",
@@ -488,7 +537,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/debfa8d924380555c281"
   },
   {
-    "id": "talk-057",
+    "id": "talk-063",
     "date": "2022-12-18",
     "platform": "Qiita",
     "category": "async",
@@ -496,7 +545,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/22f539f554981da6afb0"
   },
   {
-    "id": "talk-058",
+    "id": "talk-064",
     "date": "2022-12-12",
     "platform": "Qiita",
     "category": "ui",
@@ -504,7 +553,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/b5b313d9807ff858a73c"
   },
   {
-    "id": "talk-059",
+    "id": "talk-065",
     "date": "2022-11-04",
     "platform": "Qiita",
     "category": "arch",
@@ -512,7 +561,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/549e10af41ce91cdfbd1"
   },
   {
-    "id": "talk-060",
+    "id": "talk-066",
     "date": "2022-10-31",
     "platform": "Speaker Deck",
     "category": "ui",
@@ -521,7 +570,7 @@
     "url": "https://speakerdeck.com/fumiyasac0921/rxdatasourcewonsdiffabledatasourcehezhi-kihuan-eruji-notipsji-shao-jie"
   },
   {
-    "id": "talk-061",
+    "id": "talk-067",
     "date": "2022-10-31",
     "platform": "SlideShare",
     "category": "ui",
@@ -530,7 +579,7 @@
     "url": "https://www.slideshare.net/slideshow/rxdatasourcensdiffabledatasourcetips/253900757"
   },
   {
-    "id": "talk-062",
+    "id": "talk-068",
     "date": "2022-04-12",
     "platform": "SlideShare",
     "category": "ui",
@@ -539,7 +588,7 @@
     "url": "https://www.slideshare.net/slideshow/iosui-androidui/251570774"
   },
   {
-    "id": "talk-063",
+    "id": "talk-069",
     "date": "2022-03-15",
     "platform": "SlideShare",
     "category": "async",
@@ -548,7 +597,7 @@
     "url": "https://www.slideshare.net/slideshow/ss-251352945/251352945"
   },
   {
-    "id": "talk-064",
+    "id": "talk-070",
     "date": "2022-02-17",
     "platform": "SlideShare",
     "category": "async",
@@ -556,7 +605,7 @@
     "url": "https://www.slideshare.net/slideshow/measures-for-growth-with-firebase-remote-config-unit-testing-using-rxswift/251191805"
   },
   {
-    "id": "talk-065",
+    "id": "talk-071",
     "date": "2022-01-11",
     "platform": "SlideShare",
     "category": "community",
@@ -565,7 +614,7 @@
     "url": "https://www.slideshare.net/slideshow/2022-250976706/250976706"
   },
   {
-    "id": "talk-066",
+    "id": "talk-072",
     "date": "2021-12-24",
     "platform": "Qiita",
     "category": "arch",
@@ -573,7 +622,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/8d6b77c3547b8b7839ad"
   },
   {
-    "id": "talk-067",
+    "id": "talk-073",
     "date": "2021-12-15",
     "platform": "Qiita",
     "category": "ui",
@@ -581,7 +630,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/2f698d6c330530338826"
   },
   {
-    "id": "talk-068",
+    "id": "talk-074",
     "date": "2021-11-17",
     "platform": "SlideShare",
     "category": "arch",
@@ -589,7 +638,7 @@
     "url": "https://www.slideshare.net/slideshow/didiy/250668501"
   },
   {
-    "id": "talk-069",
+    "id": "talk-075",
     "date": "2021-09-16",
     "platform": "SlideShare",
     "category": "ui",
@@ -598,7 +647,7 @@
     "url": "https://www.slideshare.net/slideshow/ss-250211336/250211336"
   },
   {
-    "id": "talk-070",
+    "id": "talk-076",
     "date": "2021-06-30",
     "platform": "SlideShare",
     "category": "ui",
@@ -606,7 +655,7 @@
     "url": "https://www.slideshare.net/slideshow/ui-249547564/249547564"
   },
   {
-    "id": "talk-071",
+    "id": "talk-077",
     "date": "2021-03-26",
     "platform": "SlideShare",
     "category": "cross",
@@ -615,7 +664,7 @@
     "url": "https://www.slideshare.net/slideshow/android-245108194/245108194"
   },
   {
-    "id": "talk-072",
+    "id": "talk-078",
     "date": "2020-12-22",
     "platform": "SlideShare",
     "category": "cross",
@@ -624,7 +673,7 @@
     "url": "https://www.slideshare.net/slideshow/android-240434551/240434551"
   },
   {
-    "id": "talk-073",
+    "id": "talk-079",
     "date": "2020-11-04",
     "platform": "SlideShare",
     "category": "cross",
@@ -633,7 +682,7 @@
     "url": "https://www.slideshare.net/slideshow/android-239074927/239074927"
   },
   {
-    "id": "talk-074",
+    "id": "talk-080",
     "date": "2020-10-23",
     "platform": "SlideShare",
     "category": "ui",
@@ -641,7 +690,7 @@
     "url": "https://www.slideshare.net/slideshow/uikitswiftuiui/238952031"
   },
   {
-    "id": "talk-075",
+    "id": "talk-081",
     "date": "2020-08-04",
     "platform": "SlideShare",
     "category": "arch",
@@ -650,7 +699,7 @@
     "url": "https://www.slideshare.net/slideshow/ios-237557647/237557647"
   },
   {
-    "id": "talk-076",
+    "id": "talk-082",
     "date": "2020-05-15",
     "platform": "SlideShare",
     "category": "arch",
@@ -659,7 +708,7 @@
     "url": "https://www.slideshare.net/slideshow/ios-234030619/234030619"
   },
   {
-    "id": "talk-077",
+    "id": "talk-083",
     "date": "2019-12-23",
     "platform": "Qiita",
     "category": "arch",
@@ -667,7 +716,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/12165641c6569fde52ba"
   },
   {
-    "id": "talk-078",
+    "id": "talk-084",
     "date": "2019-11-11",
     "platform": "SlideShare",
     "category": "async",
@@ -676,7 +725,7 @@
     "url": "https://www.slideshare.net/slideshow/uicollectionviewcompositionallayout-combine/192280132"
   },
   {
-    "id": "talk-079",
+    "id": "talk-085",
     "date": "2019-09-18",
     "platform": "SlideShare",
     "category": "community",
@@ -685,7 +734,7 @@
     "url": "https://www.slideshare.net/slideshow/webiosswift/173339520"
   },
   {
-    "id": "talk-080",
+    "id": "talk-086",
     "date": "2019-09-17",
     "platform": "SlideShare",
     "category": "ui",
@@ -694,7 +743,7 @@
     "url": "https://www.slideshare.net/slideshow/ui-172957909/172957909"
   },
   {
-    "id": "talk-081",
+    "id": "talk-087",
     "date": "2019-07-24",
     "platform": "SlideShare",
     "category": "ui",
@@ -703,7 +752,7 @@
     "url": "https://www.slideshare.net/slideshow/ss-157519608/157519608"
   },
   {
-    "id": "talk-082",
+    "id": "talk-088",
     "date": "2019-05-28",
     "platform": "SlideShare",
     "category": "ui",
@@ -712,7 +761,7 @@
     "url": "https://www.slideshare.net/slideshow/view-iosui/147939364"
   },
   {
-    "id": "talk-083",
+    "id": "talk-089",
     "date": "2019-05-10",
     "platform": "SlideShare",
     "category": "ui",
@@ -721,7 +770,7 @@
     "url": "https://www.slideshare.net/slideshow/viewui/144760473"
   },
   {
-    "id": "talk-084",
+    "id": "talk-090",
     "date": "2019-03-29",
     "platform": "SlideShare",
     "category": "ui",
@@ -730,7 +779,7 @@
     "url": "https://www.slideshare.net/slideshow/ui-iosui/138644838"
   },
   {
-    "id": "talk-085",
+    "id": "talk-091",
     "date": "2019-03-27",
     "platform": "SlideShare",
     "category": "ui",
@@ -739,7 +788,7 @@
     "url": "https://www.slideshare.net/slideshow/ios-138412435/138412435"
   },
   {
-    "id": "talk-086",
+    "id": "talk-092",
     "date": "2019-03-13",
     "platform": "SlideShare",
     "category": "ui",
@@ -748,7 +797,7 @@
     "url": "https://www.slideshare.net/slideshow/iosuiswift/135990539"
   },
   {
-    "id": "talk-087",
+    "id": "talk-093",
     "date": "2019-02-21",
     "platform": "SlideShare",
     "category": "ui",
@@ -757,7 +806,7 @@
     "url": "https://www.slideshare.net/slideshow/approach-of-prototyping-for-making-application-user-interface-about-ios/132675287"
   },
   {
-    "id": "talk-088",
+    "id": "talk-094",
     "date": "2019-01-28",
     "platform": "SlideShare",
     "category": "ui",
@@ -766,7 +815,7 @@
     "url": "https://www.slideshare.net/slideshow/hint-ofpasscode-lockscreen-and-logic-with-localauthentication/129554318"
   },
   {
-    "id": "talk-089",
+    "id": "talk-095",
     "date": "2019-01-19",
     "platform": "SlideShare",
     "category": "ui",
@@ -774,7 +823,7 @@
     "url": "https://www.slideshare.net/slideshow/hint-of-a-little-ingenuity-about-ui/128446160"
   },
   {
-    "id": "talk-090",
+    "id": "talk-096",
     "date": "2018-12-24",
     "platform": "Qiita",
     "category": "ui",
@@ -782,7 +831,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/6124f9b272f5ee6ebb40"
   },
   {
-    "id": "talk-091",
+    "id": "talk-097",
     "date": "2018-12-21",
     "platform": "SlideShare",
     "category": "ui",
@@ -791,7 +840,7 @@
     "url": "https://www.slideshare.net/slideshow/ss-126426523/126426523"
   },
   {
-    "id": "talk-092",
+    "id": "talk-098",
     "date": "2018-12-17",
     "platform": "SlideShare",
     "category": "arch",
@@ -800,7 +849,7 @@
     "url": "https://www.slideshare.net/slideshow/rxswiftmvvm-126152551/126152551"
   },
   {
-    "id": "talk-093",
+    "id": "talk-099",
     "date": "2018-12-13",
     "platform": "Qiita",
     "category": "async",
@@ -808,7 +857,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/e426d321fbb8ab846bb6"
   },
   {
-    "id": "talk-094",
+    "id": "talk-100",
     "date": "2018-12-10",
     "platform": "SlideShare",
     "category": "async",
@@ -817,7 +866,7 @@
     "url": "https://www.slideshare.net/slideshow/unittest-125506754/125506754"
   },
   {
-    "id": "talk-095",
+    "id": "talk-101",
     "date": "2018-12-05",
     "platform": "SlideShare",
     "category": "community",
@@ -825,7 +874,7 @@
     "url": "https://www.slideshare.net/slideshow/ss-124995030/124995030"
   },
   {
-    "id": "talk-096",
+    "id": "talk-102",
     "date": "2018-12-02",
     "platform": "Qiita",
     "category": "ui",
@@ -833,7 +882,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/af4fed8ea4d0b94e6bc4"
   },
   {
-    "id": "talk-097",
+    "id": "talk-103",
     "date": "2018-11-04",
     "platform": "Qiita",
     "category": "arch",
@@ -841,7 +890,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/f25465a955afdcb795a2"
   },
   {
-    "id": "talk-098",
+    "id": "talk-104",
     "date": "2018-10-16",
     "platform": "SlideShare",
     "category": "arch",
@@ -850,7 +899,7 @@
     "url": "https://www.slideshare.net/slideshow/reduxswift/119588623"
   },
   {
-    "id": "talk-099",
+    "id": "talk-105",
     "date": "2018-09-20",
     "platform": "SlideShare",
     "category": "community",
@@ -859,7 +908,7 @@
     "url": "https://www.slideshare.net/slideshow/ss-115550134/115550134"
   },
   {
-    "id": "talk-100",
+    "id": "talk-106",
     "date": "2018-08-15",
     "platform": "SlideShare",
     "category": "arch",
@@ -868,7 +917,7 @@
     "url": "https://www.slideshare.net/slideshow/fundamentals-of-swift-redux-reduxswift/109923472"
   },
   {
-    "id": "talk-101",
+    "id": "talk-107",
     "date": "2018-07-24",
     "platform": "Qiita",
     "category": "cross",
@@ -876,7 +925,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/e27a5901dde1dbcb2086"
   },
   {
-    "id": "talk-102",
+    "id": "talk-108",
     "date": "2018-06-26",
     "platform": "SlideShare",
     "category": "backend",
@@ -885,7 +934,7 @@
     "url": "https://www.slideshare.net/slideshow/go-103161942/103161942"
   },
   {
-    "id": "talk-103",
+    "id": "talk-109",
     "date": "2018-06-22",
     "platform": "SlideShare",
     "category": "cross",
@@ -894,7 +943,7 @@
     "url": "https://www.slideshare.net/slideshow/reactnative-redux-nativebase/102812566"
   },
   {
-    "id": "talk-104",
+    "id": "talk-110",
     "date": "2018-05-31",
     "platform": "SlideShare",
     "category": "ui",
@@ -903,7 +952,7 @@
     "url": "https://www.slideshare.net/slideshow/ios-ui-minitips-99750578/99750578"
   },
   {
-    "id": "talk-105",
+    "id": "talk-111",
     "date": "2018-04-15",
     "platform": "Qiita",
     "category": "ui",
@@ -911,7 +960,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/144aec1e1726500d9d5a"
   },
   {
-    "id": "talk-106",
+    "id": "talk-112",
     "date": "2018-04-03",
     "platform": "SlideShare",
     "category": "ui",
@@ -920,7 +969,7 @@
     "url": "https://www.slideshare.net/slideshow/ui-92750134/92750134"
   },
   {
-    "id": "talk-107",
+    "id": "talk-113",
     "date": "2018-03-04",
     "platform": "Qiita",
     "category": "ui",
@@ -928,7 +977,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/c68b7ce812bf3ef48a67"
   },
   {
-    "id": "talk-108",
+    "id": "talk-114",
     "date": "2018-02-14",
     "platform": "SlideShare",
     "category": "ui",
@@ -937,7 +986,7 @@
     "url": "https://www.slideshare.net/slideshow/tinderui-87980322/87980322"
   },
   {
-    "id": "talk-109",
+    "id": "talk-115",
     "date": "2018-01-29",
     "platform": "SlideShare",
     "category": "ui",
@@ -946,7 +995,7 @@
     "url": "https://www.slideshare.net/slideshow/uidiy/86849812"
   },
   {
-    "id": "talk-110",
+    "id": "talk-116",
     "date": "2018-01-17",
     "platform": "SlideShare",
     "category": "ui",
@@ -955,7 +1004,7 @@
     "url": "https://www.slideshare.net/slideshow/ui-diy/86258079"
   },
   {
-    "id": "talk-111",
+    "id": "talk-117",
     "date": "2017-12-20",
     "platform": "Qiita",
     "category": "async",
@@ -963,7 +1012,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/19c525116f1b585bb43f"
   },
   {
-    "id": "talk-112",
+    "id": "talk-118",
     "date": "2017-12-09",
     "platform": "Qiita",
     "category": "ui",
@@ -971,7 +1020,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/48617348ef7f18494d38"
   },
   {
-    "id": "talk-113",
+    "id": "talk-119",
     "date": "2017-12-03",
     "platform": "Qiita",
     "category": "ui",
@@ -979,7 +1028,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/b694f9859cbb61c95c1a"
   },
   {
-    "id": "talk-114",
+    "id": "talk-120",
     "date": "2017-11-27",
     "platform": "SlideShare",
     "category": "ui",
@@ -988,7 +1037,7 @@
     "url": "https://www.slideshare.net/slideshow/ui-82822810/82822810"
   },
   {
-    "id": "talk-115",
+    "id": "talk-121",
     "date": "2017-11-24",
     "platform": "Qiita",
     "category": "ui",
@@ -996,7 +1045,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/d1b56ffc6d7d46c0a616"
   },
   {
-    "id": "talk-116",
+    "id": "talk-122",
     "date": "2017-10-20",
     "platform": "SlideShare",
     "category": "cross",
@@ -1005,7 +1054,7 @@
     "url": "https://www.slideshare.net/slideshow/swiftreactnativeui/81012548"
   },
   {
-    "id": "talk-117",
+    "id": "talk-123",
     "date": "2017-08-08",
     "platform": "SlideShare",
     "category": "community",
@@ -1014,7 +1063,7 @@
     "url": "https://www.slideshare.net/slideshow/1-78666682/78666682"
   },
   {
-    "id": "talk-118",
+    "id": "talk-124",
     "date": "2017-04-30",
     "platform": "Qiita",
     "category": "cross",
@@ -1022,7 +1071,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/12707f93f5c96fa3fc3f"
   },
   {
-    "id": "talk-119",
+    "id": "talk-125",
     "date": "2017-04-20",
     "platform": "SlideShare",
     "category": "ui",
@@ -1031,7 +1080,7 @@
     "url": "https://www.slideshare.net/slideshow/nativebaseui/75217517"
   },
   {
-    "id": "talk-120",
+    "id": "talk-126",
     "date": "2017-03-20",
     "platform": "Qiita",
     "category": "cross",
@@ -1039,7 +1088,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/71b8ff88d96289d43593"
   },
   {
-    "id": "talk-121",
+    "id": "talk-127",
     "date": "2017-02-17",
     "platform": "SlideShare",
     "category": "ui",
@@ -1048,7 +1097,7 @@
     "url": "https://www.slideshare.net/slideshow/ui-72280995/72280995"
   },
   {
-    "id": "talk-122",
+    "id": "talk-128",
     "date": "2017-02-14",
     "platform": "SlideShare",
     "category": "async",
@@ -1057,7 +1106,7 @@
     "url": "https://www.slideshare.net/slideshow/rxswift-72129568/72129568"
   },
   {
-    "id": "talk-123",
+    "id": "talk-129",
     "date": "2017-02-02",
     "platform": "Qiita",
     "category": "arch",
@@ -1065,7 +1114,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/da762ea512484a8291a3"
   },
   {
-    "id": "talk-124",
+    "id": "talk-130",
     "date": "2017-01-26",
     "platform": "SlideShare",
     "category": "ui",
@@ -1074,7 +1123,7 @@
     "url": "https://www.slideshare.net/slideshow/ui-71408887/71408887"
   },
   {
-    "id": "talk-125",
+    "id": "talk-131",
     "date": "2017-01-24",
     "platform": "SlideShare",
     "category": "ui",
@@ -1083,7 +1132,7 @@
     "url": "https://www.slideshare.net/slideshow/ui-71313919/71313919"
   },
   {
-    "id": "talk-126",
+    "id": "talk-132",
     "date": "2017-01-23",
     "platform": "Qiita",
     "category": "async",
@@ -1091,7 +1140,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/90d1ebaa0cd8c4558d96"
   },
   {
-    "id": "talk-127",
+    "id": "talk-133",
     "date": "2017-01-13",
     "platform": "SlideShare",
     "category": "backend",
@@ -1100,7 +1149,7 @@
     "url": "https://www.slideshare.net/slideshow/firebase-70996365/70996365"
   },
   {
-    "id": "talk-128",
+    "id": "talk-134",
     "date": "2017-01-07",
     "platform": "Qiita",
     "category": "ui",
@@ -1108,7 +1157,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/6c4c2b909a821932be04"
   },
   {
-    "id": "talk-129",
+    "id": "talk-135",
     "date": "2016-12-25",
     "platform": "Qiita",
     "category": "backend",
@@ -1116,7 +1165,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/c45ddcf5c31b6505b23c"
   },
   {
-    "id": "talk-130",
+    "id": "talk-136",
     "date": "2016-12-21",
     "platform": "SlideShare",
     "category": "ui",
@@ -1125,7 +1174,7 @@
     "url": "https://www.slideshare.net/slideshow/uikitdiypart2/70329698"
   },
   {
-    "id": "talk-131",
+    "id": "talk-137",
     "date": "2016-12-20",
     "platform": "Qiita",
     "category": "ui",
@@ -1133,7 +1182,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/3be1344255b3ebb9f416"
   },
   {
-    "id": "talk-132",
+    "id": "talk-138",
     "date": "2016-12-17",
     "platform": "Qiita",
     "category": "backend",
@@ -1141,7 +1190,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/40f143a53895282f80f8"
   },
   {
-    "id": "talk-133",
+    "id": "talk-139",
     "date": "2016-12-09",
     "platform": "Qiita",
     "category": "ui",
@@ -1149,7 +1198,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/04c66743a3c829d39b1f"
   },
   {
-    "id": "talk-134",
+    "id": "talk-140",
     "date": "2016-11-20",
     "platform": "SlideShare",
     "category": "ui",
@@ -1158,7 +1207,7 @@
     "url": "https://www.slideshare.net/slideshow/uikitdiypart1/69314989"
   },
   {
-    "id": "talk-135",
+    "id": "talk-141",
     "date": "2016-10-29",
     "platform": "Qiita",
     "category": "ui",
@@ -1166,7 +1215,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/eb5b17ab90f5aa27b793"
   },
   {
-    "id": "talk-136",
+    "id": "talk-142",
     "date": "2016-10-04",
     "platform": "SlideShare",
     "category": "community",
@@ -1175,7 +1224,7 @@
     "url": "https://www.slideshare.net/slideshow/ss-66699142/66699142"
   },
   {
-    "id": "talk-137",
+    "id": "talk-143",
     "date": "2016-09-30",
     "platform": "Qiita",
     "category": "backend",
@@ -1183,7 +1232,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/1ef428095f5845988463"
   },
   {
-    "id": "talk-138",
+    "id": "talk-144",
     "date": "2016-09-24",
     "platform": "SlideShare",
     "category": "backend",
@@ -1192,7 +1241,7 @@
     "url": "https://www.slideshare.net/slideshow/rails5api/66377454"
   },
   {
-    "id": "talk-139",
+    "id": "talk-145",
     "date": "2016-09-19",
     "platform": "SlideShare",
     "category": "ui",
@@ -1201,7 +1250,7 @@
     "url": "https://www.slideshare.net/slideshow/containerviewstoryboardswift30/66154453"
   },
   {
-    "id": "talk-140",
+    "id": "talk-146",
     "date": "2016-09-18",
     "platform": "Qiita",
     "category": "ui",
@@ -1209,7 +1258,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/3218c35de5e59f3bfafa"
   },
   {
-    "id": "talk-141",
+    "id": "talk-147",
     "date": "2016-09-15",
     "platform": "SlideShare",
     "category": "backend",
@@ -1218,7 +1267,7 @@
     "url": "https://www.slideshare.net/slideshow/laraveldbbasictips/66038048"
   },
   {
-    "id": "talk-142",
+    "id": "talk-148",
     "date": "2016-09-13",
     "platform": "Qiita",
     "category": "ui",
@@ -1226,7 +1275,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/17cbcffd90deee2cff43"
   },
   {
-    "id": "talk-143",
+    "id": "talk-149",
     "date": "2016-08-28",
     "platform": "Qiita",
     "category": "ui",
@@ -1234,7 +1283,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/96a588c4f7bfc901f729"
   },
   {
-    "id": "talk-144",
+    "id": "talk-150",
     "date": "2016-08-28",
     "platform": "SlideShare",
     "category": "community",
@@ -1243,7 +1292,7 @@
     "url": "https://www.slideshare.net/slideshow/30i-os/65440986"
   },
   {
-    "id": "talk-145",
+    "id": "talk-151",
     "date": "2016-08-23",
     "platform": "Qiita",
     "category": "backend",
@@ -1251,7 +1300,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/cdf854008e7487148a67"
   },
   {
-    "id": "talk-146",
+    "id": "talk-152",
     "date": "2016-07-19",
     "platform": "SlideShare",
     "category": "community",
@@ -1260,7 +1309,7 @@
     "url": "https://www.slideshare.net/slideshow/ios-64170020/64170020"
   },
   {
-    "id": "talk-147",
+    "id": "talk-153",
     "date": "2016-06-26",
     "platform": "SlideShare",
     "category": "backend",
@@ -1269,7 +1318,7 @@
     "url": "https://www.slideshare.net/slideshow/ruby-on-railslinebot-63450407/63450407"
   },
   {
-    "id": "talk-148",
+    "id": "talk-154",
     "date": "2016-05-29",
     "platform": "Qiita",
     "category": "ui",
@@ -1277,7 +1326,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/33bfc07ad36dfffcdf8f"
   },
   {
-    "id": "talk-149",
+    "id": "talk-155",
     "date": "2016-05-29",
     "platform": "SlideShare",
     "category": "ui",
@@ -1286,7 +1335,7 @@
     "url": "https://www.slideshare.net/slideshow/ss-62509450/62509450"
   },
   {
-    "id": "talk-150",
+    "id": "talk-156",
     "date": "2016-04-24",
     "platform": "SlideShare",
     "category": "ui",
@@ -1295,7 +1344,7 @@
     "url": "https://www.slideshare.net/slideshow/uipageviewcontrollercontainerviewtips/61278600"
   },
   {
-    "id": "talk-151",
+    "id": "talk-157",
     "date": "2016-04-23",
     "platform": "Qiita",
     "category": "ui",
@@ -1303,7 +1352,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/1244abc8e3286c47ef50"
   },
   {
-    "id": "talk-152",
+    "id": "talk-158",
     "date": "2016-04-10",
     "platform": "SlideShare",
     "category": "backend",
@@ -1312,7 +1361,7 @@
     "url": "https://www.slideshare.net/slideshow/papercliplaravelstapler-60716244/60716244"
   },
   {
-    "id": "talk-153",
+    "id": "talk-159",
     "date": "2016-04-10",
     "platform": "SlideShare",
     "category": "ui",
@@ -1321,7 +1370,7 @@
     "url": "https://www.slideshare.net/slideshow/ss-60715876/60715876"
   },
   {
-    "id": "talk-154",
+    "id": "talk-160",
     "date": "2016-03-28",
     "platform": "Qiita",
     "category": "ui",
@@ -1329,7 +1378,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/18ae522885b5aa507ca3"
   },
   {
-    "id": "talk-155",
+    "id": "talk-161",
     "date": "2016-03-16",
     "platform": "Qiita",
     "category": "backend",
@@ -1337,7 +1386,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/a73d3598d75e749ba443"
   },
   {
-    "id": "talk-156",
+    "id": "talk-162",
     "date": "2016-02-14",
     "platform": "SlideShare",
     "category": "backend",
@@ -1346,7 +1395,7 @@
     "url": "https://www.slideshare.net/slideshow/m-baasparsecomncmb/58239013"
   },
   {
-    "id": "talk-157",
+    "id": "talk-163",
     "date": "2016-02-13",
     "platform": "Qiita",
     "category": "backend",
@@ -1354,7 +1403,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/7549acb9610860de1733"
   },
   {
-    "id": "talk-158",
+    "id": "talk-164",
     "date": "2016-02-03",
     "platform": "Qiita",
     "category": "ui",
@@ -1362,7 +1411,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/53d9d45d880b0e523417"
   },
   {
-    "id": "talk-159",
+    "id": "talk-165",
     "date": "2016-01-20",
     "platform": "Qiita",
     "category": "backend",
@@ -1370,7 +1419,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/c08210196db894b322e2"
   },
   {
-    "id": "talk-160",
+    "id": "talk-166",
     "date": "2016-01-16",
     "platform": "Qiita",
     "category": "backend",
@@ -1378,7 +1427,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/320f80dcab492b3e31ab"
   },
   {
-    "id": "talk-161",
+    "id": "talk-167",
     "date": "2016-01-07",
     "platform": "Qiita",
     "category": "backend",
@@ -1386,7 +1435,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/cbdf4d36cc14e213aaa7"
   },
   {
-    "id": "talk-162",
+    "id": "talk-168",
     "date": "2016-01-07",
     "platform": "SlideShare",
     "category": "backend",
@@ -1395,7 +1444,7 @@
     "url": "https://www.slideshare.net/slideshow/core-datarealm/56792538"
   },
   {
-    "id": "talk-163",
+    "id": "talk-169",
     "date": "2015-12-30",
     "platform": "Qiita",
     "category": "backend",
@@ -1403,7 +1452,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/2f13f48bda7f945d39d5"
   },
   {
-    "id": "talk-164",
+    "id": "talk-170",
     "date": "2015-12-27",
     "platform": "Qiita",
     "category": "ui",
@@ -1411,7 +1460,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/379b51b23703287b1999"
   },
   {
-    "id": "talk-165",
+    "id": "talk-171",
     "date": "2015-12-25",
     "platform": "Qiita",
     "category": "backend",
@@ -1419,7 +1468,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/78a335880f7abb1de8bf"
   },
   {
-    "id": "talk-166",
+    "id": "talk-172",
     "date": "2015-12-22",
     "platform": "Qiita",
     "category": "ui",
@@ -1427,7 +1476,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/7463e0e1ea149ee4e9f7"
   },
   {
-    "id": "talk-167",
+    "id": "talk-173",
     "date": "2015-12-19",
     "platform": "SlideShare",
     "category": "ui",
@@ -1436,7 +1485,7 @@
     "url": "https://www.slideshare.net/slideshow/container-view/56294326"
   },
   {
-    "id": "talk-168",
+    "id": "talk-174",
     "date": "2015-12-17",
     "platform": "Qiita",
     "category": "backend",
@@ -1444,7 +1493,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/5f0e77728221aade5027"
   },
   {
-    "id": "talk-169",
+    "id": "talk-175",
     "date": "2015-12-15",
     "platform": "SlideShare",
     "category": "ui",
@@ -1453,7 +1502,7 @@
     "url": "https://www.slideshare.net/slideshow/ui3-56181535/56181535"
   },
   {
-    "id": "talk-170",
+    "id": "talk-176",
     "date": "2015-12-15",
     "platform": "SlideShare",
     "category": "ui",
@@ -1462,7 +1511,7 @@
     "url": "https://www.slideshare.net/slideshow/apple-watchtips/56181452"
   },
   {
-    "id": "talk-171",
+    "id": "talk-177",
     "date": "2015-12-15",
     "platform": "SlideShare",
     "category": "backend",
@@ -1471,7 +1520,7 @@
     "url": "https://www.slideshare.net/slideshow/rails-56181384/56181384"
   },
   {
-    "id": "talk-172",
+    "id": "talk-178",
     "date": "2015-12-15",
     "platform": "SlideShare",
     "category": "backend",
@@ -1480,7 +1529,7 @@
     "url": "https://www.slideshare.net/slideshow/parsecom-56181079/56181079"
   },
   {
-    "id": "talk-173",
+    "id": "talk-179",
     "date": "2015-12-08",
     "platform": "Qiita",
     "category": "ui",
@@ -1488,7 +1537,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/2490990be4c011935368"
   },
   {
-    "id": "talk-174",
+    "id": "talk-180",
     "date": "2015-12-04",
     "platform": "Qiita",
     "category": "ui",
@@ -1496,7 +1545,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/40c5250fbed9fe705296"
   },
   {
-    "id": "talk-175",
+    "id": "talk-181",
     "date": "2015-11-25",
     "platform": "Qiita",
     "category": "ui",
@@ -1504,7 +1553,7 @@
     "url": "https://qiita.com/fumiyasac@github/items/02a7b962e9a2013c56a0"
   },
   {
-    "id": "talk-176",
+    "id": "talk-182",
     "date": "2015-05-28",
     "platform": "SlideShare",
     "category": "backend",
@@ -1512,7 +1561,7 @@
     "url": "https://www.slideshare.net/slideshow/paperclipamazon-s3/48731076"
   },
   {
-    "id": "talk-177",
+    "id": "talk-183",
     "date": "2015-05-08",
     "platform": "SlideShare",
     "category": "ui",
@@ -1521,7 +1570,7 @@
     "url": "https://www.slideshare.net/slideshow/ui-47919323/47919323"
   },
   {
-    "id": "talk-178",
+    "id": "talk-184",
     "date": "2015-03-12",
     "platform": "SlideShare",
     "category": "ui",
@@ -1530,7 +1579,7 @@
     "url": "https://www.slideshare.net/slideshow/15potatotips/45746961"
   },
   {
-    "id": "talk-179",
+    "id": "talk-185",
     "date": "2015-02-14",
     "platform": "SlideShare",
     "category": "ui",
@@ -1538,7 +1587,7 @@
     "url": "https://www.slideshare.net/slideshow/20150215/44666848"
   },
   {
-    "id": "talk-180",
+    "id": "talk-186",
     "date": "2015-01-10",
     "platform": "SlideShare",
     "category": "ui",
@@ -1547,7 +1596,7 @@
     "url": "https://www.slideshare.net/slideshow/optional-43391115/43391115"
   },
   {
-    "id": "talk-181",
+    "id": "talk-187",
     "date": "2014-12-21",
     "platform": "SlideShare",
     "category": "ui",
