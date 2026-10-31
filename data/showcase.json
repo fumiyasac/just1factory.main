@@ -16,6 +16,19 @@
     },
     {
       "id": "repo-002",
+      "slug": "MediaStyleViewSwiftUI",
+      "category": "swiftui",
+      "title": "SwiftData + Swift Concurrencyで作るレシピ献立管理アプリサンプル",
+      "description": "SwiftUI + SwiftData + Swift Concurrencyを核に、カレンダー起点のレシピ閲覧・材料と手順の確認・調理記録と評価メモ・タイムライン振り返りまで備えたメディア型アプリの実装サンプル。MVVM + StateMachineでPresentation層を整理し、RepositoryパターンでFixture・Remote・Cacheを切り替え可能にする構成を、オフライン対応込みで実務にそのまま持ち込みやすい形にまとめている。",
+      "stack": [
+        "SwiftUI",
+        "SwiftData",
+        "Swift Concurrency"
+      ],
+      "url": "https://github.com/fumiyasac/MediaStyleViewSwiftUI"
+    },
+    {
+      "id": "repo-003",
       "slug": "SimpleObservationViperExample",
       "category": "swiftui",
       "title": "SwiftUI + VIPER + Observationの実装サンプル",
@@ -28,7 +41,7 @@
       "url": "https://github.com/fumiyasac/SimpleObservationViperExample"
     },
     {
-      "id": "repo-003",
+      "id": "repo-004",
       "slug": "SimpleMediaReaderExample",
       "category": "swiftui",
       "title": "SwiftData + インタラクティブ画面遷移のメディア一覧サンプル",
@@ -41,7 +54,7 @@
       "url": "https://github.com/fumiyasac/SimpleMediaReaderExample"
     },
     {
-      "id": "repo-004",
+      "id": "repo-005",
       "slug": "CharacteristicStyleSwiftUIExample",
       "category": "swiftui",
       "title": "特徴的なUIをトレース&応用したSwiftUI実装サンプル",
@@ -54,7 +67,7 @@
       "url": "https://github.com/fumiyasac/CharacteristicStyleSwiftUIExample"
     },
     {
-      "id": "repo-005",
+      "id": "repo-006",
       "slug": "ScrollableTabActionExample",
       "category": "swiftui",
       "title": "ScrollViewReaderを活用したTab型表現のSwiftUI実装サンプル",
@@ -67,7 +80,7 @@
       "url": "https://github.com/fumiyasac/ScrollableTabActionExample"
     },
     {
-      "id": "repo-006",
+      "id": "repo-007",
       "slug": "TinderCartExampleSwiftUI",
       "category": "swiftui",
       "title": "Tinder風のCard切り替え操作のSwiftUI実装サンプル",
@@ -80,7 +93,7 @@
       "url": "https://github.com/fumiyasac/TinderCartExampleSwiftUI"
     },
     {
-      "id": "repo-007",
+      "id": "repo-008",
       "slug": "SwiftUIAndReduxExample",
       "category": "swiftui",
       "title": "SwiftUI + Reduxによる画面状態管理サンプル",
@@ -93,7 +106,7 @@
       "url": "https://github.com/fumiyasac/SwiftUIAndReduxExample"
     },
     {
-      "id": "repo-008",
+      "id": "repo-009",
       "slug": "LikeCoodinatorLayoutExample",
       "category": "swiftui",
       "title": "AndroidのCoordinatorLayout風の動きをSwiftUIで実装",
@@ -106,7 +119,7 @@
       "url": "https://github.com/fumiyasac/LikeCoodinatorLayoutExample"
     },
     {
-      "id": "repo-009",
+      "id": "repo-010",
       "slug": "VisualEffectTraceExample",
       "category": "uikit",
       "title": "UICollectionViewで複雑なレイアウトと挙動を表現するサンプル",
@@ -119,7 +132,7 @@
       "url": "https://github.com/fumiyasac/VisualEffectTraceExample"
     },
     {
-      "id": "repo-010",
+      "id": "repo-011",
       "slug": "ScrollAnimationShowcase",
       "category": "uikit",
       "title": "UIScrollView / UICollectionViewの特性を活用した表現サンプル",
@@ -132,7 +145,7 @@
       "url": "https://github.com/fumiyasac/ScrollAnimationShowcase"
     },
     {
-      "id": "repo-011",
+      "id": "repo-012",
       "slug": "DiffableDataSourceExample",
       "category": "uikit",
       "title": "DiffableDataSourceを利用したUI実装例",
@@ -145,7 +158,7 @@
       "url": "https://github.com/fumiyasac/DiffableDataSourceExample"
     },
     {
-      "id": "repo-012",
+      "id": "repo-013",
       "slug": "ComplexCollectionViewStyleExample",
       "category": "uikit",
       "title": "新しいUICollectionViewとCombineを組み合わせた実装例",
@@ -158,7 +171,7 @@
       "url": "https://github.com/fumiyasac/ComplexCollectionViewStyleExample"
     },
     {
-      "id": "repo-013",
+      "id": "repo-014",
       "slug": "MasonryStyleLayout",
       "category": "uikit",
       "title": "Pinterest風のMasonryレイアウトUI実装サンプル",
@@ -171,7 +184,7 @@
       "url": "https://github.com/fumiyasac/MasonryStyleLayout"
     },
     {
-      "id": "repo-014",
+      "id": "repo-015",
       "slug": "TouchIDExample",
       "category": "uikit",
       "title": "TouchID / FaceIDを利用したUI実装サンプル",
@@ -184,7 +197,7 @@
       "url": "https://github.com/fumiyasac/TouchIDExample"
     },
     {
-      "id": "repo-015",
+      "id": "repo-016",
       "slug": "InteractiveUISample",
       "category": "uikit",
       "title": "ライブラリを使わないアニメーション表現の機能サンプル",
@@ -197,7 +210,7 @@
       "url": "https://github.com/fumiyasac/InteractiveUISample"
     },
     {
-      "id": "repo-016",
+      "id": "repo-017",
       "slug": "InfiniteScrollAnotherPattern",
       "category": "uikit",
       "title": "UICollectionViewによる無限循環スクロールの別パターン実装",
@@ -210,7 +223,7 @@
       "url": "https://github.com/fumiyasac/InfiniteScrollAnotherPattern"
     },
     {
-      "id": "repo-017",
+      "id": "repo-018",
       "slug": "TinderUISamples",
       "category": "uikit",
       "title": "Tinder風UIを様々な実装で実現するUIKit実装サンプル",
@@ -223,7 +236,7 @@
       "url": "https://github.com/fumiyasac/TinderUISamples"
     },
     {
-      "id": "repo-018",
+      "id": "repo-019",
       "slug": "ReduxSampleSwift",
       "category": "rx",
       "title": "ReduxとUI実装を組み合わせたSwiftサンプル",
@@ -236,7 +249,7 @@
       "url": "https://github.com/fumiyasac/ReduxSampleSwift"
     },
     {
-      "id": "repo-019",
+      "id": "repo-020",
       "slug": "RxSwiftUIExample",
       "category": "rx",
       "title": "RxSwiftとUI実装を組み合わせた実装サンプル",
@@ -249,7 +262,7 @@
       "url": "https://github.com/fumiyasac/RxSwiftUIExample"
     },
     {
-      "id": "repo-020",
+      "id": "repo-021",
       "slug": "RxSwiftPracticeNote",
       "category": "rx",
       "title": "RxSwiftの練習記録ノートで紹介したUI実装サンプル",
@@ -262,7 +275,7 @@
       "url": "https://github.com/fumiyasac/RxSwiftPracticeNote"
     },
     {
-      "id": "repo-021",
+      "id": "repo-022",
       "slug": "travel_booking",
       "category": "flutter",
       "title": "Flutter + GraphQLによる旅行プラン閲覧・予約サンプル",
@@ -275,7 +288,7 @@
       "url": "https://github.com/fumiyasac/travel_booking"
     },
     {
-      "id": "repo-022",
+      "id": "repo-023",
       "slug": "recipe_search_app",
       "category": "flutter",
       "title": "Flutter + Riverpod + driftによるレシピ検索・献立管理アプリサンプル",
@@ -288,7 +301,7 @@
       "url": "https://github.com/fumiyasac/recipe_search_app"
     },
     {
-      "id": "repo-023",
+      "id": "repo-024",
       "slug": "vocabulary_learning",
       "category": "flutter",
       "title": "Flutter + Riverpod + Driftの擬似単語帳アプリサンプル",
@@ -301,7 +314,7 @@
       "url": "https://github.com/fumiyasac/vocabulary_learning"
     },
     {
-      "id": "repo-024",
+      "id": "repo-025",
       "slug": "searchable_combobox",
       "category": "flutter",
       "title": "複数ライブラリを組み合わせたFlutterの複合検索UI実装",
@@ -314,7 +327,7 @@
       "url": "https://github.com/fumiyasac/searchable_combobox"
     },
     {
-      "id": "repo-025",
+      "id": "repo-026",
       "slug": "riverpod_firestore_example",
       "category": "flutter",
       "title": "Flutter + Riverpod + Firestoreの学習参考書メモアプリ",
@@ -327,7 +340,7 @@
       "url": "https://github.com/fumiyasac/riverpod_firestore_example"
     },
     {
-      "id": "repo-026",
+      "id": "repo-027",
       "slug": "commerce_style_sample_app",
       "category": "flutter",
       "title": "Flutter + Riverpodによるプロダクト一覧の無限スクロール実装",
@@ -340,7 +353,7 @@
       "url": "https://github.com/fumiyasac/commerce_style_sample_app"
     },
     {
-      "id": "repo-027",
+      "id": "repo-028",
       "slug": "todo_style_example_app",
       "category": "flutter",
       "title": "Flutter + RiverpodによるToDoリスト型UI実装サンプル",
@@ -353,7 +366,7 @@
       "url": "https://github.com/fumiyasac/todo_style_example_app"
     },
     {
-      "id": "repo-028",
+      "id": "repo-029",
       "slug": "SimpleGraphQLPractice",
       "category": "research",
       "title": "Apollo 0.x / 1.x系の差分調査用リポジトリ",
