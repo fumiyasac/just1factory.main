@@ -180,7 +180,7 @@ function YearBlock({ year, items }: { year: number; items: TalkItem[] }) {
       <h3 className="archive_year_heading">
         <span className="archive_year_num">{year}</span>
         <span className="archive_year_suffix">年</span>
-        <span className="archive_year_count">・{items.length} 本</span>
+        <span className="archive_year_count">・{items.length}本</span>
       </h3>
       <div className="archive_year_breakdown">{breakdown}</div>
       <ul className="archive_list list-unstyled">
