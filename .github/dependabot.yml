@@ -11,6 +11,13 @@ updates:
       - "dependencies"
     commit-message:
       prefix: "chore(deps):"
+    # Node ランタイム(.nvmrc = 22.23.4)と型定義のメジャーラインを揃えるため、
+    # @types/node の major 更新は Dependabot からは送らず、.nvmrc 側で Node を
+    # 上げる際にセットで手動更新する運用に固定する。
+    # 過去に PR #66 / #85 / #98 で同じ理由で Close 済み。
+    ignore:
+      - dependency-name: "@types/node"
+        update-types: ["version-update:semver-major"]
 
   - package-ecosystem: "github-actions"
     directory: "/"
