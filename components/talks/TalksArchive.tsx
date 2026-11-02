@@ -250,7 +250,7 @@ export default function TalksArchive({
         />
         <div className="archive_filter_summary small text-muted mb-3">
           表示中：<strong>{activeCategoryLabel}</strong> × <strong>{activeYearLabel}</strong>
-          &nbsp;<strong>{filtered.length}</strong> 本 / 全 {ARCHIVE.length} 本
+          &nbsp;<strong>{filtered.length}</strong>本 / 全{ARCHIVE.length}本
         </div>
         <div className={`archive_fade${fade ? " is-visible" : ""}`}>
           {yearGroups.length === 0 ? (
