@@ -10,14 +10,14 @@ Web制作・サーバーサイド・iOS・Android・Flutter・技術書執筆・
 
 <!-- AUTO-GENERATED-START -->
 <!-- このセクションはreadme-updater Subagentが自動生成しています。手動で編集しないでください。 -->
-<!-- 最終更新: 2026-10-14 -->
+<!-- 最終更新: 2026-11-04 -->
 
 ## Tech Stack
 
 | Category | Technology |
 |---|---|
-| Framework | Next.js 16.4.0 (App Router, Static Export) |
-| Language | TypeScript 5 / React 19.3.0 |
+| Framework | Next.js 16.4.3 (App Router, Static Export) |
+| Language | TypeScript 5 / React 19.3.1 |
 | CSS | Bootstrap 4.6 + Font Awesome 4.7(いずれもバージョン固定) |
 | Node | 22.23.4(`.nvmrc`で固定) |
 | Hosting | Firebase Hosting(プロジェクト: `just1factory-main`) |
@@ -28,10 +28,10 @@ Web制作・サーバーサイド・iOS・Android・Flutter・技術書執筆・
 |---|---|---|
 | Home | `/` | トップページ(Message / RecentActivity / Developer's Profile / Social / Information) |
 | Books | `/books` | 技術書6冊のアーカイブ(発行日降順) |
-| Talks & Articles | `/talks` | 登壇資料・技術記事176本をカテゴリー×年のフィルターで探索 |
+| Talks & Articles | `/talks` | 登壇資料・技術記事187本をカテゴリー×年のフィルターで探索 |
 | Design | `/design` | 技書博チラシ8件 + 親方Project寄稿2件のデザイン制作一覧 |
 | Manuscript & Writings | `/manuscript` | iOSDCパンフレット原稿8 + 書籍寄稿11 + 翻訳レビュー2 + DroidKaigi Contribution 18 + テックブログ15 + 自筆ノート9 |
-| Development Showcase | `/showcase` | GitHub公開リポジトリ29件 + 技術書同人誌博覧会公式サイト運用保守の記録 |
+| Development Showcase | `/showcase` | GitHub公開リポジトリ29件 + 技術書同人誌博覧会公式サイト運用保守 + OSC登壇の記録 |
 | Career Timeline | `/timeline` | 2003年〜2025年のキャリア年表 全17章 |
 
 **Total: 7 pages**
@@ -59,7 +59,7 @@ Web制作・サーバーサイド・iOS・Android・Flutter・技術書執筆・
 │  ├─ global/           NavigationBar / FooterBar / ScrollToTop / JsonLd
 │  ├─ index/            Home セクション群(Message / RecentActivity 等)
 │  └─ <section>/        books / talks / design / manuscript / showcase / timeline
-├─ data/                コンテンツデータの JSON(5 ファイル、計 292 件)
+├─ data/                コンテンツデータの JSON(5 ファイル、計 295 件)
 ├─ types/               TypeScript の型定義(5 ファイル、data/*.json と対応)
 ├─ public/              静的アセット(design/ books/ summaries/ などサブディレクトリ分割)
 ├─ .github/workflows/   GitHub Actions(現在は ci.yml のみ)
@@ -86,10 +86,10 @@ Web制作・サーバーサイド・iOS・Android・Flutter・技術書執筆・
 | ファイル | 件数 | 型 |
 |---|---|---|
 | `data/books.json` | 6冊 | [`Book`](./types/books.ts) |
-| `data/talks.json` | 176件 | [`TalkItem`](./types/talks.ts) |
+| `data/talks.json` | 187件 | [`TalkItem`](./types/talks.ts) |
 | `data/design.json` | 10件(gishohaku 8 / oyakata 2) | [`DesignItem`](./types/design.ts) |
 | `data/manuscript.json` | iOSDC 8 / 寄稿11 / 翻訳2 / DroidKaigi 18 / テックブログ15 / SNS 9 | [`ManuscriptData`](./types/manuscript.ts) |
-| `data/showcase.json` | リポジトリ27 + 技書博1ドキュメント | [`ShowcaseData`](./types/showcase.ts) |
+| `data/showcase.json` | リポジトリ29 + 技書博1ドキュメント | [`ShowcaseData`](./types/showcase.ts) |
 | `components/timeline/data.ts` | 17章(未JSON化) | `TimelineEntry` |
 
 timelineのみJSON化が未実施(Phase 3で揃える予定)。
@@ -137,7 +137,7 @@ firebase deploy --only hosting
 
 | Workflow | Trigger | Action |
 |---|---|---|
-| `ci.yml` | PR / master push | `.nvmrc` の Node(現在 22.23.4)で `npm ci` → `npx tsc --noEmit` → `npm run build` → `out/` 配下のHTML件数検証 |
+| `ci.yml` | PR / master push | `.nvmrc` のNode(現在22.23.4)で `npm ci` → `npx tsc --noEmit` → `npm run build` → `out/` 配下のHTML件数検証 |
 
 Dependabot(npm + GitHub Actions)が定期的に依存関係の更新PRを上げるため、`/review-dependabot` コマンドで一括判断する運用。
 
@@ -173,11 +173,12 @@ CMS化に備え以下を定義済み。本番Firestoreへの反映は未実施�
 | [`CLAUDE.md`](./CLAUDE.md) | Claude Code向けのプロジェクト指針(Tech Stack / Do NOT / Architecture Notes) |
 | [`AGENTS.md`](./AGENTS.md) | AIエージェントへの注意書き(Next.js 16系のドキュメント参照指示) |
 | [`PROGRESS.md`](./PROGRESS.md) | Nuxt.js 2からNext.js 16への移行作業ログ |
-| [`docs/roadmap.md`](./docs/ROADMAP.md) | 本サイトの中期ロードマップ(Phase 1〜4) |
-| [`docs/firebase_cms_design.md`](./docs/FIREBASE_CMS_DESIGN.md) | Firestoreコレクション設計のたたき台 |
+| [`docs/ROADMAP.md`](./docs/ROADMAP.md) | 本サイトの中期ロードマップ(Phase 1〜4) |
+| [`docs/FIREBASE_CMS_DESIGN.md`](./docs/FIREBASE_CMS_DESIGN.md) | Firestoreコレクション設計のたたき台 |
 | [`docs/firestore-migration-spec.md`](./docs/firestore-migration-spec.md) | 現状の `data/*.json` とFirestore設計の突き合わせ結果 + 管理画面フォーム案 |
 | [`docs/isr-migration-impact.md`](./docs/isr-migration-impact.md) | `output: 'export'` を外してISR/SSRへ切り替えた場合の影響範囲分析 |
 | [`docs/firebase-emulator-guide.md`](./docs/firebase-emulator-guide.md) | Firestoreルール検証用のEmulator操作手順 |
+| [`docs/adr/`](./docs/adr/) | Architecture Decision Records(Firestore採用・ホスティング戦略・ISR方針の意思決定記録) |
 
 ## Claude Code Integration
 
@@ -214,7 +215,9 @@ CMS化に備え以下を定義済み。本番Firestoreへの反映は未実施�
 - **Bootstrap 4.6 / Font Awesome 4.7はバージョン固定**。デザインリニューアルまで触らない
 - **`output: 'export'` を外さない**(Phase 3の正式切り替えまで)
 - **`out/` をgit管理対象にしない**
+- **英数字・記号と日本語の境界に半角スペースを入れない**(表示テキスト全般のtypography規約)
 - 新しいページを追加した際は `app/sitemap.ts` にもエントリを追加する
+- `.nvmrc` とCIのNodeバージョンはセットで更新する(CIは `node-version-file: '.nvmrc'` で自動追従)
 - コミットメッセージは日本語でも可。変更意図が伝わる単位で分割する
 
 詳細は [`CLAUDE.md`](./CLAUDE.md) を参照。
@@ -223,7 +226,7 @@ CMS化に備え以下を定義済み。本番Firestoreへの反映は未実施�
 
 - Phase 1足場固め: 進行中(CI / Dependabot / OGP / sitemap・404等は完了)
 - Phase 2コンテンツ拡充: 完了(books / talks / design / manuscript / showcase / timelineの6ページを整備)
-- Phase 3 CMS化: 準備段階(Firestore設計 / ISR影響分析 / セキュリティルール / Emulator設定は完了)
+- Phase 3 CMS化: 準備段階(Firestore設計 / ISR影響分析 / セキュリティルール / Emulator設定 / ADR 3本の起票は完了、本体実装は未着手)
 - Phase 4デザインリニューアル: 未着手
 
 詳細は [`docs/ROADMAP.md`](./docs/ROADMAP.md) を参照。
