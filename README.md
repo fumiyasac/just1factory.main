@@ -19,7 +19,7 @@ Web制作・サーバーサイド・iOS・Android・Flutter・技術書執筆・
 | Framework | Next.js 16.4.3 (App Router, Static Export) |
 | Language | TypeScript 5 / React 19.3.1 |
 | CSS | Bootstrap 4.6 + Font Awesome 4.7(いずれもバージョン固定) |
-| Node | 22.23.4(`.nvmrc`で固定) |
+| Node | 22.23.5(`.nvmrc`で固定) |
 | Hosting | Firebase Hosting(プロジェクト: `just1factory-main`) |
 
 ## Pages
@@ -96,14 +96,14 @@ timelineのみJSON化が未実施(Phase 3で揃える予定)。
 
 ## Prerequisites
 
-- **Node.js 22.23.4** (`.nvmrc` でパッチバージョンまで固定。`nvm install` で該当バージョンを入れた上で `nvm use` で切り替え)
+- **Node.js 22.23.5** (`.nvmrc` でパッチバージョンまで固定。`nvm install` で該当バージョンを入れた上で `nvm use` で切り替え)
 - **Firebase CLI** 13.0以上(デプロイ時のみ必要、`firebase login` 済みであること)
 - **Java 11+** (Firestore Emulatorを使う場合のみ必要)
 
 ## Development
 
 ```bash
-nvm use                       # .nvmrc で指定した Node 22.23.4 を使用
+nvm use                       # .nvmrc で指定した Node 22.23.5 を使用
 npm install                   # 初回のみ
 npm run dev                   # 開発サーバー起動 (http://localhost:3000)
 ```
@@ -137,7 +137,7 @@ firebase deploy --only hosting
 
 | Workflow | Trigger | Action |
 |---|---|---|
-| `ci.yml` | PR / master push | `.nvmrc` のNode(現在22.23.4)で `npm ci` → `npx tsc --noEmit` → `npm run build` → `out/` 配下のHTML件数検証 |
+| `ci.yml` | PR / master push | `.nvmrc` のNode(現在22.23.5)で `npm ci` → `npx tsc --noEmit` → `npm run build` → `out/` 配下のHTML件数検証 |
 
 Dependabot(npm + GitHub Actions)が定期的に依存関係の更新PRを上げるため、`/review-dependabot` コマンドで一括判断する運用。
 
