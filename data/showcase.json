@@ -367,6 +367,19 @@
     },
     {
       "id": "repo-029",
+      "slug": "MatchedGeometryEffectShowcase",
+      "category": "research",
+      "title": "UIKit / SwiftUI / iOS 18新APIで画面遷移表現を比較する調査用リポジトリ",
+      "description": "画面遷移時の「滑らかな拡大・移動」表現を、UIKitのUIViewControllerAnimatedTransitioning・SwiftUIの@Namespace + matchedGeometryEffect・iOS 18新APIの.matchedTransitionSource + .navigationTransition(.zoom)の3パターンで実装し、同じ題材(パスタ/タパスのギャラリー)で挙動と記述量を比較する調査用リポジトリ。実プロダクトでヒーロー遷移を導入する際に、UIKit踏襲とSwiftUI移行とiOS 18以降の新API採用のうち、どのレイヤーで表現するかを判断する材料として活用している。",
+      "stack": [
+        "SwiftUI",
+        "UIKit",
+        "matchedGeometryEffect"
+      ],
+      "url": "https://github.com/fumiyasac/MatchedGeometryEffectShowcase"
+    },
+    {
+      "id": "repo-030",
       "slug": "SimpleGraphQLPractice",
       "category": "research",
       "title": "Apollo 0.x / 1.x系の差分調査用リポジトリ",
